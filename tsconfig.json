@@ -4,6 +4,7 @@
   "exclude": ["dist"],
   "compilerOptions": {
     "strictNullChecks": true,
+    "baseUrl": ".",
     "path": {
       "@image/*": ["public/image/*"]
     }
