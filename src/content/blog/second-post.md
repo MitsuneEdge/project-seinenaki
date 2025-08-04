@@ -1,7 +1,7 @@
 ---
-title: "Second post"
-description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 15 2022"
+title: "什么鸟语"
+description: "别看了"
+pubDate: "May 29 1453"
 heroImage: "/blog-placeholder-4.jpg"
 ---
 

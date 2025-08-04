@@ -1,6 +1,6 @@
 ---
-title: "First post"
-description: "Lorem ipsum dolor sit amet"
+title: "文件目录指引"
+description: "哈基米叮咚鸡"
 pubDate: "Jul 08 2022"
 heroImage: "/blog-placeholder-3.jpg"
 ---
