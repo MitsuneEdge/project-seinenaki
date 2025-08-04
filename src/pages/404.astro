@@ -1,0 +1,29 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="zh">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+
+			<h1>爆！</h1>
+			<h3>网页笑传之ccb</h3>
+
+			<p><img src="huh_cat.gif"><img src="huh_cat.gif"><img src="huh_cat.gif">
+
+			<p>bro这里真没东西，你要么填错了要么网页爆了</p>
+
+			<p><img src="huh_cat.gif"><img src="huh_cat.gif"><img src="huh_cat.gif">
+
+		</main>
+		<Footer />
+	</body>
+</html>
