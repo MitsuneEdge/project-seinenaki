@@ -5,8 +5,8 @@ pubDate: "Jun 19 2024"
 heroImage: "/blog-placeholder-1.jpg"
 ---
 
-Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
-
+我的评价是这里面塞了一堆Markdown文本的提示，剩下的滚去Astro的文档看<br>
+<a href="https://docs.astro.build/">Astro文档</a>
 ## Headings
 
 The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
