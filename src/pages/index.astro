@@ -39,9 +39,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		    <div id="test-video" style="text-align:center;">
                 <slot />
-                  @media(min-width: 768px)<video width="1024" height="576" controls>
-                  @media(max-width: 768px)<video width="640" height="360" controls>
-                  <source src="/video/hihihiha.mp4" type="video/mp4"></video>
+                    <source src="/video/hihihiha.mp4" type="video/mp4"></video>
+                    @media(min-width: 768px)<video width="1024" height="576" controls>
+                    @media(max-width: 768px)<video width="640" height="360" controls>
+
             </div>
 		<main>
 			<h2>你是谁？ 请支持百日战记！</h2>
