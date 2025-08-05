@@ -1,0 +1,65 @@
+<div class="video-container">
+  <video id="mainVideo" controls>
+    <source src="promo-video.mp4" type="video/mp4">
+  </video>
+  <div class="video-overlay">
+    <button id="playBtn">播放视频 (音量50%)</button>
+  </div>
+</div>
+
+<script>
+  const video = document.getElementById('mainVideo');
+  const playBtn = document.getElementById('playBtn');
+  const TARGET_VOLUME = 0.5;
+
+  // 初始化视频设置
+  video.volume = TARGET_VOLUME;
+
+  // 尝试自动播放
+  function tryAutoplay() {
+    video.muted = true;
+    video.play()
+      .then(() => {
+        setTimeout(() => {
+          video.muted = false;
+          playBtn.style.display = 'none';
+        }, 500); // 延迟取消静音更可靠
+      })
+      .catch(e => {
+        playBtn.style.display = 'block';
+      });
+  }
+
+  // 用户点击播放按钮
+  playBtn.addEventListener('click', () => {
+    video.play();
+    playBtn.style.display = 'none';
+  });
+
+  // 页面加载后尝试
+  document.addEventListener('DOMContentLoaded', tryAutoplay);
+
+  // 用户与页面交互后再次尝试
+  document.addEventListener('click', tryAutoplay, { once: true });
+</script>
+
+<style>
+  .video-container {
+    position: relative;
+  }
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.3);
+  }
+  #playBtn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+  }
+</style>
