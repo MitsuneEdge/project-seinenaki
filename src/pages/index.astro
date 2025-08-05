@@ -37,11 +37,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<Header />
-		<main>
-		    <div id="test-video" style="text-align:center;">
-                <slot /><video width="1280" height="728" controls>
+		<div id="test-video" style="text-align:center;">
+            <slot />
+                <video width="1024" height="576" controls>
                 <source src="/video/hihihiha.mp4" type="video/mp4"></video>
-            </div>
+        </div>
+		<main>
 			<h2>你是谁？ 请支持百日战记！</h2>
 			<p>
 				我说有没有人帮我看看这个抽象的静态网页的多媒体库存在哪里啊<br>
