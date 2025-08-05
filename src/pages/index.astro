@@ -11,7 +11,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     <style>
         @media(min-width: 768px){
             body {
-                background-image: url('image/Mika.jpg');
+                background-image: url('/image/Mika.jpg');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -22,7 +22,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
         @media(max-width: 768px){
             body {
-                background-image: url('20250802_114801_122190299_p0.jpg');
+                background-image: url('/20250802_114801_122190299_p0.jpg');
                 background-size: contain;
                 background-position: center;
                 background-repeat:no-repeat;
@@ -62,7 +62,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<div id="test-video" style="text-align:center;">
                 <slot />
                     <video width="240" height="240" controls>
-                    <source src="hihihiha.mp4" type="video/mp4"></video>
+                    <source src="/video/hihihiha.mp4" type="video/mp4"></video>
             </div>
 
             {/*
