@@ -9,18 +9,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="zh">
 
     <style>
-        body {
-            background-image: url('Mika.jpg');
+        @media(min-width: 768px){
+            body {
+                background-image: url('Mika.jpg');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
                 min-height: 100vh;
+            }
         }
 
         @media(max-width: 768px){
             body {
                 background-image: url('20250802_114801_122190299_p0.jpg');
                 background-size: contain;
+                background-repeat:no-repeat;
+                background-attachment:fixed;
             }
         }
     </style>
