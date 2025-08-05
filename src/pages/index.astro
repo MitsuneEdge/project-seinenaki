@@ -37,7 +37,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             padding: 20px;
         }
 
-        /* 通用区块样式 */
+        {/* 通用区块样式 */}
         .block {
             padding: 20px;
             margin: 10px;
@@ -47,7 +47,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             font-weight: normal;
         }
 
-        /* 布局容器 */
+        {/* 布局容器 */}
         .container {
            display: flex;
            flex-direction: column;
@@ -55,16 +55,26 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
            margin: 0 auto;
         }
 
-        /* 中间行容器（包含A、B、C） */
+        {/* 中间行容器（包含A、B、C） */}
         .middle-row {
            display: flex;
            justify-content: space-between;
         }
 
-        /* 中间三个区块的统一样式 */
+        {/* 中间三个区块的统一样式 */}
         .middle-block {
            flex: 1;
+           text-align: left;
            min-width: 0; /* 防止内容溢出 */
+        }
+
+        @media (max-width: 768px) {
+            .middle-row {
+                flex-direction: column;
+            }
+            .middle-block {
+                width: 100%;
+            }
         }
     </style>
 
