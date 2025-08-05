@@ -1,0 +1,26 @@
+<style is:global>
+  :root {
+    --gradient-angle: 135deg;
+    --gradient-start: #f3f4f6;
+    --gradient-end: #e5e7eb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --gradient-start: #1f2937;
+      --gradient-end: #111827;
+    }
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(
+      var(--gradient-angle),
+      var(--gradient-start),
+      var(--gradient-end)
+    );
+    background-attachment: fixed;
+    color: #111827;
+  }
+</style>
