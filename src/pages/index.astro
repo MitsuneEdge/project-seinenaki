@@ -41,32 +41,27 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 
-		<div id="test-headon-video" style="text-align:center;">
-		    <video width="100%" controls>
-                <source src="/video/hihihiha.mp4" type="video/mp4">
-            </video>
-        </div>
+		{/* iframe方式插入多媒体视频 */}
 
-		{/*
-		    这个模块爆了，晚点再调试
-		    意图在主页标题前播放一个视频
-		    @media(min-width: 768px){
-		        video {
-		            width="320";
-		            height="240";
-		            source src="/video/hihihiha.mp4";
-		            type="video/mp4";
-		        }
-		    }
-            @media(max-width: 768px){
-                     <div id="test-video" style="text-align:center;">
-                     <slot />
-                        <video width="1024" height="576" controls>
-                            <source src="/video/hihihiha.mp4" type="video/mp4">
-                        </video>
-                     </div>
-            }
-         */}
+		<style>
+          .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+          }
+
+          .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        </style>
+
+        <div class="video-wrapper">
+          <iframe src="https://www.bilibili.com/video/BV1yZ421x7MY/" frameborder="0" allowfullscreen></iframe>
+        </div>
 
 		{/*网页主体文字*/}
 
