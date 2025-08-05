@@ -6,7 +6,7 @@
 
 :root {
   --gradient-angle: 135deg;
-  -gradient-start: #f3f4f6;
+  --gradient-start: #f3f4f6;
   --gradient-end: #e5e7eb;
   --black: 15, 18, 25;
   --gray: 96, 115, 159;
