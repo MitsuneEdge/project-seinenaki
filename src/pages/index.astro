@@ -37,20 +37,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<Header />
-		@media(min-width: 768px){
 		    <div id="test-video" style="text-align:center;">
                 <slot />
-                  <video width="1024" height="576" controls>
+                  @media(min-width: 768px)<video width="1024" height="576" controls>
+                  @media(max-width: 768px)<video width="640" height="360" controls>
                   <source src="/video/hihihiha.mp4" type="video/mp4"></video>
             </div>
-        }
-        @media(max-width: 768px){
-            <div id="test-video" style="text-align:center;">
-                <slot />
-                    <video width="640" height="360" controls>
-                    <source src="/video/hihihiha.mp4" type="video/mp4"></video>
-            </div>
-        }
 		<main>
 			<h2>你是谁？ 请支持百日战记！</h2>
 			<p>
