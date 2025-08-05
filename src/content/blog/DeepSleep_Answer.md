@@ -40,7 +40,9 @@ html
   allowfullscreen
   style="width: 100%; height: 500px;">
 </iframe>
+```
 Windows Server方案
+```bash
 IIS配置步骤
 安装Web服务器角色
 
@@ -63,7 +65,10 @@ PowerShell命令
 powershell
 New-Item -Path "C:\WebVideos" -ItemType Directory
 Set-Acl -Path "C:\WebVideos" -AclObject (Get-Acl -Path "C:\WebVideos")
+```
+
 通用建议
+
 必须启用HTTPS：
 
 使用Let's Encrypt免费证书
@@ -71,7 +76,7 @@ Set-Acl -Path "C:\WebVideos" -AclObject (Get-Acl -Path "C:\WebVideos")
 避免混合内容警告
 
 防盗链配置：
-
+```bash
 nginx
 valid_referers none blocked your-website.com;
 if ($invalid_referer) {
@@ -86,9 +91,13 @@ css
     height: 0;
     overflow: hidden;
 }
+```
 故障排查表
-问题现象	可能原因	解决方案
-403错误	权限不足	检查文件夹权限
-视频无法拖动	未启用字节服务	配置Range头支持
-跨域问题	缺少CORS头	检查Access-Control-Allow-Origin
+
+| 问题现象 | 可能原因 | 解决方案 |
+|---------|---------|---------|
+| 403错误  | 权限不足  | 检查文件夹权限  |
+| 视频无法拖动  | 未启用字节服务  | 配置Range头支持  |
+| 跨域问题  | 缺少CORS头  | 检查Access-Control-Allow-Origin  |
+		
 提示：建议使用HTML5 video标签作为首选方案，iframe作为备用方案。
