@@ -40,46 +40,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             padding: 20px;
         }
 
-        {/* 正文区块样式 */}
-        .main_block {
-            padding: 20px;
-            margin: 10px;
-            background-color: transparent;
-            text-align: center;
-            font-size: 16px;
-            font-weight: normal;
-        }
 
-        {/* 正文区块布局容器 */}
-        .main_container {
-           display: flex;
-           flex-direction: column;
-           max-width: 100%;
-           margin: 0 auto;
-        }
-
-        {/* 中间行容器（包含A、B、C） */}
-        .middle-row {
-           display: flex;
-           justify-content: space-between;
-        }
-
-        {/* 中间三个区块的统一样式 */}
-        .middle-block {
-           flex: 1;
-           text-align: left;
-           min-width: 0; /* 防止内容溢出 */
-        }
-
-        @media (max-width: 768px) {
-            .middle-row {
-                max-width: 90%;
-                flex-direction: column;
-            }
-            .middle-block {
-                width: 100%;
-            }
-        }
 
     </style>
 
@@ -162,67 +123,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
             {/*Project-Seinenaki 首页介绍正文部分*/}
 
-			<div class="main_container">
-			    {/*模块1*/}
-			    <div class="block" style="background-color: transparent;">
-			        <p style="text-align: center;">
-			            <b>这是第一行的概述喵</b><br>
-			        </p>
-			    </div>
 
-			    {/*第二行：A、B、C*/}
-			    <div class="middle-row">
-			        <div class="block middle-block" style="background-color: transparent;">
-			            <p style="text-align: center;">
-			                <b>这是故事背景</b><br>
-			                我说有没有人帮我看看这个抽象的静态网页的多媒体库存在哪里啊<br>
-			                气死了喵气死了喵气死了喵气死了喵<br>
-			                话说我还在想怎么调整显示窗口<br>
-			                哎怎么个事怎么个事怎么个事，谁去看看那个tsconfig.json的引用为什么是爆的
-			            </p>
-			        </div>
-			        <div class="block middle-block" style="background-color: transparent;">
-			            <p style="text-align: center;">
-			                <b>这是人物简介</b><br>
-			                这里之前测试过bilibili的嵌入视频播放<br>
-			                窗口小的奇怪，不过能用
-                    	</p>
-			        </div>
-			        <div class="block middle-block" style="background-color: transparent;">
-			            <p style="text-align: center;">
-			                <b>这是人物长什么样</b><br>
-			                <img src="/image/huh_cat.gif">
-			            </p>
-			        </div>
-                </div>
-
-                {/*模块2*/}
-                <div class="block" style="background-color: transparent;">
-                    <p style="text-align: left;">
-                        <b>这是剧情介绍</b>
-                        <br>
-                        原来是按错电梯了啊，不知道还以为是瑞克和帕克、爱尔兰牢、邓恩一起去巴库执行秘密任务，
-                        结果在离开的过程中，整车人落水，邓恩被卡住腿，掉水里化身憋气王了。之后又前往上海拯救中国的民选领导人金杰，
-                        刚开车行驶到马路上就被路人骂伸进冰，还被人用燃烧瓶给烧到车了结果导致车失控卡住了，又在大街上看到了著名上将张将军的演讲，
-                        在黄金海岸大楼的坐电梯时候一不小心按错楼层被最优质的战士看到大喊：美国人! 哎呀!，之后救下了金杰和汉娜。
-                        逃跑途中炸了PLA的99坦克和09步战，硬吃一发emp开民用船走了，并把上海民众带到了瓦尔基里号上。
-                        在这件事过后，瑞克和帕克，爱尔兰佬回到了瓦尔基里号上。之后，泰坦号航母航行在平静的海面，突然被张将军的部队袭击。
-                        为了一探求竟，瑞克和汉娜、帕克、爱尔兰佬坐着皮划艇进入泰坦号里面。一进来就看到两个队友被困在船舱下面，他们说是中国人干的。
-                        爱尔兰佬想救他们，先是拿m249试图打开舱门，结果无妄便继续前进，走过一处积水地，他们三个顺利的游了过去，
-                        但瑞克一不小心卡在船里了，正着游不动了，反着游了过去。后来，墓碑小队挫败了张将军的计划，但泰坦号龙骨断裂沉没了，
-                        美中不足的是加里森在爬梯子的时候脚一滑从梯子上摔下来给摔似了。为了转移中国人的视线，
-                        墓碑小队和海军陆战队以及三辆M1坦克突袭新加坡有PLA驻守的樟宜机场。驾车逃出之后，被炸翻，帕克当场生死不明，
-                        汉娜突然反水，拿着P90带着两位PLA大喊“快过来，他们在这，我抓到他们了”。
-                        然后一不小心被中国人抓到昆仑山监狱审问“what was your mission in ShangHai!”
-                        之后瑞克在同监室的俄国特工蒂玛的帮助下成功出逃，和爱尔兰佬汇合，结果跑到半路被汉娜带着警卫王博海和另外一名警卫当场逮住了，
-                        结果汉娜又反水毙了他们，之后四人一起出逃，结果坐缆车被直-10袭击，蒂玛不耐摔摔死了。
-                        后来在前往澜沧江大坝的途中帮助了被包围的霉菌部队，把水坝炸了，水坝放出的水消灭了俄军防空部队，
-                        然后通过b键呼叫富尔顿回收系统回到了瓦尔基里号。一回到瓦尔基里号，发现帕克打赢了复活赛，
-                        因为金杰还没死，“感化”了来袭的PLA。最后在炸毁张将军的战舰途中，由于炸弹故障，
-                        自己掏出仅剩的c4，犹豫不知道把炸药是给汉娜好还是给爱尔兰老好，导致瓦尔基里号被炸飞了，还好最后解锁了优质的95-1突击步枪
-                    </p>
-                </div>
-            </div>
 
 			<p style="text-align: center;">
 			    <img src="/image/ivytype.gif">
