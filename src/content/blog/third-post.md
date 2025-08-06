@@ -2,7 +2,7 @@
 title: "美国人！哎呀"
 description: "做最优质的战士"
 pubDate: "Jul 22 2022"
-heroImage: "/blog-placeholder-2.jpg"
+heroImage: "/image/blog-placeholder-1.jpg"
 ---
 
 今天，我们为被害的金杰哀悼。明天，我们就要让凶手付出代价！<br>
