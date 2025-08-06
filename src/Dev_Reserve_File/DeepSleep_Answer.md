@@ -1,9 +1,3 @@
----
-title: "视频嵌入方案指南"
-description: "哈基米叮咚鸡"
-pubDate: "Jul 08 2142"
-heroImage: "/blog-placeholder-3.jpg"
----
 
 # 视频嵌入方案指南
 
