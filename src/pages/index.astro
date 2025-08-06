@@ -21,6 +21,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         }
 
         {/*
+        暂时去掉了移动端的奶龙背景，背景适配有点问题
         @media(max-width: 768px){
             body {
                 background-image: url('/image/Kotone_Fujita.jpg');
@@ -87,9 +88,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 
-	<Header />
-
 	<body>
+		<Header />
 
 		{/* iframe方式插入多媒体视频，置顶在网页头部 */}
 
@@ -131,7 +131,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 			<div class="container">
 			    {/*模块1*/}
-			    <div class="block" style="background-color: transparent;">1</div>
+			    <div class="block" style="background-color: transparent;">
+			        <p style="text-align: center;">
+			            这是概述的第一行喵<br>
+			        </p>
+			    </div>
 
 			    {/*第二行：A、B、C*/}
 			    <div class="middle-row">
