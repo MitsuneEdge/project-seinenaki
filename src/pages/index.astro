@@ -9,28 +9,24 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="zh">
 
     <style>
-
-        @media(min-width: 768px){
-            body {
-                background-image: url('/image/Mika.jpg');
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-attachment:fixed;
-                min-height: 100vh;
-            }
+        body {
+            background-image: url('/image/Mika.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment:fixed;
+            min-height: 100vh;
         }
 
         body {
             font-family: "Atkinson", sans-serif;
             margin: 0;
-            //padding: 20px;
         }
 
-        {/*巨大海报和文字*/}
+        {/*巨大海报*/}
         .hero-banner {
           /* 背景设置 */
-          background-image: url('/image/Reserve_Example.png');
+          background-image: url('/image/Reserve_Example.jpg');
           background-size: cover;      /* 填充整个区域 */
           background-position: center; /* 居中显示 */
           background-repeat: no-repeat;
@@ -51,10 +47,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
           z-index: 10; /* 低于导航栏的z-index */
         }
 
+        {/*巨大海报里包含的文字*/}
         .hero-content {
           color: white;              /* 文字颜色 */
-          font-size: 3rem;           /* 文字大小 */
-          text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 文字阴影增强可读性 */
+          font-size: 16px;           /* 文字大小 */
+          position: relative;
+          left: 150px;
+            //text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            /* 文字阴影增强可读性 */
           padding: 20px;
           background-color: rgba(0,0,0,0.3); /* 半透明背景衬底 */
           border-radius: 10px;
