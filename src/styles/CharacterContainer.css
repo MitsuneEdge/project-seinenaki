@@ -13,10 +13,10 @@
 
 /* 通用子元素样式 */
 .character-item {
-    height: 100px;           /* 统一高度 */
-    border: 1px solid #000;  /* 边框（可选） */
+    height: auto;           /* 统一高度 */
+    border: 2px solid #000;  /* 边框（可选） */
     box-sizing: border-box;  /* 确保边框不影响宽度计算 */
-    margin: 5px;
+    margin: 20px;
 }
 
 /* 按比例分配宽度 */
