@@ -4,10 +4,8 @@ Failed to connect to github.com port 443 after 21127 ms: Couldn't connect to ser
 
 </h1>
 
-<h2>dev笔记本，上工之前看一眼</h2>
+**真是DNS污污又染染啊**
 
-我还没试过< image >这个东西所以
+<h2>仓库里有个dev笔记本，上工之前看一眼</h2>
 
-现在用img和video引入图片视频的话需要按照相对public的目录填路径
-
-样例：/image/Mika.jpg
+<h4>美国人！哎呀！</h4>
