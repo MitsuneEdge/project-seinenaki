@@ -23,10 +23,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				width: 85%;
 			}
 			.hero-image img {
-				display: flex;
+				display: block;
 				margin: 0 auto;
-				justify-content: center;
-				align-items: center;
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
 			}
@@ -60,7 +58,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<Header />
 		<main>
 			<article>
-				<div class="hero-image">
+				<div class="hero-image" style="text-align: center;">
 					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
 				</div>
 				<div class="prose">
