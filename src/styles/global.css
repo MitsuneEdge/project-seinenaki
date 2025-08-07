@@ -33,7 +33,9 @@
 }
 @font-face {
   font-family: "Silver";
-  src: url("/fonts/Silver.ttf") format("truetype");
+  src:
+      url('/fonts/silver.woff') format('woff'),
+      url('/fonts/silver.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
