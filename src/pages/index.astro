@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import DivLine from '../components/DivLine.astro';
+import '../styles/CharacterContainer.css';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -69,38 +70,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             gap: 10px;             /* 最小间距（现代浏览器） */
         }
 
-        {/* 正文区块样式 */}
-        .main_block {
-            padding: 20px;
-            margin: 10px;
-            background-color: transparent;
-            text-align: center;
-            font-size: 16px;
-            font-weight: normal;
-        }
-
-        {/* 正文区块布局容器 */}
-        .main_container {
-           display: flex;
-           flex-direction: column;
-           max-width: 100%;
-           margin: 0 auto;
-        }
-
-        {/* 中间行容器（包含A、B、C） */}
-        .middle-row {
-           display: flex;
-           justify-content: space-between;
-        }
-
-        {/* 中间三个区块的统一样式 */}
-        .middle-block {
-           flex: 1;
-           text-align: left;
-           padding: 10px;
-           min-width: 0; /* 防止内容溢出 */
-        }
-
     </style>
 
     {/* 768px区分移动和桌面端 */}
@@ -117,7 +86,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 		<div class="hero-banner">
 		    <div class="hero-content">
-		        <h1 style="font-family: silver;">时载录</h1>
+		        <h1 style="font-family: Silver;">时载录</h1>
                 <p>基于《千年时载录》改编的2D游戏</p>
 
                 {/*某种skill issue引起的抽象按钮操作*/}
@@ -186,31 +155,31 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			        </p>
 			    </div>
 
-			    {/*第二行：A、B、C*/}
-			    <div class="middle-row">
-			        <div class="block middle-block" style="background-color: transparent;">
+			    {/*第二行：A、B、C、D，引用CharacterContainer.css控制*/}
+			    <div class="character-container">
+			        <div class="character-container character-item-Img-L" style="background-color: transparent;">
                         <p style="text-align: center;">
-                            <b>这是人物长什么样</b><br>
+                            <p style="font-size: 10px;">这是人物长什么样</p><br>
                             <img src="/image/huh_cat.gif">
                         </p>
                     </div>
-			        <div class="block middle-block" style="background-color: transparent;">
+			        <div class="character-container character-item-Txt-L" style="background-color: transparent;">
 			            <p style="text-align: center;">
 			                <b>这是人物简介</b><br>
 			                这里之前测试过bilibili的嵌入视频播放<br>
 			                窗口小的奇怪，不过能用
 			            </p>
 			        </div>
-			        <div class="block middle-block" style="background-color: transparent;">
+			        <div class="character-container character-item-Txt-R" style="background-color: transparent;">
 			            <p style="text-align: center;">
 			                <b>这是人物简介</b><br>
 			                这里之前测试过bilibili的嵌入视频播放<br>
 			                窗口小的奇怪，不过能用
                     	</p>
 			        </div>
-			        <div class="block middle-block" style="background-color: transparent;">
+			        <div class="character-container character-item-Img-R" style="background-color: transparent;">
 			            <p style="text-align: center;">
-			                <b>这是人物长什么样</b><br>
+			                <p style="font-size: 10px;">这是人物长什么样</p><br>
 			                <img src="/image/huh_cat.gif">
 			            </p>
 			        </div>

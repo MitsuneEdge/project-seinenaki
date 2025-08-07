@@ -1,0 +1,36 @@
+/* src/styles/CharacterContainer.css */
+
+/* 容器样式 */
+.character-container {
+    display: flex;           /* Flex 布局 */
+    width: 1000px;           /* 固定宽度 */
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: transparent;
+}
+
+/* 通用子元素样式 */
+.character-item {
+    height: 100px;           /* 统一高度 */
+    border: 1px solid #000;  /* 边框（可选） */
+    box-sizing: border-box;  /* 确保边框不影响宽度计算 */
+    margin: 5px;
+}
+
+/* 按比例分配宽度 */
+.character-item-Img-L,
+.character-item-Img-R {
+    flex: 1;                 /* 比例 1 */
+    background: lightblue;    /* 调试用颜色 */
+}
+
+.character-item-Txt-L,
+.character-item-Txt-R {
+    flex: 4;                 /* 比例 4 */
+    background: lightgreen;   /* 调试用颜色 */
+    text-align: left;
+    padding: 10px;
+    min-width: 0;
+}
