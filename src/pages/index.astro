@@ -65,13 +65,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         .link-container {
             display: flex;          /* 启用弹性布局 */
             align-items: center;    /* 垂直居中 */
-            gap: 5px;             /* 最小间距（现代浏览器） */
-        }
-
-        .spacer {
-            flex: 1;               /* 动态填充剩余空间 */
-            min-width: 5px;       /* 强制最小间距 */
-            background: transparent; /* 透明背景 */
+            gap: 10px;             /* 最小间距（现代浏览器） */
         }
 
         {/* 正文区块样式 */}
@@ -129,7 +123,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                 <div class="link-container">
                     <a href="/blog" class="btn"
                         style="
-                        font-size: 18px;
+                        font-size: 20px;
                         background-color: rgba(0,0,0,0.3);
                         text-decoration: none;
                         border-radius: 4px; /* 圆角 */
@@ -139,10 +133,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                     >
                         开发动态
                     </a>
-                    <div class="spacer"></div>
                     <a href="/pre-order" class="btn"
                         style="
-                        font-size: 18px;
+                        font-size: 20px;
+                        margin-left: max(10px, 5%);
                         background-color: rgba(0,0,0,0.3);
                         text-decoration: none;
                         border-radius: 4px;
