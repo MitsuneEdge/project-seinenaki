@@ -25,41 +25,58 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
         {/*巨大海报*/}
         .hero-banner {
-          /* 背景设置 */
-          background-image: url('/image/Reserve_Example.jpg');
-          background-size: cover;      /* 填充整个区域 */
-          background-position: center; /* 居中显示 */
-          background-repeat: no-repeat;
+            /* 背景设置 */
+            background-image: url('/image/Reserve_Example.jpg');
+            background-size: cover;      /* 填充整个区域 */
+            background-position: center; /* 居中显示 */
+            background-repeat: no-repeat;
 
-          /* 尺寸设置 */
-          width: 100%;
-            /* 视口宽度 */
-          height: 100vh;
-            /* 视口高度 */
-          margin: 0;
-            /* 清除默认边距 */
+                /* 尺寸设置 */
+            width: 100%;
+                /* 视口宽度 */
+            height: 100vh;
+                /* 视口高度 */
+            margin: 0;
+                /* 清除默认边距 */
 
-          /* 文字居中 */
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
 
-          /* 确保在导航栏下方 */
-          position: relative;
-          z-index: 10;
-            /* 低于导航栏的z-index */
+            /* 确保在导航栏下方 */
+            position: relative;
+            //z-index: 10;
+                /* 低于导航栏的z-index */
         }
 
         {/*巨大海报里包含的文字*/}
         .hero-content {
-          color: white;              /* 文字颜色 */
-          font-size: 18px;           /* 文字大小 */
-          position: relative;
-          right: 15%;
-          padding: 20px;
-          background-color: transparent; /* 半透明背景衬底 */
-          border-radius: 10px;
+            display: inline-block;
+            color: white;              /* 文字颜色 */
+            font-size: 18px;           /* 文字大小 */
+            position: relative;
+            right: 15%;
+            padding: 20px;
+            background-color: transparent; /* 透明背景衬底 */
+            border-radius: 10px;
+        }
+
+        {/*海报主要文字下方的两个可跳转的按键*/}
+        .primary-button-container {
+            display: inline-flex;  /* 保持与上方div同宽 */
+            gap: 10px;            /* 按钮间距 */
+            width: 100%;          /* 继承父容器宽度 */
+            max-width: fit-content; /* 宽度不超出内容 */
+        }
+
+        .primary-button {
+            font-size: 18px;           /* 文字大小 */
+            flex: 1;              /* 按钮均分宽度 */
+            min-width: 60px;      /* 避免过窄 */
+            padding: 8px 12px;
+            background-color: rgba(0,0,0,0.3);
+            border-radius: 5px;
         }
 
         {/* 正文区块样式 */}
@@ -112,6 +129,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		    <div class="hero-content">
 		        <h1>时载录</h1>
                 <p>基于《千年时载录》改编的2D游戏</p>
+            </div>
+            {/* 字体下方的两个跳转按钮 */}
+            <div class="primary-button-container">
+                <button class="primary-button" onclick="window.location.href='/blog'>信息发布</button>
+                <button class="primary-button" onclick="window.location.href='/pre-order'>预约下载</button>
             </div>
         </div>
 
