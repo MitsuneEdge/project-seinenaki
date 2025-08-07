@@ -111,8 +111,30 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		    <div class="hero-content">
 		        <h1>时载录</h1>
                 <p>基于《千年时载录》改编的2D游戏</p>
-                <a href="/blog" class="btn">开发动态</a>
-                <a href="/pre-order" class="btn">预约游戏</a>
+
+                {/*某种skill issue引起的抽象按钮操作*/}
+                <a href="/blog" class="btn"
+                    style="
+                    background-color: rgba(0,0,0,0.3);
+                    text-decoration: none;
+                    border-radius: 4px; /* 圆角 */
+                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);"
+                    onmouseover="this.style.transform='scale(1.05)'"
+                    onmouseout="this.style.transform='scale(1)'"
+                    >
+                    开发动态
+                </a>
+                <a href="/pre-order" class="btn"
+                    style="
+                    background-color: rgba(0,0,0,0.3);
+                    text-decoration: none;
+                    border-radius: 4px;
+                    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);"
+                    onmouseover="this.style.transform='scale(1.05)'"
+                    onmouseout="this.style.transform='scale(1)'"
+                >
+                    预约游戏
+                </a>
             </div>
             {/* 字体下方的两个跳转按钮 */}
 
