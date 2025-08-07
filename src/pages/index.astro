@@ -40,7 +40,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
           display: flex;
           justify-content: center;
           align-items: center;
-          text-align: center;
+          text-align: left;
 
           /* 确保在导航栏下方 */
           position: relative;
@@ -92,15 +92,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
            min-width: 0; /* 防止内容溢出 */
         }
 
-        @media (max-width: 768px) {
-            .middle-row {
-                max-width: 90%;
-                flex-direction: column;
-            }
-            .middle-block {
-                width: 100%;
-            }
-        }
     </style>
 
     {/* 768px区分移动和桌面端 */}
@@ -118,7 +109,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<div class="hero-banner">
 		    <div class="hero-content">
 		        <h1>时载录</h1><br>
-                <h3>基于《千年时载录》改变的2D游戏</h3>
+                <p>基于《千年时载录》改编的2D游戏</p>
             </div>
         </div>
 
