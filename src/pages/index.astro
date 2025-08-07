@@ -148,7 +148,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                     </a>
                 </div>
             </div>
-            {/* 字体下方的两个跳转按钮 */}
 
         </div>
 
@@ -167,26 +166,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			</h1>
 
 			{/*标题字号自动控制*/}
-
-			<script>
-              function adjustFontSize() {
-                const title = document.querySelector('.index_title');
-                const container = index_title.parentElement;
-
-                // 重置字体大小
-                index_title.style.fontSize = '';
-
-                // 如果文本溢出则减小字号
-                while (index_title.scrollWidth > container.offsetWidth) {
-                  const currentSize = parseFloat(getComputedStyle(index_title).fontSize);
-                  index_title.style.fontSize = (currentSize - 1) + 'px';
-                }
-              }
-
-              // 初始执行+窗口变化时执行
-              window.addEventListener('load', adjustFontSize);
-              window.addEventListener('resize', adjustFontSize);
-            </script>
+			<script src="/script/IndexTitleControl.js"></script>
 
             <h3 style="text-align: center;">
                 By Resonote Studio
@@ -205,12 +185,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			    {/*第二行：A、B、C*/}
 			    <div class="middle-row">
 			        <div class="block middle-block" style="background-color: transparent;">
+                        <p style="text-align: center;">
+                            <b>这是人物长什么样</b><br>
+                            <img src="/image/huh_cat.gif">
+                        </p>
+                    </div>
+			        <div class="block middle-block" style="background-color: transparent;">
 			            <p style="text-align: center;">
-			                <b>这是故事背景</b><br>
-			                我说有没有人帮我看看这个抽象的静态网页的多媒体库存在哪里啊<br>
-			                气死了喵气死了喵气死了喵气死了喵<br>
-			                话说我还在想怎么调整显示窗口<br>
-			                哎怎么个事怎么个事怎么个事，谁去看看那个tsconfig.json的引用为什么是爆的
+			                <b>这是人物简介</b><br>
+			                这里之前测试过bilibili的嵌入视频播放<br>
+			                窗口小的奇怪，不过能用
 			            </p>
 			        </div>
 			        <div class="block middle-block" style="background-color: transparent;">
