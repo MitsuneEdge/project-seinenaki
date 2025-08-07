@@ -53,7 +53,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         {/*巨大海报里包含的文字*/}
         .hero-content {
             color: white;              /* 文字颜色 */
-            font-size: 18px;           /* 文字大小 */
+            font-size: 22px;           /* 文字大小 */
             position: relative;
             right: 15%;
             padding: 20px;
@@ -65,12 +65,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         .link-container {
             display: flex;          /* 启用弹性布局 */
             align-items: center;    /* 垂直居中 */
-            gap: 10px;             /* 最小间距（现代浏览器） */
+            gap: 5px;             /* 最小间距（现代浏览器） */
         }
 
         .spacer {
             flex: 1;               /* 动态填充剩余空间 */
-            min-width: 10px;       /* 强制最小间距 */
+            min-width: 5px;       /* 强制最小间距 */
             background: transparent; /* 透明背景 */
         }
 
@@ -129,6 +129,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                 <div class="link-container">
                     <a href="/blog" class="btn"
                         style="
+                        font-size: 18px;
                         background-color: rgba(0,0,0,0.3);
                         text-decoration: none;
                         border-radius: 4px; /* 圆角 */
@@ -141,6 +142,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                     <div class="spacer"></div>
                     <a href="/pre-order" class="btn"
                         style="
+                        font-size: 18px;
                         background-color: rgba(0,0,0,0.3);
                         text-decoration: none;
                         border-radius: 4px;
