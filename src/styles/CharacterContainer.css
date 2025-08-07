@@ -3,7 +3,7 @@
 /* 容器样式 */
 .character-container {
     display: flex;           /* Flex 布局 */
-    width: 1000px;           /* 固定宽度 */
+    width: 1200px;           /* 固定宽度 */
     margin: 0 auto;
     text-align: center;
     font-size: 16px;
@@ -22,15 +22,14 @@
 /* 按比例分配宽度 */
 .character-item-Img-L,
 .character-item-Img-R {
-    flex: 1;                 /* 比例 1 */
+    flex: 2;                 /* 比例 1 */
     background: lightblue;    /* 调试用颜色 */
 }
 
 .character-item-Txt-L,
 .character-item-Txt-R {
-    flex: 4;                 /* 比例 4 */
+    flex: 1;                 /* 比例 4 */
     background: lightgreen;   /* 调试用颜色 */
-    text-align: left;
     padding: 10px;
     min-width: 0;
 }
