@@ -3,7 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import DivLine from '../components/DivLine.astro';
-import '../styles/CharacterContainer.css';
+import '../styles/indexCharacterIntroduction.css';
 import '../styles/indexHeroBanner.css';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
@@ -108,7 +108,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			        </p>
 			    </div>
 
-			    {/*第二行：A、B、C、D，引用CharacterContainer.css控制*/}
+			    {/*第二行：A、B、C、D，indexCharacterIntroduction.css控制*/}
 			    <div class="character-container">
 			        <div class="character-container character-item-Img-L" style="background-color: transparent;">
 			            <div style="text-align: center;">
@@ -118,8 +118,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                         </div>
                     </div>
 			        <div class="character-container character-item-Txt-L" style="background-color: transparent;">
-			            <p style="text-align: center;">
-			                <b>这是人物简介</b><br>
+			            <p style="text-align: left; text-indent: 2em;">
+			                <b style="text-align: center;">这是人物简介</b><br>
 			                这里之前测试过bilibili的嵌入视频播放<br>
 			                窗口小的奇怪，不过能用<br>
 			                这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
@@ -131,8 +131,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			            </p>
 			        </div>
 			        <div class="character-container character-item-Txt-R" style="background-color: transparent;">
-			            <p style="text-align: center;">
-			                <b>这是人物简介</b><br>
+			            <p style="text-align: left; text-indent: 2em;">
+			                <b style="text-align: center;">这是人物简介</b><br>
 			                这里之前测试过bilibili的嵌入视频播放<br>
 			                窗口小的奇怪，不过能用<br>
 			                这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
@@ -147,7 +147,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                         <div style="text-align: center;">
                             <p style="font-size: 18px; margin: 0 0 8px 0;">这是人物长什么样</p>
                             <DivLine color="#00ff00" height="10px" class="DivLine-R" />
-                            <img style="height: auto; width: 100%;" src="/image/Kotone_Fujita.jpg">
+                            <img style="height: auto; width: 100%;" src="/image/Mari_Iochi.png">
                         </div>
                     </div>
                 </div>
@@ -155,7 +155,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                 {/*模块2*/}
                 <div class="block" style="background-color: transparent;">
                     <p style="text-align: center;"><b>这是剧情介绍</b><p>
-                    <p style="text-align: left;">
+                    <p style="text-align: left; text-indent: 2em;">
                         原来是按错电梯了啊，不知道还以为是瑞克和帕克、爱尔兰牢、邓恩一起去巴库执行秘密任务，
                         结果在离开的过程中，整车人落水，邓恩被卡住腿，掉水里化身憋气王了。之后又前往上海拯救中国的民选领导人金杰，
                         刚开车行驶到马路上就被路人骂伸进冰，还被人用燃烧瓶给烧到车了结果导致车失控卡住了，又在大街上看到了著名上将张将军的演讲，
@@ -179,27 +179,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                 </div>
             </div>
 
-			<p style="text-align: center;">
-			    <img src="/image/ivytype.gif">
-			    <img src="/image/huh_cat.gif">
-			    <img src="/image/ivytype.gif">
-			</p>
+			{/*游戏点击就送*/}
+			<DivLine color="#00ff00" height="10px" class="DivLine-indexPreOrder" />
+			<a href="/pre-order" class="btn"
+			    style="
+			        font-size: 36px;
+			        margin-left: max(10px, 5%);
+			        background-color: rgba(0,0,0,0.3);
+			        text-decoration: none;
+			        text-align: center;
+			        border-radius: 5px;
+			        box-shadow: 4px 4px 9px rgba(0,0,0,0.3);"
+			    onmouseover="this.style.transform='scale(1.50)'"
+                onmouseout="this.style.transform='scale(1)'"
+            >
+                预约游戏
+            </a>
 
-			<div id="test-video2" style="text-align:center;">
-                <slot />
-                    <video width="240" height="240" controls>
-                        <source src="/video/hihihiha.mp4" type="video/mp4">
-                    </video>
-            </div>
-
-			<p>
-			    R：我说先这样搞着玩会<br>
-				M：看不懂喵，关注永雏塔菲谢谢喵。
-			</p>
-			<p>
-				不许删掉这行否则有人忘记怎么操作Astro就给我滚出去
-				<a href="https://docs.astro.build/zh-cn/getting-started/">Astro文档</a>
-			</p>
 		</main>
 		<Footer />
 	</body>
