@@ -74,7 +74,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             flex: 1;              /* 按钮均分宽度 */
             min-width: 60px;      /* 避免过窄 */
             padding: 8px 12px;
-            background-color: rgba(0,0,0,0.3);
             border-radius: 5px;
         }
 
@@ -130,7 +129,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                 <p>基于《千年时载录》改编的2D游戏</p>
             </div>
             {/* 字体下方的两个跳转按钮 */}
-            <div class="primary-button-container">
+            <div class="primary-button-container" style="background-color:rgba(0,0,0,0.3);">
                 <button class="primary-button" onclick="window.location.href='/blog'>信息发布</button>
                 <button class="primary-button" onclick="window.location.href='/pre-order'>预约下载</button>
             </div>
