@@ -4,17 +4,26 @@
 export interface Props {
   color?: string;
   height?: string;
+  background?: string;
 }
 
-const { color = "var(--div-line-color, #e2e8f0)", height = "5vh" } = Astro.props;
+const { color = "var(--div-line-color, #e2e8f0)", height = "5vh", background = "" } = Astro.props;
+const finalBackground = background || color;
+
 ---
+
 <hr
   class="div-line"
   style={`
     width: 100%;
     height: ${height};
-    background: ${color};
+    background: ${finalBackground};
     border: none;
     margin: 0;
   `}
 />
+
+{/*说明：此方式用于在选定模块分界插入一个横跨屏幕的，颜色可选的，高度可调的长分割线*/}
+{/*使用格式*/}
+{/*  <DivLine height="" background="linear-gradient(to right, #RGB, #RGB)"/>  */}
+{/*  <DivLine height="" color="#RGB"/>  */}
