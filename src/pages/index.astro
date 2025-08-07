@@ -166,7 +166,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			</h1>
 
 			{/*标题字号自动控制*/}
-			<script src="/script/IndexTitleControl.js"></script>
+			<script hoist>
+              import '../script/IndexTitleControl.js';
+            </script>
 
             <h3 style="text-align: center;">
                 By Resonote Studio
