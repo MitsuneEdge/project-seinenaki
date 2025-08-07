@@ -61,6 +61,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             border-radius: 10px;
         }
 
+        {/*跳转键距离控制*/}
+        .spacer {
+            flex: 1;               /* 动态填充剩余空间 */
+            min-width: 10px;       /* 强制最小间距 */
+            background: transparent; /* 透明背景 */
+        }
+
         {/* 正文区块样式 */}
         .main_block {
             padding: 20px;
@@ -124,6 +131,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                     >
                     开发动态
                 </a>
+                <div class="spacer"></div>
                 <a href="/pre-order" class="btn"
                     style="
                     background-color: rgba(0,0,0,0.3);
