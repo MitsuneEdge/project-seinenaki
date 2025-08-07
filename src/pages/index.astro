@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import DivLine from '../components/DivLine.astro';
 import '../styles/indexCharacterIntroduction.css';
 import '../styles/indexHeroBanner.css';
+import '../styles/indexGameMechanics.css';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -122,8 +123,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			                <b>这是人物简介</b><br>
 			            </p>
 			            <p style="text-align: left; text-indent: 2em;">
-			                这里之前测试过bilibili的嵌入视频播放<br>
-			                窗口小的奇怪，不过能用<br>
+			                这里之前测试过bilibili的嵌入视频播放</p>
+			            <p style="text-align: left; text-indent: 2em;">
+			                窗口小的奇怪，不过能用</p>
+			            <p style="text-align: left; text-indent: 2em;">
 			                这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
 			                这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
 			                这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
@@ -137,8 +140,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			                <b>这是人物简介</b><br>
 			            </p>
 			            <p style="text-align: left; text-indent: 2em;">
-			                这里之前测试过bilibili的嵌入视频播放<br>
-			                窗口小的奇怪，不过能用<br>
+			                这里之前测试过bilibili的嵌入视频播放</p>
+			            <p style="text-align: left; text-indent: 2em;">
+			                窗口小的奇怪，不过能用</p>
+			            <p style="text-align: left; text-indent: 2em;">
 			                这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
 			                这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
 			                这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
@@ -153,6 +158,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                             <DivLine color="#00ff00" height="10px" class="DivLine-R" />
                             <img style="height: auto; width: 100%;" src="/image/Mari_Iochi.png">
                         </div>
+                    </div>
+                </div>
+
+                {/*插画鉴赏部分——多图片幻灯片轮换，鼠标移至区块上暂停轮换*/}
+
+                {/*玩法展示部分——左模块为竖排多选项，右模块为对应概念图*/}
+                <div class="GameMechanics-container">
+                    <div class="GameMechanics-L">
+                        <div class="GameMechanics-L-module">模块 1</div>
+                        <div class="GameMechanics-L-module">模块 2</div>
+                        <div class="GameMechanics-L-module">模块 3</div>
+                        <div class="GameMechanics-L-module">模块 4</div>
+                        <div class="GameMechanics-L-module">模块 5</div>
+                    </div>
+                    <div class="GameMechanics-R">
+                        这里是右侧内容
                     </div>
                 </div>
 
@@ -184,23 +205,24 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             </div>
 
 			{/*游戏点击就送*/}
-			<DivLine color="#ffffff" height="10px" class="DivLine-indexPreOrder" />
-			<a href="/pre-order" class="btn"
-			    style="
-			        font-size: 36px;
-			        margin-left: max(10px, 5%);
-			        background-color: rgba(0,0,0,0.3);
-			        text-decoration: none;
-			        text-align: center;
-			        border-radius: 5px;
-			        align-items: center;
-			        box-shadow: 4px 4px 9px rgba(0,0,0,0.3);"
-			    onmouseover="this.style.transform='scale(1.50)'"
-                onmouseout="this.style.transform='scale(1)'"
-            >
-                预约游戏
-            </a>
-
+			<DivLine color="#ffffff" height="10px" class="DivLine-indexPreOrder"  />
+			<div class="block" style="background-color: transparent; align-items: center;">
+			    <a href="/pre-order" class="btn"
+			        style="
+			            padding: 10px;
+			            font-size: 36px;
+			            margin-left: max(10px, 5%);
+			            background-color: rgba(0,0,0,0.3);
+			            text-decoration: none;
+			            text-align: center;
+			            border-radius: 5px;
+			            box-shadow: 4px 4px 9px rgba(0,0,0,0.3);"
+			        onmouseover="this.style.transform='scale(1.50)'"
+                    onmouseout="this.style.transform='scale(1)'"
+                >
+                    预约游戏
+                </a>
+            </div>
 		</main>
 		<Footer />
 	</body>
