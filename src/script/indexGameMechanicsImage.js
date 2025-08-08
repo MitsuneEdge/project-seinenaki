@@ -3,11 +3,11 @@
 // 预加载所有图片
 function preloadImages() {
     const imagePaths = [
-        '/image/Reserver_Example_1.jpg',
-        '/image/Reserver_Example_2.jpg',
-        '/image/Reserver_Example_3.jpg',
-        '/image/Reserver_Example_4.jpg',
-        '/image/Reserver_Example_5.jpg'
+        '/image/Reserve_Example_1.jpg',
+        '/image/Reserve_Example_2.jpg',
+        '/image/Reserve_Example_3.jpg',
+        '/image/Reserve_Example_4.jpg',
+        '/image/Reserve_Example_5.jpg'
     ];
 
     imagePaths.forEach(path => {
