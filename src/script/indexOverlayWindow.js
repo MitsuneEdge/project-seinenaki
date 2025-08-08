@@ -58,7 +58,7 @@ if (typeof window !== 'undefined') {
         windowContent.classList.add('slide-from-left');
 
         // 强制重绘确保动画重置
-        void windowContent.offsetWidth;
+        //void windowContent.offsetWidth;
 
         content.L.innerHTML = await loadContent('/content/OverlayWindow/indexContent-L1.html');
         content.R.innerHTML = await loadContent('/content/OverlayWindow/indexContent-L2.html');
@@ -77,7 +77,7 @@ if (typeof window !== 'undefined') {
         windowContent.classList.add('slide-from-right');
 
         // 强制重绘确保动画重置
-        void windowContent.offsetWidth;
+        //void windowContent.offsetWidth;
 
         content.L.innerHTML = await loadContent('/content/OverlayWindow/indexContent-R1.html');
         content.R.innerHTML = await loadContent('/content/OverlayWindow/indexContent-R2.html');

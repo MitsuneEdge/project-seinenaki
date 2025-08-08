@@ -55,9 +55,6 @@
 #window-overlay.window-visible {
     opacity: 1;
     pointer-events: all;
-}
-
-#window-overlay.window-visible #window-content {
     transform: translate(-50%, -50%) translateX(0);
 }
 
