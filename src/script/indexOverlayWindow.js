@@ -3,15 +3,16 @@
 // 获取元素引用
 if (typeof window !== 'undefined') {
     document.addEventListener('DOMContentLoaded', () => {
-    const overlay = document.getElementById('window-overlay');
-    const trigger = {
-        L : document.getElementById('window-trigger-L');
-        R : document.getElementById('window-trigger-R');
-    }
-    const content = {
-        L : document.getElementById('window-content-L');
-        R : document.getElementById('window-content-R');
-    }
+        const overlay = document.getElementById('window-overlay');
+        const trigger = {
+            L : document.getElementById('window-trigger-L'),
+            R : document.getElementById('window-trigger-R')
+        }
+        const content = {
+            L : document.getElementById('window-content-L'),
+            R : document.getElementById('window-content-R')
+        }
+    };
 
     // 异步加载外部html文件
     const loadContent = async (path) => {
