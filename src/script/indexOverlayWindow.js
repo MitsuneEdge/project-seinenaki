@@ -24,8 +24,6 @@ if (typeof window !== 'undefined') {
         e.stopPropagation();
         const rect = trigger.getBoundingClientRect();
         const centerY = rect.top + rect.height / 2;
-        const modalHeight = window.innerHeight * 0.9;
-
         // 获取视口高度并计算90vh的像素值
         const viewportHeight = window.innerHeight;
         const modalHeight = viewportHeight * 0.9; // 90vh
