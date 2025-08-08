@@ -15,7 +15,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0,0,0,0.5);
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,6 +25,7 @@
 
 /* 模态内容容器 */
 #window-content {
+    position: absolute;
     width: 90vw;
     max-height: 90vh;
     background: white;
@@ -34,15 +35,21 @@
     overflow: auto;
     margin: auto;
     display: flex;
+    overflow: hidden;
     transition: transform 0.3s ease;
+
+    /* 居中定位 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-100vw); /* 初始位置在左侧屏幕外 */
 }
 
 /* 动画起始位置 */
 #window-content.slide-from-left {
-    transform: translateX(-100%);
+    transform: translateX(-100vw);
 }
 #window-content.slide-from-right {
-    transform: translateX(100%);
+    transform: translateX(100vw);
 }
 
 #window-overlay.window-visible #window-content {

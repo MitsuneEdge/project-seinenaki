@@ -36,11 +36,7 @@ if (typeof window !== 'undefined') {
         const isLeft = windowContent.classList.contains('slide-from-left');
 
         // 根据进入方向决定退出方向
-        windowContent.style.transform = isLeft ? 'translateX(-100%)' : 'translateX(100%)';
-
-        setTimeout(() => {
-            overlay.classList.replace('window-visible', 'window-hidden');
-        }, 300); // 等待动画完成再隐藏
+        windowContent.style.transform = isLeft ? 'translateX(-100vw)' : 'translateX(100vw)';
     });
 
     content.L.addEventListener('click', (e) => {e.stopPropagation();});
