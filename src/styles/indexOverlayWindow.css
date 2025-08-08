@@ -38,15 +38,17 @@
     transition: transform 0.5s ease;
 
     /* 居中定位 */
-    transform: translateX(-100vw); /* 初始位置在左侧屏幕外 */
+    transform: translateX(-100vw) translateY(0); /* 初始位置在左侧屏幕外 */
+    top: 0;
+    left: 0;
 }
 
 /* 动画起始位置 */
 #window-content.slide-from-left {
-    transform: translateX(-100vw);
+    transform: translateX(-100vw) translateY(0);
 }
 #window-content.slide-from-right {
-    transform: translateX(100vw);
+    transform: translateX(100vw) translateY(0);
 }
 
 #window-overlay.window-visible {
