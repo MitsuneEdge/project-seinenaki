@@ -17,7 +17,7 @@ function preloadImages() {
 }
 
 // 显示图片到右侧区域
-function showImage(imagePath, moduleElement) {
+export function showImage(imagePath, moduleElement) {
     const rightContent = document.getElementById('rightContent');
 
     // 创建图片元素
