@@ -32,7 +32,7 @@ if (typeof window !== 'undefined') {
         });
 
         // 阻止内容区域点击关闭
-        modalContent.addEventListener('click', (e) => {
+        Content.addEventListener('click', (e) => {
             e.stopPropagation();
         });
     });
