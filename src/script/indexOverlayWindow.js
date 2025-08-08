@@ -32,7 +32,7 @@ if (typeof window !== 'undefined') {
     }
 
     overlay.addEventListener('click', () => {
-        const windowContent = document.getElementById('window-overlay');
+        const windowContent = document.getElementById('window-content');
         const isLeft = windowContent.classList.contains('slide-from-left');
 
         // 根据进入方向决定退出方向
@@ -54,7 +54,7 @@ if (typeof window !== 'undefined') {
         const windowContent = document.getElementById('window-content');
 
         // 设置从左进入的动画
-        windowContent.classList.remove('slide-from-right');
+        windowContent.classList.remove('slide-from-left');
         windowContent.classList.add('window-visible');
 
         // 强制重绘确保动画重置
@@ -64,16 +64,16 @@ if (typeof window !== 'undefined') {
         content.R.innerHTML = await loadContent('/content/OverlayWindow/indexContent-L2.html');
 
         //显示窗口
-        //overlay.classList.replace('window-hidden', 'window-visible');
+        overlay.classList.replace('slide-from-left', 'window-visible');
     });
 
     trigger.R.addEventListener('click', async (e) => {
         // 阻止事件冒泡（避免立即触发关闭）
         e.stopPropagation();
-        const windowContent = document.getElementById('window-overlay');
+        const windowContent = document.getElementById('window-content');
 
         // 设置从右进入的动画
-        windowContent.classList.remove('slide-from-left');
+        windowContent.classList.remove('slide-from-right');
         windowContent.classList.add('window-visible');
 
         // 强制重绘确保动画重置
@@ -83,7 +83,7 @@ if (typeof window !== 'undefined') {
         content.R.innerHTML = await loadContent('/content/OverlayWindow/indexContent-R2.html');
 
         //显示窗口
-        //overlay.classList.replace('window-hidden', 'window-visible');
+        overlay.classList.replace('slide-from-right', 'window-visible');
         });
     });
 }

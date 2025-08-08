@@ -8,7 +8,7 @@
     display: inline-block;
 }
 
-/* 模态窗口移动部分 */
+/* 模态窗口遮罩 */
 #window-overlay {
     position: fixed;
     top: 0;
@@ -38,11 +38,11 @@
 }
 
 /* 动画起始位置 */
-#window-overlay.slide-from-left {
+#window-content.slide-from-left {
     transform: translateX(-100%);
     opacity: 0;
 }
-#window-overlay.slide-from-right {
+#window-content.slide-from-right {
     transform: translateX(100%);
     opacity: 0;
 }
@@ -51,7 +51,7 @@
     opacity: 1;
     pointer-events: all;
 }
-#window-overlay.window-visible #window-overlay {
+#window-overlay.window-visible #window-content {
     transform: translateX(0);
 }
 
