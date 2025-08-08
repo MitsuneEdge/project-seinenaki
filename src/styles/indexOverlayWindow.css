@@ -38,7 +38,12 @@
 }
 
 /* 显示状态 */
-.window-visible {
+#window-overlay.window-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#window-overlay.window-visible {
     opacity: 1;
     pointer-events: all;
 }
