@@ -15,8 +15,12 @@ trigger.addEventListener('click', (e) => {
     const rect = trigger.getBoundingClientRect();
     const centerY = rect.top + rect.height / 2;
 
+    // 获取视口高度并计算90vh的像素值
+    const viewportHeight = window.innerHeight;
+    const modalHeight = viewportHeight * 0.9; // 90vh
+
     // 设置模态窗口初始位置（与触发元素水平对齐）
-    modalContent.style.top = `${centerY - (90vh / 2)}px`;
+    modalContent.style.top = `${centerY - (modalHeight / 2)}px`;
 
     // 显示模态窗口
     overlay.classList.remove('modal-hidden');
