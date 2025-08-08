@@ -28,16 +28,29 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		{/* 网页头部的巨大海报和字体 */}
 
 		<div class="hero-banner">
-		    <div class="hero-banner-slides">
-		        <div class="hero-banner-slide"></div>
-		        <div class="hero-banner-slide"></div>
-		        <div class="hero-banner-slide"></div>
-		        <div class="hero-banner-slide"></div>
-		        <div class="hero-banner-slide"></div>
+		    <div class="hero-banner-blur">
+		        <div class="hero-banner-slides">
+		            <div class="hero-banner-slide"></div>
+		            <div class="hero-banner-slide"></div>
+		            <div class="hero-banner-slide"></div>
+		            <div class="hero-banner-slide"></div>
+		            <div class="hero-banner-slide"></div>
+		        </div>
             </div>
 		    <div class="hero-content">
-		        <h1 style="font-family: Silver;">时载录</h1>
-                <p>基于《千年时载录》改编的2D游戏</p>
+		        <h1 style="
+		            font-family: Silver;
+		            background-color: rgba(0,0,0,0.1);
+		            border-radius: 15px;
+		        ">
+		            时载录
+		        </h1>
+                <p style="
+                    background-color: rgba(0,0,0,0.1);
+                    border-radius: 10px;
+                ">
+                    基于《千年时载录》改编的2D游戏
+                </p>
 
                 {/*某种skill issue引起的抽象按钮操作*/}
                 <div class="link-container">
