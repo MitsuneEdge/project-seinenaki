@@ -17,7 +17,6 @@
 .hero-banner-blur {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   filter: blur(8px); /* 初始模糊度 */
   transition: filter 0.5s ease; /* 平滑过渡 */
 }
@@ -69,7 +68,7 @@
     color: white;              /* 文字颜色 */
     font-size: 26px;           /* 文字大小 */
     position: relative;
-    right: 15%;
+    left: 15%;
     padding: 20px;
     background-color: transparent; /* 透明背景衬底 */
     border-radius: 10px;
