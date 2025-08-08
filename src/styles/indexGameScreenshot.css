@@ -20,7 +20,7 @@
 
 /* 右侧单元 B（占比 4/5） */
 .GameScreenshot-R {
-    flex: 2 1 0%;              /* 占 2 份 */
+    flex: 3 1 0%;              /* 占 2 份 */
     padding: 10px;
     min-width: 0;
     background: #e9e9e9;  /* 可选背景色 */

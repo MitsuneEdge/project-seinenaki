@@ -172,7 +172,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                         <div class="GameScreenshot-L" style="flex:5; min-width:0; overflow: hidden;">
                             <img style="height: auto; width: 100%; object-fit: contain;" src="/image/humph_rabbit.jpg">
                         </div>
-                        <div class="GameScreenshot-R" style="flex:2; min-width:0;">
+                        <div class="GameScreenshot-R" style="flex:3; min-width:0;">
                             这里是右侧内容
                         </div>
                     </div>
@@ -228,12 +228,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 			{/*游戏点击就送*/}
 			<DivLine color="#ffffff" height="10px" class="DivLine-indexPreOrder"  />
-			<div class="block"
+			<div class="preorder-btn"
 			    style="
 			    display: flex;
 			    background-color: transparent;
 			    align-items: center;
 			    justify-content: center;
+			    transform: translateY(200px); /* 向右平移 */
+                margin-bottom: -200px; /* 抵消平移后的视觉空间 */
 			">
 			    <a href="/pre-order" class="btn"
 			        style="
