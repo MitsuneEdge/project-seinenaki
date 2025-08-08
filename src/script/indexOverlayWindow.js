@@ -1,8 +1,15 @@
 /* src/script/indexOverlayWindow.js */
 
 // 获取元素引用
-const trigger = document.getElementById('window-trigger');
-const overlay = document.getElementById('window-overlay');
+document.addEventListener('DOMContentLoaded', () => {
+    const trigger = document.querySelector('.window-trigger');
+    const overlay = document.getElementById('window-overlay');
+
+    // 检查元素是否存在
+    if (!trigger || !overlay) {
+        console.error('关键元素未找到！');
+    return;
+}
 const modalContent = document.getElementById('window-visible');
 
 
