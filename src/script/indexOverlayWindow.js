@@ -33,19 +33,16 @@ if (typeof window !== 'undefined') {
 
     overlay.addEventListener('click', () => {
         const windowContent = document.getElementById('window-content');
-        const isLeft = windowContent.classList.contains('slide-from-left');
 
-        // 根据进入方向决定退出方向
-        windowContent.style.transform = isLeft
-        ? 'translate(-50%, -50%) translateX(-100vw)'
-        : 'translate(-50%, -50%) translateX(100vw)';
-        setTimeout(() => {
-            overlay.classList.remove('window-visible');
-        }, 500);
+        if(document.getElementById('window-content') == 'window-visible')
+            windowContent.classList.replace('window-visible', 'slide-from-right');
+        else
+            windowContent.classList.add('slide-from-right');
+        // 不管如何直接往右边扔
+
     });
 
-    content.L.addEventListener('click', (e) => {e.stopPropagation();});
-    content.R.addEventListener('click', (e) => {e.stopPropagation();});
+    content.addEventListener('click', (e) => {e.stopPropagation();});
 
     // 点击触发元素
     trigger.L.addEventListener('click', async (e) => {
