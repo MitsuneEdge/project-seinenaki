@@ -162,9 +162,21 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                 </div>
 
                 {/*插画鉴赏部分——多图片幻灯片轮换，鼠标移至区块上暂停轮换*/}
+                <div class="GameMechanics-container">
+                    <div class="block" style="background-color: transparent;">
+                        <p style="text-align: center;"><b>插画鉴赏</b><p>
+                    <div class="GameScreenshot-L">
+                        这里是左侧内容
+                    </div>
+                    <div class="GameScreenshot-R">
+                        这里是右侧内容
+                    </div>
+                 </div>
 
                 {/*玩法展示部分——左模块为竖排多选项，右模块为对应概念图*/}
                 <div class="GameMechanics-container">
+                    <div class="block" style="background-color: transparent;">
+                        <p style="text-align: center;"><b>玩法展示</b><p>
                     <div class="GameMechanics-L">
                         <div class="GameMechanics-L-module">模块 1</div>
                         <div class="GameMechanics-L-module">模块 2</div>
@@ -206,18 +218,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 			{/*游戏点击就送*/}
 			<DivLine color="#ffffff" height="10px" class="DivLine-indexPreOrder"  />
-			<div class="block" style="background-color: transparent; align-items: center;">
+			<div class="block"
+			    style="
+			    display: flex;
+			    background-color: transparent;
+			    align-items: center;
+			    justify-content: center;
+			">
 			    <a href="/pre-order" class="btn"
 			        style="
 			            padding: 10px;
 			            font-size: 36px;
-			            margin-left: max(10px, 5%);
 			            background-color: rgba(0,0,0,0.3);
 			            text-decoration: none;
 			            text-align: center;
-			            border-radius: 5px;
+			            border-radius: 10px;
 			            box-shadow: 4px 4px 9px rgba(0,0,0,0.3);"
-			        onmouseover="this.style.transform='scale(1.50)'"
+			        onmouseover="this.style.transform='scale(1.75)'"
                     onmouseout="this.style.transform='scale(1)'"
                 >
                     预约游戏
