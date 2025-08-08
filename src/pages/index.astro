@@ -161,20 +161,24 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                     </div>
                 </div>
 
+                <DivLine color="#00ff00" height="10px" class="DivLine-ScreenShot" />
+
                 {/*插画鉴赏部分——多图片幻灯片轮换，鼠标移至区块上暂停轮换*/}
                 <div class="GameScreenshot-container">
                     <div style="background-color: transparent; text-align: center; width: 100%;">
                         <p><b>插画鉴赏</b></p>
                     </div>
                     <div style="display: flex; width: 100%; gap: 10px;">
-                        <div class="GameScreenshot-L" style="overflow: hidden;">
-                            <img style="height: auto; width: 100%; object-fit: cover;" src="/image/humph_rabbit.jpg">
+                        <div class="GameScreenshot-L" style="flex:5; min-width:0; overflow: hidden;">
+                            <img style="height: auto; width: 100%; object-fit: contain;" src="/image/humph_rabbit.jpg">
                         </div>
-                        <div class="GameScreenshot-R">
+                        <div class="GameScreenshot-R" style="flex:2; min-width:0;">
                             这里是右侧内容
                         </div>
                     </div>
                  </div>
+
+                 <DivLine color="#00ff00" height="10px" class="DivLine-GameMechanics" />
 
                 {/*玩法展示部分——左模块为竖排多选项，右模块为对应概念图*/}
                 <div class="GameMechanics-container">
