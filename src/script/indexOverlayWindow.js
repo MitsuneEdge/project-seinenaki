@@ -32,7 +32,15 @@ if (typeof window !== 'undefined') {
     }
 
     overlay.addEventListener('click', () => {
-        overlay.classList.replace('window-visible', 'window-hidden');
+        const windowContent = document.getElementById('window-content');
+        const isLeft = windowContent.classList.contains('slide-from-left');
+
+        // 根据进入方向决定退出方向
+        windowContent.style.transform = isLeft ? 'translateX(-100%)' : 'translateX(100%)';
+
+        setTimeout(() => {
+            overlay.classList.replace('window-visible', 'window-hidden');
+        }, 300); // 等待动画完成再隐藏
     });
 
     content.L.addEventListener('click', (e) => {e.stopPropagation();});
@@ -42,17 +50,39 @@ if (typeof window !== 'undefined') {
     trigger.L.addEventListener('click', async (e) => {
         // 阻止事件冒泡（避免立即触发关闭）
         e.stopPropagation();
+        const windowContent = document.getElementById('window-content');
+
+        // 设置从左进入的动画
+        windowContent.classList.remove('slide-from-right');
+        windowContent.classList.add('slide-from-left');
+
+        // 强制重绘确保动画重置
+        void windowContent.offsetWidth;
+
         content.L.innerHTML = await loadContent('/content/OverlayWindow/indexContent-L1.html');
         content.R.innerHTML = await loadContent('/content/OverlayWindow/indexContent-L2.html');
-        overlay.classList.replace('window-hidden', 'window-visible');
+
+        //显示窗口
+        //overlay.classList.replace('window-hidden', 'window-visible');
     });
 
     trigger.R.addEventListener('click', async (e) => {
         // 阻止事件冒泡（避免立即触发关闭）
         e.stopPropagation();
+        const windowContent = document.getElementById('window-content');
+
+        // 设置从右进入的动画
+        windowContent.classList.remove('slide-from-left');
+        windowContent.classList.add('slide-from-right');
+
+        // 强制重绘确保动画重置
+        void windowContent.offsetWidth;
+
         content.L.innerHTML = await loadContent('/content/OverlayWindow/indexContent-R1.html');
         content.R.innerHTML = await loadContent('/content/OverlayWindow/indexContent-R2.html');
-        overlay.classList.replace('window-hidden', 'window-visible');
+
+        //显示窗口
+        //overlay.classList.replace('window-hidden', 'window-visible');
         });
     });
 }

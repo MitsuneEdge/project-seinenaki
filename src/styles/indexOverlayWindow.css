@@ -20,9 +20,7 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
 }
 
 /* 模态内容容器 */
@@ -36,17 +34,19 @@
     overflow: auto;
     margin: auto;
     display: flex;
+    transition: transform 0.3s ease;
 }
 
-/* 显示状态 */
-#window-overlay.window-hidden {
-    opacity: 0;
-    pointer-events: none;
+/* 动画起始位置 */
+#window-content.slide-from-left {
+    transform: translateX(-100%);
+}
+#window-content.slide-from-right {
+    transform: translateX(100%);
 }
 
-#window-overlay.window-visible {
-    opacity: 1;
-    pointer-events: all;
+#window-overlay.window-visible #window-content {
+    transform: translateX(0);
 }
 
 #window-content-L{
