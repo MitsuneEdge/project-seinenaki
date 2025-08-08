@@ -37,6 +37,9 @@ if (typeof window !== 'undefined') {
 
         // 根据进入方向决定退出方向
         windowContent.style.transform = isLeft ? 'translateX(-100vw)' : 'translateX(100vw)';
+        setTimeout(() => {
+            overlay.classList.remove('window-visible');
+        }, 500);
     });
 
     content.L.addEventListener('click', (e) => {e.stopPropagation();});

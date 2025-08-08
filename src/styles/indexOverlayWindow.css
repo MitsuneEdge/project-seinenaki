@@ -39,6 +39,7 @@
 
     /* 居中定位 */
     transform: translateX(-100vw) translateY(0); /* 初始位置在左侧屏幕外 */
+    position: absolute;
     top: 0;
     left: 0;
 }
