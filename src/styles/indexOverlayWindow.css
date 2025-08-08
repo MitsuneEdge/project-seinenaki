@@ -10,10 +10,8 @@
 
 /* 外框 */
 .window-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
+    position: relative;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     background-color: transparent;
@@ -27,13 +25,12 @@
 /* 模态内容容器 */
 #window-content {
     position: absolute;
-    width: 90vw;
-    max-height: 90vh;
+    width: 90%;
+    max-height: 90%;
     background: white;
-    border-radius: 8px;
+    border-radius: 14px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    position: relative;
-    overflow: auto;
+    position: fixed;
     margin: auto;
     display: flex;
     overflow: hidden;
