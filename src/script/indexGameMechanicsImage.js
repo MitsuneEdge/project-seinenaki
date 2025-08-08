@@ -14,7 +14,7 @@ function preloadImages() {
         const img = new Image();
         img.src = path;
         //Debug
-        img.onerror = () => console.error(`Failed to load: ${path}`);
+        //img.onerror = () => console.error(`Failed to load: ${path}`);
     });
 }
 
@@ -50,7 +50,7 @@ export function showImage(imagePath, moduleElement) {
 // 初始化函数
 function initModuleInteraction() {
     //Debug
-    console.log(document.getElementById('rightContent'));
+    //console.log(document.getElementById('rightContent'));
 
     // 获取所有左侧模块
     const modules = document.querySelectorAll('.GameMechanics-L-module');

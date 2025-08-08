@@ -1,31 +1,40 @@
 /* src/styles/indexHeroBanner.css */
 
 .hero-banner {
-    /* 背景设置 */
-    background-image: url('/image/Reserve_Example_1.jpg');
-    background-size: cover;      /* 填充整个区域 */
-    background-position: center; /* 居中显示 */
-    background-repeat: no-repeat;
-
-    /* 尺寸设置 */
+    /* 基础布局 */
     width: 100%;
-    /* 视口宽度 */
     height: 100vh;
-    /* 覆盖容器-裁剪 */
-    object-fit: cover;
-    /* 视口高度 */
     margin: 0;
-    /* 清除默认边距 */
-
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: left;
-
-    /* 确保在导航栏下方 */
     position: relative;
-    //z-index: 10;
-    /* 低于导航栏的z-index */
+    overflow: hidden; /* 防止动画溢出 */
+}
+
+/* 关键帧动画：轮播5张图片 */
+@keyframes backgroundSlide {
+    0%, 20% { background-image: url('/image/Reserve_Example_1.jpg'); }
+    20.01%, 40% { background-image: url('/image/Reserve_Example_2.jpg'); }
+    40.01%, 60% { background-image: url('/image/Reserve_Example_3.jpg'); }
+    60.01%, 80% { background-image: url('/image/Reserve_Example_4.jpg'); }
+    80.01%, 100% { background-image: url('/image/Reserve_Example_5.jpg'); }
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: backgroundSlide 30s infinite; /* 20秒完成一轮，无限循环 */
+    transition: opacity 1s ease;
+    z-index: -1; /* 确保在内容下方 */
 }
 
 {/*巨大海报里包含的文字*/}
