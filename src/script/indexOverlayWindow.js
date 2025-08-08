@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!trigger || !overlay) {
         console.error('关键元素未找到！');
     return;
+    }
 }
 const modalContent = document.getElementById('window-visible');
 
