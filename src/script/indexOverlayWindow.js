@@ -36,7 +36,9 @@ if (typeof window !== 'undefined') {
         const isLeft = windowContent.classList.contains('slide-from-left');
 
         // 根据进入方向决定退出方向
-        windowContent.style.transform = isLeft ? 'translateX(-100vw)' : 'translateX(100vw)';
+        windowContent.style.transform = isLeft
+        ? 'translate(-50%, -50%) translateX(-100vw)'
+        : 'translate(-50%, -50%) translateX(100vw)';
         setTimeout(() => {
             overlay.classList.remove('window-visible');
         }, 500);

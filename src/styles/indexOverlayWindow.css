@@ -38,18 +38,18 @@
     transition: transform 0.5s ease;
 
     /* 居中定位 */
-    transform: translateX(-100vw) translateY(0); /* 初始位置在左侧屏幕外 */
+    transform: translate(-50%, -50%) translateX(-100vw); /* 初始位置在左侧屏幕外 */
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
 }
 
 /* 动画起始位置 */
 #window-content.slide-from-left {
-    transform: translateX(-100vw) translateY(0);
+    transform: translate(-50%, -50%) translateX(-100vw);
 }
 #window-content.slide-from-right {
-    transform: translateX(100vw) translateY(0);
+    transform: translate(-50%, -50%) translateX(100vw);
 }
 
 #window-overlay.window-visible {
@@ -58,7 +58,7 @@
 }
 
 #window-overlay.window-visible #window-content {
-    transform: translateX(0);
+    transform: translate(-50%, -50%) translateX(0);
 }
 
 #window-content-L{
