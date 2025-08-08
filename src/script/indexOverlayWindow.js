@@ -3,7 +3,6 @@
 // 获取元素引用
 if (typeof window !== 'undefined') {
     document.addEventListener('DOMContentLoaded', async () => {
-        const overlay = document.getElementById('window-overlay');
         const trigger = {
             L : document.getElementById('window-trigger-L'),
             R : document.getElementById('window-trigger-R')
@@ -26,7 +25,7 @@ if (typeof window !== 'undefined') {
     };
 
     // 检查元素是否存在
-    if (!trigger.L || !trigger.R || !overlay || !content.L || !content.R) {
+    if (!trigger.L || !trigger.R || !content.L || !content.R) {
         console.error('元素未找到');
         return;
     }
