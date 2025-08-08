@@ -39,7 +39,7 @@
     transition: transform 0.3s ease;
 
     /* 居中定位 */
-    transform: translate(-50%, -50%) translateX(-100vw); /* 初始位置在左侧屏幕外 */
+    transform: translateX(-100vw); /* 初始位置在左侧屏幕外 */
 }
 
 /* 动画起始位置 */
