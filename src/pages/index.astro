@@ -114,10 +114,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			                <div id="window-trigger" >
 			                    <img style="height: auto; width: 100%;" src="/image/huh_cat.gif">
 			                </div>
-			                {/* 人物简介中的拟态窗口 */}
+			                {/* 人物简介中的拟态窗口 左触发器*/}
                             <div id="window-overlay" class="window-hidden">
                                 <div id="window-content">
-                                    <p>这是由深层嵌套元素触发的模态窗口</p>
+                                    <div id="window-content-L">
+                                        <p>左拟态窗口 左触发器</p>
+                                    </div>
+                                    <div id="window-content-R">
+                                        <p>右拟态窗口</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -160,7 +165,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                         <div style="text-align: center;">
                             <p style="font-size: 18px; margin: 0 0 8px 0;">这是人物长什么样</p>
                             <DivLine color="#00ff00" height="10px" class="DivLine-R" />
-                            <img style="height: auto; width: 100%;" src="/image/Mari_Iochi.png">
+                            <div id="window-trigger" >
+                                <img style="height: auto; width: 100%;" src="/image/Mari_Iochi.png">
+                            </div>
+                            {/* 人物简介中的拟态窗口 右触发器*/}
+                            <div id="window-overlay" class="window-hidden">
+                                <div id="window-content">
+                                    <div id="window-content-L">
+                                        <p>左拟态窗口 右触发器</p>
+                                    </div>
+                                    <div id="window-content-R">
+                                        <p>右拟态窗口</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
