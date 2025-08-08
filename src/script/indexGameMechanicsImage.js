@@ -1,12 +1,13 @@
 /* src/script/indexGameMechanicsImage.js */
 
+// 预加载所有图片
 function preloadImages() {
     const imagePaths = [
-        '/image/Reserve_Example_1.jpg',
-        '/image/Reserve_Example_2.jpg',
-        '/image/Reserve_Example_3.jpg',
-        '/image/Reserve_Example_4.jpg',
-        '/image/Reserve_Example_5.jpg'
+        '/image/Reserver_Example_1.jpg',
+        '/image/Reserver_Example_2.jpg',
+        '/image/Reserver_Example_3.jpg',
+        '/image/Reserver_Example_4.jpg',
+        '/image/Reserver_Example_5.jpg'
     ];
 
     imagePaths.forEach(path => {
@@ -43,13 +44,14 @@ function initModuleInteraction() {
     // 为每个模块绑定事件
     modules.forEach((module, index) => {
         module.addEventListener('mouseover', () => {
-            const imagePath = `/image/Reserve_Example_{index + 1}.jpg`;
+            const imageNumber = index + 1;
+            const imagePath = `/image/Reserver_Example_${imageNumber}.jpg`;
             showImage(imagePath);
         });
     });
 
     // 默认显示第一张图片
-    showImage('/image/Reserve_Example_1.jpg');
+    showImage('/image/Reserver_Example_1.jpg');
 }
 
 // 页面加载完成后执行

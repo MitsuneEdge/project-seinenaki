@@ -68,8 +68,3 @@
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);          /* 鼠标指针变手形 */
 }
-
-.GameMechanics-L-module:first-child {
-    background-color: #e0e0e0;
-    border-left: 3px solid #007bff;
-}
