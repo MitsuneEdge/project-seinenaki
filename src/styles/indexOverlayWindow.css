@@ -8,12 +8,13 @@
     display: inline-block;
 }
 
-/* 外框 */
+/* 模态窗口遮罩 */
 #window-overlay {
-    position: relative;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     height: 100vh;
-    overflow: hidden;
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -25,12 +26,13 @@
 /* 模态内容容器 */
 #window-content {
     position: absolute;
-    width: 90%;
-    max-height: 90%;
+    width: 90vw;
+    max-height: 90vh;
     background: white;
-    border-radius: 14px;
+    border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    position: fixed;
+    position: relative;
+    overflow: auto;
     margin: auto;
     display: flex;
     overflow: hidden;
