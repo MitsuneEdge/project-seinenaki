@@ -3,7 +3,7 @@
 /* 容器样式 */
 .character-container {
     display: flex;           /* Flex 布局 */
-    width: 90%;           /* 固定宽度 */
+    width: 100%;           /* 固定宽度 */
     margin: 0 auto;
     text-align: center;
     font-size: 16px;
