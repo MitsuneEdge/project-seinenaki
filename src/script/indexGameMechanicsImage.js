@@ -43,7 +43,7 @@ function initModuleInteraction() {
     // 为每个模块绑定事件
     modules.forEach((module, index) => {
         module.addEventListener('mouseover', () => {
-            const imagePath = `/image/eserve_Example_{index + 1}.jpg`;
+            const imagePath = `/image/Reserve_Example_{index + 1}.jpg`;
             showImage(imagePath);
         });
     });
