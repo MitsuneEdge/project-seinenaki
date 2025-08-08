@@ -13,33 +13,41 @@
     overflow: hidden; /* 防止动画溢出 */
 }
 
-/* 关键帧动画：轮播5张图片 */
-@keyframes backgroundSlide {
-    0%, 15% { opacity: 1; background-image: url('/image/Reserve_Example_1.jpg'); }
-    15.01% , 20% { opacity: 0.5; }
-    20.01%, 35% { opacity: 1; background-image: url('/image/Reserve_Example_2.jpg'); }
-    35.01% , 40% { opacity: 0.5; }
-    40.01%, 55% { opacity: 1; background-image: url('/image/Reserve_Example_3.jpg'); }
-    55.01% , 60% { opacity: 0.5; }
-    60.01%, 75% { opacity: 1; background-image: url('/image/Reserve_Example_4.jpg'); }
-    75.01% , 80% { opacity: 0.5; }
-    80.01%, 95% { opacity: 1; background-image: url('/image/Reserve_Example_5.jpg'); }
-    95.01% , 100% { opacity: 0.5; }
-}
-
-.hero-banner::before {
-    content: '';
+/* 图片容器 */
+.hero-banner-slides {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 500%; /* 5张图片的总宽度（100% * 5） */
+    height: 100%;
+    display: flex;
+    animation: slideShow 25s infinite; /* 25秒完成一轮 */
+}
+
+/* 单张图片样式 */
+.hero-banner-slide {
+    width: 20%; /* 每张图片占容器20% */
     height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    animation: backgroundSlide 40s infinite; /* 40秒完成一轮，无限循环 */
-    transition: opacity 3s ease;
-    z-index: -1; /* 确保在内容下方 */
+}
+
+/* 定义5张图片 */
+.hero-banner-slide:nth-child(1) { background-image: url('/image/Reserve_Example_1.jpg'); }
+.hero-banner-slide:nth-child(2) { background-image: url('/image/Reserve_Example_2.jpg'); }
+.hero-banner-slide:nth-child(3) { background-image: url('/image/Reserve_Example_3.jpg'); }
+.hero-banner-slide:nth-child(4) { background-image: url('/image/Reserve_Example_4.jpg'); }
+.hero-banner-slide:nth-child(5) { background-image: url('/image/Reserve_Example_5.jpg'); }
+
+/* 关键帧动画：水平滑动 */
+@keyframes slideShow {
+    0% { transform: translateX(0); }     /* 第1张 */
+    20% { transform: translateX(-20%); } /* 第2张 */
+    40% { transform: translateX(-40%); } /* 第3张 */
+    60% { transform: translateX(-60%); } /* 第4张 */
+    80% { transform: translateX(-80%); } /* 第5张 */
+    100% { transform: translateX(-80%); } /* 最后一帧保持 */
 }
 
 {/*巨大海报里包含的文字*/}
