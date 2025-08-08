@@ -13,6 +13,19 @@
     overflow: hidden; /* 防止动画溢出 */
 }
 
+.hero-banner-blur{
+    width: 100%;
+    height: 100%;
+    filter: blur(8px); /* 默认模糊 */
+    transition: filter 0.5s ease;
+    z-index: -1;
+}
+
+/* 悬停时取消模糊 */
+.hero-banner:hover .hero-banner-blur {
+  filter: blur(0);
+}
+
 /* 图片容器 */
 .hero-banner-slides {
     position: absolute;
@@ -22,6 +35,7 @@
     height: 100%;
     display: flex;
     animation: slideShow 45s infinite; /* 45秒完成一轮 */
+    z-index: 5;
 }
 
 /* 单张图片样式 */
