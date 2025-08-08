@@ -32,7 +32,7 @@ if (typeof window !== 'undefined') {
     }
 
     overlay.addEventListener('click', () => {
-        const windowContent = document.getElementById('window-content');
+        const windowContent = document.getElementById('window-overlay');
         const isLeft = windowContent.classList.contains('slide-from-left');
 
         // 根据进入方向决定退出方向
@@ -70,7 +70,7 @@ if (typeof window !== 'undefined') {
     trigger.R.addEventListener('click', async (e) => {
         // 阻止事件冒泡（避免立即触发关闭）
         e.stopPropagation();
-        const windowContent = document.getElementById('window-content');
+        const windowContent = document.getElementById('window-overlay');
 
         // 设置从右进入的动画
         windowContent.classList.remove('slide-from-left');
