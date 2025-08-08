@@ -1,24 +1,63 @@
 /* src/script/indexOverlayWindow.js */
 
+import { marked } from 'marked';
+
 // 获取元素引用
 if (typeof window !== 'undefined') {
     document.addEventListener('DOMContentLoaded', () => {
-    const trigger = document.getElementById('window-trigger');
     const overlay = document.getElementById('window-overlay');
-    const content = document.getElementById('window-content');
+    const trigger = {
+        L : document.getElementById('window-trigger-L');
+        R : document.getElementById('window-trigger-R');
+    }
+    const content = {
+        L : document.getElementById('window-content-L');
+        R : document.getElementById('window-content-R');
+    }
+
+    // 异步加载外部Markdown文件
+    const loadContent = async (path) => {
+        try {
+            const response = await fetch(path);
+            if (!response.ok) throw new Error(`Failed to load ${path}`);
+            return await response.text();
+        } catch (error) {
+            console.error(error);
+            return `<p>加载内容失败: ${error.message}</p>`;
+        }
+    };
 
     // 检查元素是否存在
-    if (!trigger || !overlay || !content) {
-        console.error('元素未找到:', { trigger, overlay, content });
+    if (!triggers.L || !triggers.R || !overlay || !content.L || !content.R) {
+        console.error('元素未找到');
         return;
     }
 
     // 点击触发元素
-    trigger.addEventListener('click', (e) => {
+    trigger.L.addEventListener('click', (e) => {
         // 阻止事件冒泡（避免立即触发关闭）
         e.stopPropagation();
+        content.L.innerHTML = await loadHTML('/content/OverlayWindow/indexContent-L1.html');
+        content.R.innerHTML = await loadHTML('/content/OverlayWindow/indexContent-L2.html');
         overlay.classList.replace('window-hidden', 'window-visible');
+
+        // 点击遮罩关闭
+        overlay.addEventListener('click', () => {
+            overlay.classList.replace('window-visible', 'window-hidden');
         });
+
+        // 阻止内容区域点击关闭
+        content.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    });
+
+    trigger.R.addEventListener('click', (e) => {
+        // 阻止事件冒泡（避免立即触发关闭）
+        e.stopPropagation();
+        content.L.innerHTML = await loadHTML('/content/OverlayWindow/indexContent-R1.html');
+        content.R.innerHTML = await loadHTML('/content/OverlayWindow/indexContent-R2.html');
+        overlay.classList.replace('window-hidden', 'window-visible');
 
         // 点击遮罩关闭
         overlay.addEventListener('click', () => {
