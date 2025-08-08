@@ -16,15 +16,15 @@
 /* 关键帧动画：轮播5张图片 */
 @keyframes backgroundSlide {
     0%, 15% { opacity: 1; background-image: url('/image/Reserve_Example_1.jpg'); }
-    15.01% , 20% { opacity: 0; }
+    15.01% , 20% { opacity: 0.5; }
     20.01%, 35% { opacity: 1; background-image: url('/image/Reserve_Example_2.jpg'); }
-    35.01% , 40% { opacity: 0; }
+    35.01% , 40% { opacity: 0.5; }
     40.01%, 55% { opacity: 1; background-image: url('/image/Reserve_Example_3.jpg'); }
-    55.01% , 60% { opacity: 0; }
+    55.01% , 60% { opacity: 0.5; }
     60.01%, 75% { opacity: 1; background-image: url('/image/Reserve_Example_4.jpg'); }
-    75.01% , 80% { opacity: 0; }
+    75.01% , 80% { opacity: 0.5; }
     80.01%, 95% { opacity: 1; background-image: url('/image/Reserve_Example_5.jpg'); }
-    95.01% , 100% { opacity: 0; }
+    95.01% , 100% { opacity: 0.5; }
 }
 
 .hero-banner::before {
@@ -37,8 +37,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    animation: backgroundSlide 30s infinite; /* 20秒完成一轮，无限循环 */
-    transition: opacity 1s ease;
+    animation: backgroundSlide 40s infinite; /* 40秒完成一轮，无限循环 */
+    transition: opacity 3s ease;
     z-index: -1; /* 确保在内容下方 */
 }
 
@@ -51,6 +51,7 @@
     padding: 20px;
     background-color: transparent; /* 透明背景衬底 */
     border-radius: 10px;
+    z-index: 10;
 }
 
 {/*跳转键距离控制*/}
