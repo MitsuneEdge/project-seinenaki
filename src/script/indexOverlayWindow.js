@@ -42,16 +42,16 @@ if (typeof window !== 'undefined') {
     trigger.L.addEventListener('click', async (e) => {
         // 阻止事件冒泡（避免立即触发关闭）
         e.stopPropagation();
-        content.L.innerHTML = await loadContent('/content/OverlayWindow/indexContent-L1.html');
-        content.R.innerHTML = await loadContent('/content/OverlayWindow/indexContent-L2.html');
+        content.L.innerHTML = await loadContent('../content/OverlayWindow/indexContent-L1.html');
+        content.R.innerHTML = await loadContent('../content/OverlayWindow/indexContent-L2.html');
         overlay.classList.replace('window-hidden', 'window-visible');
     });
 
     trigger.R.addEventListener('click', async (e) => {
         // 阻止事件冒泡（避免立即触发关闭）
         e.stopPropagation();
-        content.L.innerHTML = await loadContent('/content/OverlayWindow/indexContent-R1.html');
-        content.R.innerHTML = await loadContent('/content/OverlayWindow/indexContent-R2.html');
+        content.L.innerHTML = await loadContent('../content/OverlayWindow/indexContent-R1.html');
+        content.R.innerHTML = await loadContent('../content/OverlayWindow/indexContent-R2.html');
         overlay.classList.replace('window-hidden', 'window-visible');
         });
     });
