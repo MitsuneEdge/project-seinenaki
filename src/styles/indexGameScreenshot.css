@@ -4,6 +4,7 @@
     display: flex;          /* 启用 Flex 布局 */
     width: 100%;           /* 占满父容器宽度 */
     gap: 10px;             /* 单元之间的间距 */
+    flex-direction: row;
 }
 
 /* 左侧单元 A（占比 1/5） */
