@@ -64,7 +64,7 @@ if (typeof window !== 'undefined') {
         content.R.innerHTML = await loadContent('/content/OverlayWindow/indexContent-L2.html');
 
         //显示窗口
-        overlay.classList.replace('slide-from-left', 'window-visible');
+        windowContent.classList.replace('slide-from-left', 'window-visible');
     });
 
     trigger.R.addEventListener('click', async (e) => {
@@ -83,7 +83,7 @@ if (typeof window !== 'undefined') {
         content.R.innerHTML = await loadContent('/content/OverlayWindow/indexContent-R2.html');
 
         //显示窗口
-        overlay.classList.replace('slide-from-right', 'window-visible');
+        windowContent.classList.replace('slide-from-right', 'window-visible');
         });
     });
 }
