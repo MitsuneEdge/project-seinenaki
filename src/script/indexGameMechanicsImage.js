@@ -17,14 +17,14 @@ function preloadImages() {
 }
 
 // 显示图片到右侧区域
-export function showImage(imagePath) {
+function showImage(imagePath, moduleElement) {
     const rightContent = document.getElementById('rightContent');
 
     // 创建图片元素
     const imgElement = document.createElement('img');
     imgElement.src = imagePath;
     imgElement.alt = "模块展示图";
-    imgElement.style.opacity = '0'; // 初始透明用于淡入效果
+    imgElement.style.opacity = '0';
 
     // 清空并添加新内容
     rightContent.innerHTML = '';
@@ -34,6 +34,14 @@ export function showImage(imagePath) {
     setTimeout(() => {
         imgElement.style.opacity = '1';
     }, 10);
+
+    // 移除所有模块的高亮样式
+    document.querySelectorAll('.GameMechanics-L-module').forEach(module => {
+        module.classList.remove('active-module');
+    });
+
+    // 为当前模块添加高亮样式
+    moduleElement.classList.add('active-module');
 }
 
 // 初始化函数
@@ -44,14 +52,12 @@ function initModuleInteraction() {
     // 为每个模块绑定事件
     modules.forEach((module, index) => {
         module.addEventListener('mouseover', () => {
-            const imageNumber = index + 1;
-            const imagePath = `/image/Reserver_Example_${imageNumber}.jpg`;
-            showImage(imagePath);
+            showImage(imagePaths[index], module);
         });
     });
 
-    // 默认显示第一张图片
-    showImage('/image/Reserver_Example_1.jpg');
+    // 默认显示第一张图片并高亮第一个模块
+    showImage(imagePaths[0], modules[0]);
 }
 
 // 页面加载完成后执行

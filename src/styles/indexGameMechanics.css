@@ -68,3 +68,11 @@
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);          /* 鼠标指针变手形 */
 }
+
+/* 激活/高亮状态 */
+.GameMechanics-L-module.active-module {
+    background-color: #e0e0e0;
+    border-left: 3px solid #007bff;
+    transform: translateX(5px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
