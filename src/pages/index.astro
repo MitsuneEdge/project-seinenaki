@@ -163,14 +163,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
                 {/*插画鉴赏部分——多图片幻灯片轮换，鼠标移至区块上暂停轮换*/}
                 <div class="GameScreenshot-container">
-                    <div class="block" style="background-color: transparent;">
-                        <p style="text-align: center;"><b>插画鉴赏</b><p>
+                    <div style="background-color: transparent; text-align: center; width: 100%;">
+                        <p><b>插画鉴赏</b></p>
                     </div>
-                    <div class="GameScreenshot-L">
-                        <img style="height: auto; width: 100%;" src="/image/humph_rabbit.jpg">
-                    </div>
-                    <div class="GameScreenshot-R">
-                        这里是右侧内容
+                    <div style="display: flex; width: 100%; gap: 10px;">
+                        <div class="GameScreenshot-L">
+                            <img style="height: auto; width: 100%;" src="/image/humph_rabbit.jpg">
+                        </div>
+                        <div class="GameScreenshot-R">
+                            这里是右侧内容
+                        </div>
                     </div>
                  </div>
 
@@ -238,7 +240,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			            text-align: center;
 			            border-radius: 10px;
 			            box-shadow: 4px 4px 9px rgba(0,0,0,0.3);"
-			        onmouseover="this.style.transform='scale(1.75)'"
+			        onmouseover="this.style.transform='scale(1.35)'"
                     onmouseout="this.style.transform='scale(1)'"
                 >
                     预约游戏
