@@ -13,10 +13,9 @@ function preloadImages() {
     imagePaths.forEach(path => {
         const img = new Image();
         img.src = path;
+        //Debug
+        img.onerror = () => console.error(`Failed to load: ${path}`);
     });
-
-    //Debug
-    img.onerror = () => console.error(`Failed to load: ${path}`);
 }
 
 // 显示图片到右侧区域
