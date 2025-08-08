@@ -2,7 +2,7 @@
 
 .hero-banner {
     /* 背景设置 */
-    background-image: url('/image/Reserve_Example.jpg');
+    background-image: url('/image/Reserve_Example_1.jpg');
     background-size: cover;      /* 填充整个区域 */
     background-position: center; /* 居中显示 */
     background-repeat: no-repeat;
