@@ -13,25 +13,12 @@
     overflow: hidden; /* 防止动画溢出 */
 }
 
-/* 背景图片默认模糊 */
-.hero-banner-blur {
-  width: 100%;
-  height: 100%;
-  filter: blur(8px); /* 初始模糊度 */
-  transition: filter 0.5s ease; /* 平滑过渡 */
-}
-
-/* 取消模糊 */
-.hero-banner:hover .hero-banner-blur {
-  filter: blur(0);
-}
-
 /* 图片容器 */
 .hero-banner-slides {
     position: absolute;
     top: 0;
     left: 0;
-    width: 500%; /* 5张图片的总宽度（100% * 5） */
+    min-width: 500%; /* 5张图片的总宽度（100% * 5） */
     height: 100%;
     display: flex;
     animation: slideShow 45s infinite; /* 45秒完成一轮 */
@@ -39,11 +26,14 @@
 
 /* 单张图片样式 */
 .hero-banner-slide {
-    width: 20%; /* 每张图片占容器20% */
-    height: 100%;
+    width: 20vw; /* 每张图片占容器20% */
+    min-width: 20%;
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    flex-shrink: 0;
+    overflow: hidden;
 }
 
 /* 定义5张图片 */
@@ -67,8 +57,9 @@
 .hero-content {
     color: white;              /* 文字颜色 */
     font-size: 26px;           /* 文字大小 */
-    position: relative;
-    left: 15%;
+    position: absolute;
+    width: max-content;
+    right: 15%;
     padding: 20px;
     background-color: transparent; /* 透明背景衬底 */
     border-radius: 10px;
