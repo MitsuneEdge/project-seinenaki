@@ -9,7 +9,7 @@
 }
 
 /* 外框 */
-.window-overlay {
+#window-overlay {
     position: relative;
     width: 100%;
     height: 100vh;

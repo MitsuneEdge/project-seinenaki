@@ -3,6 +3,7 @@
 // 获取元素引用
 if (typeof window !== 'undefined') {
     document.addEventListener('DOMContentLoaded', async () => {
+        const overlay = document.getElementById('window-overlay');
         const trigger = {
             L : document.getElementById('window-trigger-L'),
             R : document.getElementById('window-trigger-R')
