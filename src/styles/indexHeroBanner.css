@@ -15,15 +15,15 @@
 
 /* 关键帧动画：轮播5张图片 */
 @keyframes backgroundSlide {
-    0%, 15% { background-image: url('/image/Reserve_Example_1.jpg'); }
+    0%, 15% { opacity: 1; background-image: url('/image/Reserve_Example_1.jpg'); }
     15.01% , 20% { opacity: 0; }
-    20.01%, 35% { background-image: url('/image/Reserve_Example_2.jpg'); }
+    20.01%, 35% { opacity: 1; background-image: url('/image/Reserve_Example_2.jpg'); }
     35.01% , 40% { opacity: 0; }
-    40.01%, 55% { background-image: url('/image/Reserve_Example_3.jpg'); }
+    40.01%, 55% { opacity: 1; background-image: url('/image/Reserve_Example_3.jpg'); }
     55.01% , 60% { opacity: 0; }
-    60.01%, 75% { background-image: url('/image/Reserve_Example_4.jpg'); }
+    60.01%, 75% { opacity: 1; background-image: url('/image/Reserve_Example_4.jpg'); }
     75.01% , 80% { opacity: 0; }
-    80.01%, 95% { background-image: url('/image/Reserve_Example_5.jpg'); }
+    80.01%, 95% { opacity: 1; background-image: url('/image/Reserve_Example_5.jpg'); }
     95.01% , 100% { opacity: 0; }
 }
 
