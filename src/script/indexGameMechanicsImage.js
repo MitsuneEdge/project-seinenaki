@@ -1,15 +1,15 @@
 /* src/script/indexGameMechanicsImage.js */
 
 // 预加载所有图片
-function preloadImages() {
-    const imagePaths = [
-        '/image/Reserve_Example_1.jpg',
-        '/image/Reserve_Example_2.jpg',
-        '/image/Reserve_Example_3.jpg',
-        '/image/Reserve_Example_4.jpg',
-        '/image/Reserve_Example_5.jpg'
-    ];
+const imagePaths = [
+    '/image/Reserve_Example_1.jpg',
+    '/image/Reserve_Example_2.jpg',
+    '/image/Reserve_Example_3.jpg',
+    '/image/Reserve_Example_4.jpg',
+    '/image/Reserve_Example_5.jpg'
+];
 
+function preloadImages() {
     imagePaths.forEach(path => {
         const img = new Image();
         img.src = path;
@@ -21,6 +21,7 @@ function preloadImages() {
 // 显示图片到右侧区域
 export function showImage(imagePath, moduleElement) {
     const rightContent = document.getElementById('rightContent');
+    if (!rightContent) return; // 安全校验
 
     // 创建图片元素
     const imgElement = document.createElement('img');
