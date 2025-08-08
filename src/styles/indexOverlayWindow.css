@@ -8,13 +8,14 @@
     display: inline-block;
 }
 
-/* 模态窗口遮罩 */
-#window-overlay {
+/* 外框 */
+.window-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -39,8 +40,6 @@
     transition: transform 0.3s ease;
 
     /* 居中定位 */
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%) translateX(-100vw); /* 初始位置在左侧屏幕外 */
 }
 
