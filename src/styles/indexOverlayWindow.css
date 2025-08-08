@@ -15,7 +15,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: transparent;
+    background: rgba(0,0,0,0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,28 +34,18 @@
     overflow: auto;
     margin: auto;
     display: flex;
-    overflow: auto;
-    transition: transform 0.5s ease;
-
-    /* 居中定位 */
-    transform: translate(-50%, -50%) translateX(-100vw); /* 初始位置在左侧屏幕外 */
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    transition: transform 0.3s ease;
 }
 
 /* 动画起始位置 */
 #window-content.slide-from-left {
-    transform: translate(-50%, -50%) translateX(-100vw);
+    transform: translateX(-100%);
 }
 #window-content.slide-from-right {
-    transform: translate(-50%, -50%) translateX(100vw);
+    transform: translateX(100%);
 }
-
-#window-overlay.window-visible {
-    opacity: 1;
-    pointer-events: all;
-    transform: translate(-50%, -50%) translateX(0);
+#window-overlay.window-visible #window-content {
+    transform: translateX(0);
 }
 
 #window-content-L{
