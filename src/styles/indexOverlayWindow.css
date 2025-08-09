@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.overlay-core {
+#overlay-core {
     position: fixed; /* 改为fixed定位不随页面滚动 */
     z-index: 1000;
     display: flex;
@@ -17,14 +17,14 @@
     align-items: center;
 }
 
-.overlay-window-L {
+#overlay-window-L {
     display: flex;
     width: 80%;
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border: 1px solid #e0e0e0;
-    animation: fadeIn 0.5s ease-out;
+    animation: transform 0.5s ease-out;
 }
 #overlay-content-L, #overlay-content-R{
     padding: 16px;
@@ -43,9 +43,10 @@
 
 #overlay-window-R {
     display: flex;
-    width: 90%;
+    width: 80%;
     background: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e0e0e0;
+    animation: transform 0.5s ease-out;
 }

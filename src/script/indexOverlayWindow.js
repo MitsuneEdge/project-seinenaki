@@ -33,31 +33,40 @@ if (typeof window !== 'undefined') {
             return;
         }
 
-        function showOverlay() {
-            // 获取触发器位置（使用getBoundingClientRect获取相对于视口的位置）
-            const triggerRect = {
-                L : triggerBtn.L.getBoundingClientRect(),
-                R : triggerBtn.R.getBoundingClientRect()
-            };
+        //关闭全部窗口
+        let activeWindow = null;
+
+        async function showOverlay(side) {
+
+            // 隐藏所有窗口
+            hideAllWindows();
+
+            // 设置活动窗口
+            activeWindow = side;
+
+            // 加载外部内容
+            //await loadContent(side);
 
             // 计算拟态窗口位置（与触发器同一高度）
             const top = triggerRect.top;
             const left = triggerRect.right + 10; // 在触发器右侧10px处显示
 
+            // 设置窗口可见
+            windows[side].style.display = 'flex';
             overlayCore.style.display = 'block';
-
-            // 设置位置
-            overlayCore.style.display = 'block';
-            overlayCore.style.top = `${top}px`;
-            overlayCore.style.left = `${left}px`;
 
             // 点击外部关闭
             document.addEventListener('click', handleOutsideClick, true);
         }
 
-        // 隐藏拟态窗口
-        function hideOverlay() {
+        // 隐藏所有窗口
+        function hideAllWindows() {
             overlayCore.style.display = 'none';
+            Object.values(windows).forEach(window => {
+                window.style.display = 'none';
+                window.innerHTML = defaultContent[window.id.split('-').pop()]; // 恢复默认内容
+            });
+            activeWindow = null;
             document.removeEventListener('click', handleOutsideClick, true);
         }
 
@@ -72,18 +81,18 @@ if (typeof window !== 'undefined') {
         triggerBtn.L.addEventListener('click', (e) => {
             e.stopPropagation();
             if (overlayCore.style.display === 'block') {
-                hideOverlay();
+                hideAllWindows();
             } else {
-                showOverlay();
+                showOverlay('L');
             }
         });
 
         triggerBtn.R.addEventListener('click', (e) => {
             e.stopPropagation();
             if (overlayCore.style.display === 'block') {
-                hideOverlay();
+                hideAllWindows();
             } else {
-                showOverlay();
+                showOverlay('R');
             }
         });
 
