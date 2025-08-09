@@ -75,6 +75,24 @@
     overflow: hidden;
 }
 
+#overlay-window-L[style*="display: none"] #indexImage-L {
+    height: 0 !important;
+}
+
+/* 父元素显示时，子元素高度自动填充 */
+#overlay-window-L[style*="display: flex"] #indexImage-L {
+    height: 100%;
+}
+
+#overlay-window-R[style*="display: none"] #indexImage-R {
+    height: 0 !important;
+}
+
+/* 父元素显示时，子元素高度自动填充 */
+#overlay-window-R[style*="display: flex"] #indexImage-R {
+    height: 100%;
+}
+
 #overlay-content-BtnL, overlay-content-BtnR {
     border: 5px solid #FF99CC;
     margin: 10px;

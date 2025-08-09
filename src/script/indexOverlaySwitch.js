@@ -68,8 +68,6 @@ if (!window.__SCRIPT_EXECUTED__) {
             indexImage[side].style.backgroundSize = 'contain';
             indexImage[side].style.backgroundPosition = 'center';
             indexImage[side].style.backgroundRepeat = 'no-repeat';
-            indexImage[side].style.height = '100%';
-            indexImage[side].style.width = '100%';
             indexImage[side].style.opacity = 0;
 
             setTimeout(() => {
