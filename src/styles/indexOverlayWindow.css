@@ -1,69 +1,13 @@
 /* src/styles/indexOverlayWindow.css */
 
-/* 触发元素样式（示例） */
-#window-trigger {
-    cursor: pointer;
-    padding: 10px;
-    background-color: transparent;
-    display: inline-block;
-}
-
-/* 模态窗口遮罩 */
-#window-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
+.overlay-core {
+    /* 基础布局 */
+    width: 100%;
     height: 100vh;
-    background-color: transparent;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-    pointer-events: none;
-}
-
-/* 模态内容容器 */
-#window-content {
-    width: 90vw;
-    max-height: 90vh;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    text-align: left;
     position: relative;
-    overflow: auto;
-    margin: auto;
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-/* 动画起始位置 */
-#window-content.slide-from-left {
-    transform: translateX(-100%);
-    opacity: 0;
-}
-#window-content.slide-from-right {
-    transform: translateX(100%);
-    opacity: 0;
-}
-/* 显示状态 */
-#window-overlay.window-visible {
-    opacity: 1;
-    pointer-events: all;
-}
-#window-overlay.window-visible #window-content {
-    transform: translateX(0);
-}
-
-#window-content-L{
-    flex: 5;
-    background: #f5f5f5;  /* 可选背景色 */
-    border: 2px solid #ddd;
-    border-radius: 10px;
-}
-#window-content-R{
-    flex: 3;
-    background: #f0f0f0;  /* 可选背景色 */
-    border: 2px solid #ddd;
-    border-radius: 10px;
 }
