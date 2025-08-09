@@ -59,10 +59,12 @@ if (typeof window !== 'undefined') {
             overlayWindow[side].style.display = 'flex';
             overlayWindow[side].style.justifyContent = 'center';
             overlayWindow[side].style.alignItems = 'center';
+            /*
             if(side == 'L')
                 overlayWindow[side].style.transform = 'translateX(calc(-50% + 10vw))';
             else
                 overlayWindow[side].style.transform = 'translateX(calc(-50% - 10vw))';
+            */
 
             // 点击外部关闭
             document.addEventListener('click', handleOutsideClick, true);
