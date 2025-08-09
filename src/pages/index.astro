@@ -93,7 +93,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         {/*Project-Seinenaki 首页介绍正文部分*/}
 
 		{/*要套一层拟态窗口的div，让窗口锁定这一层*/}
-        <div class="overlay-core">
+        <div id="overlay-core">
             {/* indexOverlayWindow.css */}
             <div id="overlay-window-L">
                 <div style="flex: 5">拟态窗口-左</div>
@@ -103,51 +103,51 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                 <div style="flex: 2">拟态窗口-右</div>
                 <div style="flex: 5">skill issue</div>
             </div>
+        </div>
 
-            {/* indexCharacterIntroduction.css */}
-            <div class="character-container">
-                <div class="character-container character-item-Img-L" style="background-color: transparent;">
-                    <div style="text-align: center;">
-                        <p style="font-size: 18px; margin: 0 0 8px 0;">这是人物长什么样</p>
-                        <DivLine class="DivLine-L" color="#00ff00" height="10px"></DivLine>
-                        <div id="window-trigger-L">
-                            <img style="height: auto; width: 100%;" src="/image/huh_cat.gif">
-                        </div>
+        {/* indexCharacterIntroduction.css */}
+        <div class="character-container">
+            <div class="character-container character-item-Img-L" style="background-color: transparent;">
+                <div style="text-align: center;">
+                    <p style="font-size: 18px; margin: 0 0 8px 0;">这是人物长什么样</p>
+                    <DivLine class="DivLine-L" color="#00ff00" height="10px"></DivLine>
+                    <div id="window-trigger-L">
+                        <img style="height: auto; width: 100%;" src="/image/huh_cat.gif">
                     </div>
                 </div>
-                <div class="character-container character-item-Txt-L" style="background-color: transparent; display: block;">
-                    <p style="text-align: center;">
-                        <b>这是人物简介</b><br>
-                    </p>
-                    <p style="text-align: left; text-indent: 2em">
-                        这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
-                        这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
-                        这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
-                        这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
-                        这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
-                        这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
-                    </p>
-                </div>
-                <div class="character-container character-item-Txt-R" style="background-color: transparent; display: block;">
-                    <p style="text-align: center;">
-                        <b>这是人物简介</b><br>
-                    </p>
-                    <p style="text-align: left; text-indent: 2em">
-                        这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
-                        这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
-                        这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
-                        这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
-                        这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
-                        这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
-                    </p>
-                </div>
-                <div class="character-container character-item-Img-R" style="background-color: transparent;">
-                    <div style="text-align: center;">
-                    <p style="font-size: 18px; margin: 0 0 8px 0;">这是人物长什么样</p>
-                        <DivLine color="#00ff00" height="10px" class="DivLine-R" />
-                        <div id="window-trigger-R" >
-                            <img style="height: auto; width: 100%;" src="/image/Mari_Iochi.png">
-                        </div>
+            </div>
+            <div class="character-container character-item-Txt-L" style="background-color: transparent; display: block;">
+                <p style="text-align: center;">
+                    <b>这是人物简介</b><br>
+                </p>
+                <p style="text-align: left; text-indent: 2em">
+                    这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
+                    这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
+                    这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
+                    这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
+                    这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
+                    这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
+                </p>
+            </div>
+            <div class="character-container character-item-Txt-R" style="background-color: transparent; display: block;">
+                <p style="text-align: center;">
+                    <b>这是人物简介</b><br>
+                </p>
+                <p style="text-align: left; text-indent: 2em">
+                    这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
+                    这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
+                    这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
+                    这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
+                    这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
+                    这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作这里填充大量文字以验证对称性是否正常工作
+                </p>
+            </div>
+            <div class="character-container character-item-Img-R" style="background-color: transparent;">
+                <div style="text-align: center;">
+                <p style="font-size: 18px; margin: 0 0 8px 0;">这是人物长什么样</p>
+                    <DivLine color="#00ff00" height="10px" class="DivLine-R" />
+                    <div id="window-trigger-R" >
+                        <img style="height: auto; width: 100%;" src="/image/Mari_Iochi.png">
                     </div>
                 </div>
             </div>

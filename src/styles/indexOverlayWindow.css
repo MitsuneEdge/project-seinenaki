@@ -1,6 +1,6 @@
 /* src/styles/indexOverlayWindow.css */
 
-#window-trigger {
+#window-trigger-L, #window-trigger-R {
     cursor: pointer;
     padding: 10px;
     background-color: transparent;
@@ -8,23 +8,32 @@
     display: inline-block;
 }
 
-.overlay-core {
+#overlay-core {
     /* 基础布局 */
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: left;
-    position: relative;
-
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
     transition: opacity 0.5s ease;
+}
+
+#overlay-core.active {
+    pointer-event: auto;
 }
 
 #overlay-window-L {
     display: flex;
     width: 90%;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 #overlay-window-L.hidden {
@@ -41,6 +50,10 @@
 #overlay-window-R {
     display: flex;
     width: 90%;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 #overlay-window-R.hidden {
