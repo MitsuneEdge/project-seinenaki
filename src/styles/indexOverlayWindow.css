@@ -1,5 +1,13 @@
 /* src/styles/indexOverlayWindow.css */
 
+#window-trigger {
+    cursor: pointer;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    display: inline-block;
+}
+
 .overlay-core {
     /* 基础布局 */
     width: 100%;
@@ -10,4 +18,20 @@
     align-items: center;
     text-align: left;
     position: relative;
+}
+
+#overlay-window-L {
+    display: flex;
+}
+
+#overlay-content-L{
+    ;
+}
+
+#overlay-window-R {
+    display: flex;
+}
+
+#overlay-content-R{
+    ;
 }
