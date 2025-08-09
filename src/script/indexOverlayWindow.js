@@ -109,6 +109,7 @@ if (typeof window !== 'undefined') {
             }
         });
 
+        /*
         // 窗口滚动时重新计算位置
         window.addEventListener('scroll', () => {
             if (activeWindow) {  // 检查当前是否有活动窗口
@@ -122,5 +123,7 @@ if (typeof window !== 'undefined') {
                 showOverlay(activeWindow);  // 传入当前活动窗口侧
             }
         });
+
+        */
     });
 }

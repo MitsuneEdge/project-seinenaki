@@ -11,7 +11,7 @@
     font-weight: normal;
     background-color: transparent;
 
-    position: relative;
+    grid-area: character-container;
 }
 
 /* 通用子元素样式 */
