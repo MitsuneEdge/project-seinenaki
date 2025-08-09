@@ -73,12 +73,14 @@ if (!window.__SCRIPT_EXECUTED__) {
         // 按钮点击事件（区分左右侧按钮）
         triggerBtn.L.addEventListener('click', function() {
             currentImageIndex.L = (currentImageIndex.L + 1) % images.L.length;
+            currentTextIndex.L = (currentTextIndex.L + 1) % text.L.length;
             updateImage('L');
             updateText('L');
         });
 
         triggerBtn.R.addEventListener('click', function() {
             currentImageIndex.R = (currentImageIndex.R + 1) % images.R.length;
+            currentTextIndex.R = (currentTextIndex.R + 1) % text.R.length;
             updateText('R');
             updateImage('R');
         });
