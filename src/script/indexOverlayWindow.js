@@ -3,51 +3,102 @@
 // 获取元素引用
 if (typeof window !== 'undefined') {
     document.addEventListener('DOMContentLoaded', async () => {
-        const overlayCore = document.getElementById('overlay-core');
-        const trigger = {
+        const triggerBtn = {
             L : document.getElementById('window-trigger-L'),
             R : document.getElementById('window-trigger-R')
         };
-        const content = {
-            L : document.getElementById('content-section-L'),
-            R : document.getElementById('content-section-R')
+        const overlayCore = document.getElementById('overlay-core');
+        const overlayWindow = {
+            L : document.getElementById('overlay-window-L'),
+            R : document.getElementById('overlay-window-R')
+        };
+        const contentSectionL = document.getElementById('content-section-L');
+        const contentSectionR = document.getElementById('content-section-R');
+
+        // 异步加载外部html文件
+        const loadContent = async (path) => {
+            try {
+                const response = await fetch(path);
+                if (!response.ok) throw new Error(`Failed to load ${path}`);
+                return await response.text();
+            } catch (error) {
+                console.error(error);
+                return `<p>加载内容失败: ${error.message}</p>`;
+            }
         };
 
-    // 异步加载外部html文件
-    const loadContent = async (path) => {
-        try {
-            const response = await fetch(path);
-            if (!response.ok) throw new Error(`Failed to load ${path}`);
-            return await response.text();
-        } catch (error) {
-            console.error(error);
-            return `<p>加载内容失败: ${error.message}</p>`;
+        // 检查元素是否存在
+        if (!triggerBtn.L || !triggerBtn.R || !overlayWindow.L || !overlayWindow.R) {
+            console.error('元素未找到');
+            return;
         }
-    };
 
+        function showOverlay() {
+            // 获取触发器位置（使用getBoundingClientRect获取相对于视口的位置）
+            const triggerRect = {
+                L : triggerBtn.L.getBoundingClientRect(),
+                R : triggerBtn.R.getBoundingClientRect()
+            };
 
-    // 检查元素是否存在
-    if (!trigger.L || !trigger.R || !content.L || !content.R) {
-        console.error('元素未找到');
-        return;
-    }
+            // 计算拟态窗口位置（与触发器同一高度）
+            const top = triggerRect.top;
+            const left = triggerRect.right + 10; // 在触发器右侧10px处显示
 
-    trigger.L.addEventListener('click', async (e) => {
-        e.stopPropagation();
+            overlayCore.style.display = 'block';
 
-        // 加载内容
-        content.L.innerHTML = await loadContent('/content/OverlayWindow/indexContent-L1.html');
-        content.R.innerHTML = await loadContent('/content/OverlayWindow/indexContent-L2.html');
+            // 设置位置
+            overlayCore.style.display = 'block';
+            overlayCore.style.top = `${top}px`;
+            overlayCore.style.left = `${left}px`;
 
-    });
+            // 点击外部关闭
+            document.addEventListener('click', handleOutsideClick, true);
+        }
 
-    trigger.R.addEventListener('click', async (e) => {
-        e.stopPropagation();
+        // 隐藏拟态窗口
+        function hideOverlay() {
+            overlayCore.style.display = 'none';
+            document.removeEventListener('click', handleOutsideClick, true);
+        }
 
-        // 加载内容
-        content.L.innerHTML = await loadContent('/content/OverlayWindow/indexContent-R2.html');
-        content.R.innerHTML = await loadContent('/content/OverlayWindow/indexContent-R1.html');
-    });
+        // 处理外部点击
+        function handleOutsideClick(e) {
+            if (!overlayCore.contains(e.target) && e.target !== triggerBtn) {
+                hideOverlay();
+            }
+        }
 
+        // 触发器点击事件
+        triggerBtn.L.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (overlayCore.style.display === 'block') {
+                hideOverlay();
+            } else {
+                showOverlay();
+            }
+        });
+
+        triggerBtn.R.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (overlayCore.style.display === 'block') {
+                hideOverlay();
+            } else {
+                showOverlay();
+            }
+        });
+
+        // 窗口滚动时重新计算位置
+        window.addEventListener('scroll', () => {
+            if (overlayCore.style.display === 'block') {
+                showOverlay(); // 重新计算位置
+            }
+        });
+
+          // 窗口大小改变时重新计算位置
+        window.addEventListener('resize', () => {
+            if (overlayCore.style.display === 'block') {
+                showOverlay(); // 重新计算位置
+            }
+        });
     });
 }

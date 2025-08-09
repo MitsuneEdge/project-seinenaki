@@ -1,55 +1,44 @@
 /* src/styles/indexOverlayWindow.css */
 
-#window-trigger-L, #window-trigger-R {
+.window-trigger-L, .window-trigger-R {
     cursor: pointer;
     padding: 10px;
     background-color: transparent;
     color: white;
     display: inline-block;
+    position: relative;
 }
 
-#overlay-core {
-    /* 基础布局 */
-    width: 100%;
-    height: 100%;
-    margin: 0;
+.overlay-core {
+    position: fixed; /* 改为fixed定位不随页面滚动 */
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: left;
-    position: fixed;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s ease;
 }
 
-#overlay-core.active {
-    pointer-event: auto;
-}
-
-#overlay-window-L {
+.overlay-window-L {
     display: flex;
-    width: 90%;
+    width: 80%;
     background: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e0e0e0;
+    animation: fadeIn 0.5s ease-out;
 }
-
-#overlay-window-L.hidden {
+#overlay-content-L, #overlay-content-R{
+    padding: 16px;
+}
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    pointer-events: none;
-    height: 0;
-    overflow: hidden;
-}
-
-#overlay-window-L.active {
+    transform: translateX(-100vw);
+  }
+  to {
     opacity: 1;
-    pointer-events: all;
-}
-
-#overlay-content-L{
-    ;
+    transform: translateX(0);
+  }
 }
 
 #overlay-window-R {
@@ -59,15 +48,4 @@
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-#overlay-window-R.hidden {
-    opacity: 0;
-    pointer-events: none;
-    height: 0;
-    overflow: hidden;
-}
-
-#overlay-content-R{
-    ;
 }
