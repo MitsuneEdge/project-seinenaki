@@ -63,13 +63,12 @@
     justify-content: center;    /* 水平居中 */
     align-items: center;        /* 垂直居中 */
     width: 100%;               /* 确保宽度填满父容器 */
-    height: 100%;              /* 确保高度填满父容器 */
+    height: 90%;              /* 确保高度填满父容器 */
 }
 
 #indexImage-L, #indexImage-R {
     position: relative;
     min-height: 90%;
-    height: 100%;
     overflow: hidden;
 }
 
@@ -93,6 +92,8 @@
 
 #overlay-content-BtnL, overlay-content-BtnR {
     border: 5px solid #FF99CC;
+    width: fit-content;
+    height: fit-content;
     margin: 10px;
     padding: 10px;
 }
