@@ -17,10 +17,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none; /* 默认隐藏 */
 }
 
 #overlay-window-L {
-    display: flex;
     flex-direction: row;
     align-items: stretch;
     width: 80%;
@@ -35,7 +35,6 @@
 }
 
 #overlay-window-R {
-    display: flex;
     flex-direction: row;
     align-items: stretch;
     width: 80%;
@@ -58,10 +57,12 @@
 @keyframes L-SlideIn {
   from {
     opacity: 0;
+    display: none;
     transform: translateX(-100vw);
   }
   to {
     opacity: 1;
+    display: flex;
     transform: translateX(0);
   }
 }
@@ -69,10 +70,12 @@
 @keyframes R-SlideIn {
   from {
     opacity: 0;
+    display: none;
     transform: translateX(100vw);
   }
   to {
     opacity: 1;
+    display: flex;
     transform: translateX(0);
   }
 }
