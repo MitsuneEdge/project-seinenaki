@@ -18,10 +18,20 @@
     align-items: center;
     text-align: left;
     position: relative;
+
+    transition: opacity 0.5s ease;
 }
 
 #overlay-window-L {
     display: flex;
+    width: 90%;
+}
+
+#overlay-window-L.hidden {
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
 }
 
 #overlay-content-L{
@@ -30,6 +40,14 @@
 
 #overlay-window-R {
     display: flex;
+    width: 90%;
+}
+
+#overlay-window-R.hidden {
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
 }
 
 #overlay-content-R{
