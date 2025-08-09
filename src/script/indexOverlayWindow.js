@@ -81,7 +81,7 @@ if (typeof window !== 'undefined') {
         // 处理外部点击
         function handleOutsideClick(e) {
             if (!overlayCore.contains(e.target) && e.target !== triggerBtn) {
-                hideOverlay();
+                hideAllWindows();
             }
         }
 
