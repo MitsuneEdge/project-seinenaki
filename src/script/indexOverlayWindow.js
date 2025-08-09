@@ -15,6 +15,11 @@ if (typeof window !== 'undefined') {
         const contentSectionL = document.getElementById('content-section-L');
         const contentSectionR = document.getElementById('content-section-R');
 
+        const defaultContent = {
+            L: '拟态窗口-左',
+            R: '拟态窗口-右'
+        };
+
         // 异步加载外部html文件
         const loadContent = async (path) => {
             try {
