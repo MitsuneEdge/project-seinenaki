@@ -56,6 +56,11 @@
     border: 5px solid #FF99CC;
     margin: 10px;
     padding: 10px;
+    display: flex;              /* 启用 Flex 布局 */
+    justify-content: center;    /* 水平居中 */
+    align-items: center;        /* 垂直居中 */
+    width: 100%;               /* 确保宽度填满父容器 */
+    height: 100%;              /* 确保高度填满父容器 */
 }
 /* 动画效果 */
 @keyframes L-SlideIn {
