@@ -69,6 +69,7 @@
 #indexImage-L, #indexImage-R {
     position: relative;
     min-height: 90%;
+    height: 600px;
     overflow: hidden;
 }
 
