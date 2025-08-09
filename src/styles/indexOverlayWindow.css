@@ -90,10 +90,9 @@
     height: 90%;
 }
 
-#overlay-content-BtnL, overlay-content-BtnR {
+#overlay-content-BtnL, #overlay-content-BtnR {
     border: 5px solid #FF99CC;
-    width: fit-content;
-    height: fit-content;
+    display: inline-flex;
     margin: 10px;
     padding: 10px;
 }
