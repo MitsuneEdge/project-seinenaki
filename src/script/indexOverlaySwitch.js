@@ -93,7 +93,7 @@ if (!window.__SCRIPT_EXECUTED__) {
             }
 
             // 设置新图片并添加淡入效果
-            indexImage[side].style.backgroundImage = `url($images[side][currentImageIndex[side]]})`;
+            indexImage[side].style.backgroundImage = `url({$images[side][currentImageIndex[side]]})`;
             indexImage[side].style.backgroundSize = 'contain';
             indexImage[side].style.backgroundPosition = 'center';
             indexImage[side].style.backgroundRepeat = 'no-repeat';
