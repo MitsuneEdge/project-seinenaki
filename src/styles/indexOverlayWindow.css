@@ -43,6 +43,11 @@
     overflow: hidden;
 }
 
+#overlay-window-L.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
 #overlay-content-L{
     ;
 }

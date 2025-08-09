@@ -25,10 +25,29 @@ if (typeof window !== 'undefined') {
         }
     };
 
+
     // 检查元素是否存在
     if (!trigger.L || !trigger.R || !content.L || !content.R) {
         console.error('元素未找到');
         return;
     }
+
+    trigger.L.addEventListener('click', async (e) => {
+        e.stopPropagation();
+
+        // 加载内容
+        content.L.innerHTML = await loadContent('/content/OverlayWindow/indexContent-L1.html');
+        content.R.innerHTML = await loadContent('/content/OverlayWindow/indexContent-L2.html');
+
+    });
+
+    trigger.R.addEventListener('click', async (e) => {
+        e.stopPropagation();
+
+        // 加载内容
+        content.L.innerHTML = await loadContent('/content/OverlayWindow/indexContent-R2.html');
+        content.R.innerHTML = await loadContent('/content/OverlayWindow/indexContent-R1.html');
+    });
+
     });
 }

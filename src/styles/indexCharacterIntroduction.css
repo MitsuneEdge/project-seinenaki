@@ -4,6 +4,7 @@
 .character-container {
     display: flex;           /* Flex 布局 */
     width: 80%;           /* 固定宽度 */
+    max-height: 100vh;
     margin: 0 auto;
     text-align: center;
     font-size: 16px;
