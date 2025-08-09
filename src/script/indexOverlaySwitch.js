@@ -107,7 +107,7 @@ if (!window.__SCRIPT_EXECUTED__) {
             }
 
             //设置新文字
-            indexText[side].innerHTML = `url(${text[side][currentTextIndex[side]]})`;
+            indexText[side].innerHTML = `text[side][currentTextIndex[side]]`;
 
             console.log(`${side}侧当前显示文字: ${text[side][currentTextIndex[side]]}`);
         }
