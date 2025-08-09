@@ -91,7 +91,7 @@ if (!window.__SCRIPT_EXECUTED__) {
             }
 
             // 设置新图片并添加淡入效果
-            indexImage[side].style.backgroundImage = `url(${images[side][currentImageIndex[side]]})`;
+            indexImage[side].style.backgroundImage = `url($images[side][currentImageIndex[side]]})`;
             indexImage[side].style.backgroundSize = 'contain';
             indexImage[side].style.backgroundPosition = 'center';
             indexImage[side].style.backgroundRepeat = 'no-repeat';
@@ -107,7 +107,7 @@ if (!window.__SCRIPT_EXECUTED__) {
             }
 
             //设置新文字
-            indexText[side].innerHTML = text[side][currentTextIndex[side]];
+            indexText[side].innerHTML = url($text[side][currentTextIndex[side]]});
 
             console.log(`${side}侧当前显示文字: ${text[side][currentTextIndex[side]]}`);
         }
