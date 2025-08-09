@@ -102,14 +102,21 @@ if (!window.__SCRIPT_EXECUTED__) {
             //console.log(`${side}侧当前显示图片: ${images[side][currentImageIndex[side]]}`);
         }
 
-        function updateText(side) {
-            if (!indexImage[side] || !images[side] || !images[side][currentImageIndex[side]]) {
+        async function updateText(side) {
+            if (!indexText[side] || !text[side] || !text[side][currentTextIndex[side]]) {
                 console.error(`更新文字失败: ${side}侧数据无效`);
                 return;
             }
 
             //设置新文字
-            indexText[side].innerHTML = url($text[side][currentTextIndex[side]]});
+            try {
+                const response = await fetch(text[side][currentTextIndex[side]]);
+                const html = await response.text();
+                indexText[side].innerHTML = html;
+            } catch (error) {
+                console.error(`加载文字失败: ${error}`);
+                indexText[side].innerHTML = `加载错误: ${error.message}`;
+            }
 
             console.log(`${side}侧当前显示文字: ${text[side][currentTextIndex[side]]}`);
         }
