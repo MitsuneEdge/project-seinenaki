@@ -56,6 +56,7 @@
     padding: 16px;
     box-sizing: border-box; /* 包含padding在宽度计算内 */
     border: 5px solid #FF99CC;
+    padding: 10px;
 }
 /* 动画效果 */
 @keyframes L-SlideIn {
