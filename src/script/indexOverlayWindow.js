@@ -15,11 +15,6 @@ if (typeof window !== 'undefined') {
         const contentSectionL = document.getElementById('content-section-L');
         const contentSectionR = document.getElementById('content-section-R');
 
-        const defaultContent = {
-            L: '拟态窗口-左',
-            R: '拟态窗口-右'
-        };
-
         // 异步加载外部html文件
         const loadContent = async (path) => {
             try {
@@ -72,7 +67,6 @@ if (typeof window !== 'undefined') {
             overlayCore.style.display = 'none';
             Object.values(overlayWindow).forEach(overlayWindow => {
                 overlayWindow.style.display = 'none';
-                overlayWindow.innerHTML = defaultContent[overlayWindow.id.split('-').pop()]; // 恢复默认内容
             });
             activeWindow = null;
             document.removeEventListener('click', handleOutsideClick, true);

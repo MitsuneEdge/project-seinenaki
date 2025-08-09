@@ -31,7 +31,7 @@
     border: 1px solid #e0e0e0;
 
     overflow: hidden;
-    animation: fadeIn 0.5s ease-out;
+    animation: L-SlideIn 0.5s ease-out;
 }
 
 #overlay-window-R {
@@ -46,7 +46,7 @@
     border: 1px solid #e0e0e0;
 
     overflow: hidden;
-    animation: fadeIn 0.5s ease-out;
+    animation: R-SlideIn 0.5s ease-out;
 }
 
 #overlay-content-L, #overlay-content-R{
@@ -55,10 +55,21 @@
     box-sizing: border-box; /* 包含padding在宽度计算内 */
 }
 /* 动画效果 */
-@keyframes fadeIn {
+@keyframes L-SlideIn {
   from {
     opacity: 0;
     transform: translateX(-100vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes R-SlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100vw);
   }
   to {
     opacity: 1;
