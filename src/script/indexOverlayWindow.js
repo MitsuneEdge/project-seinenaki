@@ -59,10 +59,6 @@ if (typeof window !== 'undefined') {
                 console.error(`显示${side}侧窗口失败:`, error);
             }
 
-            // 计算拟态窗口位置（与触发器同一高度）
-            const top = triggerRect.top;
-            const left = triggerRect.right + 10; // 在触发器右侧10px处显示
-
             // 设置窗口可见
             overlayWindow[side].style.display = 'flex';
             overlayCore.style.display = 'block';
