@@ -66,21 +66,6 @@ if (typeof window !== 'undefined') {
                 overlayWindow[side].style.transform = 'translateX(calc(-50% - 10vw))';
             */
 
-            try {
-                const contentL = await loadContent('/content/OverlayWindow/indexContent-L.html');
-                const contentR = await loadContent('/content/OverlayWindow/indexContent-R.html');
-                // 将内容填充到对应的div中
-                if (side === 'L') {
-                    //document.getElementById('indexImage-L').innerHTML = contentL1;
-                    document.getElementById('overlay-content-L').innerHTML = contentL;
-                } else {
-                    document.getElementById('overlay-content-R').innerHTML = contentR;
-                    //document.getElementById('indexImage-R').innerHTML = contentR2;
-                }
-            } catch (error) {
-                console.error(`加载外部内容失败:`, error);
-            }
-
             // 点击外部关闭
             document.addEventListener('click', handleOutsideClick, true);
         }
