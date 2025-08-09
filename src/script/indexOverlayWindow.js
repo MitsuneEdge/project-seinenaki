@@ -12,8 +12,8 @@ if (typeof window !== 'undefined') {
             L : document.getElementById('overlay-window-L'),
             R : document.getElementById('overlay-window-R')
         };
-        const contentSectionL = document.getElementById('content-section-L');
-        const contentSectionR = document.getElementById('content-section-R');
+        const contentSectionL = document.getElementById('overlay-content-L');
+        const contentSectionR = document.getElementById('overlay-content-R');
 
         // 异步加载外部html文件
         const loadContent = async (path) => {
