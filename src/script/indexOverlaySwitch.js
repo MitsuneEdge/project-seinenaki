@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // 设置新图片并添加淡入效果
-        indexImage[side].style.backgroundImage = `url(${images[side][currentImageIndex[side]})`;
+        indexImage[side].style.backgroundImage = `url(${images[side][currentImageIndex[side]]})`;
         indexImage[side].style.opacity = 0;
 
         setTimeout(() => {
