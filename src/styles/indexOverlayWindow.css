@@ -23,6 +23,7 @@
     flex-direction: row;
     align-items: stretch;
     width: 80%;
+    height: auto;
     max-height: 70%;
     left: 10%;
     background: white;
@@ -38,6 +39,7 @@
     flex-direction: row;
     align-items: stretch;
     width: 80%;
+    height: auto;
     max-height: 70%;
     right: 10%; /* 距离右边10vw */
     background: white;
@@ -52,7 +54,7 @@
 #overlay-content-L1, #overlay-content-R1,
 #overlay-content-L2, #overlay-content-R2,{
     border: 5px solid #FF99CC;
-    margin: 10px
+    margin: 10px;
     padding: 10px;
 }
 /* 动画效果 */
