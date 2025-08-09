@@ -56,7 +56,7 @@ if (typeof window !== 'undefined') {
             try {
                 const triggerRect = triggerBtn[side].getBoundingClientRect();
             } catch {
-                console.error(`显示${side}侧窗口失败:`, error);
+                console.error(`显示${side}侧窗口失败:`);
             }
 
             // 设置窗口可见
