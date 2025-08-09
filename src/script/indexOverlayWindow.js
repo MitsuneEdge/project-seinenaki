@@ -122,8 +122,5 @@ if (typeof window !== 'undefined') {
                 showOverlay(activeWindow);  // 传入当前活动窗口侧
             }
         });
-
-        window.addEventListener('scroll', repositionOverlay);
-        window.addEventListener('resize', repositionOverlay);
     });
 }
