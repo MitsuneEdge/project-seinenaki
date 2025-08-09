@@ -67,17 +67,15 @@ if (typeof window !== 'undefined') {
             */
 
             try {
-                const contentL1 = await loadContent('/content/OverlayWindow/indexContent-L1.html');
-                const contentL2 = await loadContent('/content/OverlayWindow/indexContent-L2.html');
-                const contentR1 = await loadContent('/content/OverlayWindow/indexContent-R2.html');
-                const contentR2 = await loadContent('/content/OverlayWindow/indexContent-R1.html');
+                const contentL = await loadContent('/content/OverlayWindow/indexContent-L.html');
+                const contentR = await loadContent('/content/OverlayWindow/indexContent-2.html');
                 // 将内容填充到对应的div中
                 if (side === 'L') {
-                    document.getElementById('indexImage-L').innerHTML = contentL1;
-                    document.getElementById('overlay-content-R1').innerHTML = contentL2;
+                    //document.getElementById('indexImage-L').innerHTML = contentL1;
+                    document.getElementById('overlay-content-R').innerHTML = contentL2;
                 } else {
-                    document.getElementById('overlay-content-L2').innerHTML = contentR1;
-                    document.getElementById('indexImage-R').innerHTML = contentR2;
+                    document.getElementById('overlay-content-L').innerHTML = contentR1;
+                    //document.getElementById('indexImage-R').innerHTML = contentR2;
                 }
             } catch (error) {
                 console.error(`加载外部内容失败:`, error);
