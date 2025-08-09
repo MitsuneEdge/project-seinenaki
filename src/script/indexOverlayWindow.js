@@ -55,8 +55,8 @@ if (typeof window !== 'undefined') {
             // 获取触发器位置
             try {
                 const triggerRect = triggerBtn[side].getBoundingClientRect();
-            } catch {
-                console.error(`显示${side}侧窗口失败:`);
+            } catch (error) {
+                console.error(`显示${side}侧窗口失败:` , error);
             }
 
             // 设置窗口可见
@@ -111,16 +111,19 @@ if (typeof window !== 'undefined') {
 
         // 窗口滚动时重新计算位置
         window.addEventListener('scroll', () => {
-            if (overlayCore.style.display === 'block') {
-                showOverlay(); // 重新计算位置
+            if (activeWindow) {  // 检查当前是否有活动窗口
+                showOverlay(activeWindow);  // 传入当前活动窗口侧
             }
         });
 
-          // 窗口大小改变时重新计算位置
+        // 窗口大小改变时重新计算位置
         window.addEventListener('resize', () => {
-            if (overlayCore.style.display === 'block') {
-                showOverlay(); // 重新计算位置
+            if (activeWindow) {  // 检查当前是否有活动窗口
+                showOverlay(activeWindow);  // 传入当前活动窗口侧
             }
         });
+
+        window.addEventListener('scroll', repositionOverlay);
+        window.addEventListener('resize', repositionOverlay);
     });
 }
