@@ -56,8 +56,8 @@ if (typeof window !== 'undefined') {
 
             // 设置窗口可见
             overlayWindow[side].style.display = 'flex';
-            overlayWindow[side].style.justify-content = 'center';
-            overlayWindow[side].style.align-items = 'center';
+            overlayWindow[side].style.justifyContent = 'center';
+            overlayWindow[side].style.alignItems = 'center';
             if(side == 'L')
                 overlayWindow[side].style.transform = 'translateX(-40%)';
             else
