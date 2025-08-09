@@ -50,7 +50,8 @@
     animation: R-SlideIn 0.5s ease-out;
 }
 
-#overlay-content-L, #overlay-content-R{
+#overlay-content-L1, #overlay-content-R1,
+#overlay-content-L2, #overlay-content-R2,{
     flex-grow: 1; /* 允许扩展 */
     padding: 16px;
     box-sizing: border-box; /* 包含padding在宽度计算内 */
@@ -58,27 +59,27 @@
 }
 /* 动画效果 */
 @keyframes L-SlideIn {
-  from {
-    opacity: 0;
-    display: none;
-    transform: translateX(-100vw);
-  }
-  to {
-    opacity: 1;
-    display: flex;
-    transform: translateX(0);
-  }
+    from {
+        opacity: 0;
+        display: none;
+        transform: translateX(-100vw);
+    }
+    to {
+        opacity: 1;
+        display: flex;
+        transform: translateX(0);
+    }
 }
 
 @keyframes R-SlideIn {
-  from {
-    opacity: 0;
-    display: none;
-    transform: translateX(100vw);
-  }
-  to {
-    opacity: 1;
-    display: flex;
-    transform: translateX(0);
-  }
+    from {
+        opacity: 0;
+        display: none;
+        transform: translateX(100vw);
+    }
+    to {
+        opacity: 1;
+        display: flex;
+        transform: translateX(0);
+    }
 }
