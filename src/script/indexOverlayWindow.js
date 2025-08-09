@@ -34,7 +34,7 @@ if (typeof window !== 'undefined') {
 
         // 检查元素是否存在
         if (!triggerBtn.L || !triggerBtn.R || !overlayWindow.L || !overlayWindow.R) {
-            console.error('缺少必要的元素:', { overlayWindow, windows });
+            console.error('缺少必要的元素:', { overlayWindow, triggerBtn });
             return;
         }
 
