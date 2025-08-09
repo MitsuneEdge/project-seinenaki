@@ -4,16 +4,16 @@
 if (typeof window !== 'undefined') {
     document.addEventListener('DOMContentLoaded', async () => {
         const triggerBtn = {
-            L : document.getElementById('window-trigger-L'),
-            R : document.getElementById('window-trigger-R')
+            L : document.querySelector('window-trigger-L'),
+            R : document.querySelector('window-trigger-R')
         };
-        const overlayCore = document.getElementById('overlay-core');
+        const overlayCore = document.querySelector('overlay-core');
         const overlayWindow = {
-            L : document.getElementById('overlay-window-L'),
-            R : document.getElementById('overlay-window-R')
+            L : document.querySelector('overlay-window-L'),
+            R : document.querySelector('overlay-window-R')
         };
-        const contentSectionL = document.getElementById('content-section-L');
-        const contentSectionR = document.getElementById('content-section-R');
+        const contentSectionL = document.querySelector('content-section-L');
+        const contentSectionR = document.querySelector('content-section-R');
 
         const defaultContent = {
             L: '拟态窗口-左',
@@ -34,7 +34,7 @@ if (typeof window !== 'undefined') {
 
         // 检查元素是否存在
         if (!triggerBtn.L || !triggerBtn.R || !overlayWindow.L || !overlayWindow.R) {
-            console.error('元素未找到');
+            console.error('缺少必要的元素:', { overlayWindow, windows });
             return;
         }
 
@@ -53,7 +53,11 @@ if (typeof window !== 'undefined') {
             //await loadContent(side);
 
             // 获取触发器位置
-            const triggerRect = triggerBtn[side].getBoundingClientRect();
+            try {
+                const triggerRect = triggerBtn[side].getBoundingClientRect();
+            } catch {
+                console.error(`显示${side}侧窗口失败:`, error);
+            }
 
             // 计算拟态窗口位置（与触发器同一高度）
             const top = triggerRect.top;
@@ -78,6 +82,12 @@ if (typeof window !== 'undefined') {
             document.removeEventListener('click', handleOutsideClick, true);
         }
 
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                hideAllWindows();
+            }
+        });
+
         // 处理外部点击
         function handleOutsideClick(e) {
             if (!overlayCore.contains(e.target) && e.target !== triggerBtn) {
@@ -85,22 +95,21 @@ if (typeof window !== 'undefined') {
             }
         }
 
-        // 触发器点击事件
-        triggerBtn.L.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (overlayCore.style.display === 'block') {
-                hideAllWindows();
-            } else {
-                showOverlay('L');
-            }
-        });
+        // 点击事件处理（委托给触发器容器）
+        document.body.addEventListener('click', (e) => {
+            // 检查是否点击了触发器或其中的图片
+            const triggerClicked =
+                e.target.closest('#window-trigger-L') ||
+                e.target.closest('#window-trigger-R');
 
-        triggerBtn.R.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (overlayCore.style.display === 'block') {
+            const windowClicked = e.target.closest('[id^="overlay-window-"]');
+
+            if (triggerClicked) {
+                e.preventDefault();
+                const side = triggerClicked.id.split('-').pop(); // 获取L或R
+                showOverlay(side);
+            } else if (!windowClicked) {
                 hideAllWindows();
-            } else {
-                showOverlay('R');
             }
         });
 
