@@ -24,7 +24,7 @@
     flex-direction: row;
     align-items: stretch;
     width: 80%;
-    max-height: 80%;
+    max-height: 70%;
     left: 10%;
     background: white;
     border-radius: 8px;
@@ -39,7 +39,7 @@
     flex-direction: row;
     align-items: stretch;
     width: 80%;
-    max-height: 80%;
+    max-height: 70vh;
     right: 10%; /* 距离右边10vw */
     background: white;
     border-radius: 8px;
@@ -52,10 +52,8 @@
 
 #overlay-content-L1, #overlay-content-R1,
 #overlay-content-L2, #overlay-content-R2,{
-    flex-grow: 1; /* 允许扩展 */
-    padding: 16px;
-    box-sizing: border-box; /* 包含padding在宽度计算内 */
     border: 5px solid #FF99CC;
+    margin: 10px
     padding: 10px;
 }
 /* 动画效果 */
