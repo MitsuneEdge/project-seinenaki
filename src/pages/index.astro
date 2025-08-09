@@ -92,19 +92,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
         {/*Project-Seinenaki 首页介绍正文部分*/}
 
-		{/*要套一层拟态窗口的div，让窗口锁定这一层*/}
-        <div id="overlay-core">
-            {/* indexOverlayWindow.css */}
-            <div id="overlay-window-L active">
-                <div class="content-section-L" style="flex: 5">拟态窗口-左</div>
-                <div class="content-section-R" style="flex: 2">skill issue</div>
-            </div>
-            <div id="overlay-window-R">
-                <div class="content-section-L" style="flex: 2">拟态窗口-右</div>
-                <div class="content-section-R" style="flex: 5">skill issue</div>
-            </div>
-        </div>
-
         {/* indexCharacterIntroduction.css */}
         <div class="character-container">
             <div class="character-container character-item-Img-L" style="background-color: transparent;">
@@ -153,6 +140,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             </div>
         </div>
         <DivLine color="#00ff00" height="10px" class="DivLine-ScreenShot" />
+
+        {/*要套一层拟态窗口的div，让窗口锁定这一层*/}
+        <div id="overlay-core">
+            {/* indexOverlayWindow.css */}
+            <div id="overlay-window-L active">
+                <div class="content-section-L" style="flex: 5">拟态窗口-左</div>
+                <div class="content-section-R" style="flex: 2">skill issue</div>
+            </div>
+            <div id="overlay-window-R">
+                <div class="content-section-L" style="flex: 2">拟态窗口-右</div>
+                <div class="content-section-R" style="flex: 5">skill issue</div>
+            </div>
+        </div>
 
         {/*网页主体*/}
         <main>
