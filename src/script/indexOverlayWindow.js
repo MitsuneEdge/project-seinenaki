@@ -52,7 +52,7 @@ if (typeof window !== 'undefined') {
             const left = triggerRect.right + 10; // 在触发器右侧10px处显示
 
             // 设置窗口可见
-            windows[side].style.display = 'flex';
+            overlayWindow[side].style.display = 'flex';
             overlayCore.style.display = 'block';
 
             // 点击外部关闭
@@ -62,7 +62,7 @@ if (typeof window !== 'undefined') {
         // 隐藏所有窗口
         function hideAllWindows() {
             overlayCore.style.display = 'none';
-            Object.values(windows).forEach(window => {
+            Object.values(overlayWindow).forEach(window => {
                 window.style.display = 'none';
                 window.innerHTML = defaultContent[window.id.split('-').pop()]; // 恢复默认内容
             });
