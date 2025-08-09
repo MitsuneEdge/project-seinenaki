@@ -56,7 +56,13 @@ if (typeof window !== 'undefined') {
 
             // 设置窗口可见
             overlayWindow[side].style.display = 'flex';
-            overlayCore.style.display = 'block';
+            overlayWindow[side].style.justify-content = 'center';
+            overlayWindow[side].style.align-items = 'center';
+            if(side == 'L')
+                overlayWindow[side].style.transform = 'translateX(-40%)';
+            else
+                overlayWindow[side].style.transform = 'translateX(40%)';
+            overlayCore.style.display = 'flex';
 
             // 点击外部关闭
             document.addEventListener('click', handleOutsideClick, true);
