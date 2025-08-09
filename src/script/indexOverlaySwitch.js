@@ -16,6 +16,10 @@ if (!window.__SCRIPT_EXECUTED__) {
             L : document.getElementById('indexImage-L'),
             R : document.getElementById('indexImage-R')
         };
+        const indexText = {
+            L : document.getElementById('overlay-content-L'),
+            R : document.getElementById('overlay-content-R')
+        };
 
         // 图片数组
         const images = {
@@ -29,9 +33,21 @@ if (!window.__SCRIPT_EXECUTED__) {
             ]
         };
 
+        //文字数组
+        const text = {
+            L: [
+                '/content/OverlayWindow/indexContent-L1.html',
+                '/content/OverlayWindow/indexContent-L2.html'
+            ],
+            R: [
+                '/content/OverlayWindow/indexContent-R1.html',
+                '/content/OverlayWindow/indexContent-R2.html'
+            ]
+        };
+
         // 检查元素是否存在
-        if (!indexImage.L || !indexImage.R || !triggerBtn.L || !triggerBtn.R) {
-            console.error('缺少必要的元素:', { indexImage, triggerBtn });
+        if (!indexImage.L || !indexImage.R || !triggerBtn.L || !triggerBtn.R || !indexText.L || !indexText.R) {
+            console.error('缺少必要的元素:', { indexImage, triggerBtn , indexText });
             return;
         }
 
@@ -41,18 +57,29 @@ if (!window.__SCRIPT_EXECUTED__) {
             R: 0
         };
 
+        let currentTextIndex = {
+            L: 0,
+            R: 0
+        };
+
         // 初始化显示第一张图片
         updateImage('L');
         updateImage('R');
+
+        // 初始化显示第一组文字
+        updateText('L');
+        updateText('R');
 
         // 按钮点击事件（区分左右侧按钮）
         triggerBtn.L.addEventListener('click', function() {
             currentImageIndex.L = (currentImageIndex.L + 1) % images.L.length;
             updateImage('L');
+            updateText('L');
         });
 
         triggerBtn.R.addEventListener('click', function() {
             currentImageIndex.R = (currentImageIndex.R + 1) % images.R.length;
+            updateText('R');
             updateImage('R');
         });
 
@@ -68,15 +95,21 @@ if (!window.__SCRIPT_EXECUTED__) {
             indexImage[side].style.backgroundSize = 'contain';
             indexImage[side].style.backgroundPosition = 'center';
             indexImage[side].style.backgroundRepeat = 'no-repeat';
-            indexImage[side].style.opacity = 0;
-
-            setTimeout(() => {
-                indexImage[side].style.opacity = 1;
-                indexImage[side].style.transition = 'opacity 0.5s ease';
-            }, 10);
 
             // 调试信息（显示当前图片路径）
-            console.log(`${side}侧当前显示图片: ${images[side][currentImageIndex[side]]}`);
+            //console.log(`${side}侧当前显示图片: ${images[side][currentImageIndex[side]]}`);
+        }
+
+        function updateText(side) {
+            if (!indexImage[side] || !images[side] || !images[side][currentImageIndex[side]]) {
+                console.error(`更新文字失败: ${side}侧数据无效`);
+                return;
+            }
+
+            //设置新文字
+            indexText[side].innerHTML = `url(${text[side][currentTextIndex[side]]})`;
+
+            console.log(`${side}侧当前显示文字: ${text[side][currentTextIndex[side]]}`);
         }
     });
 }
