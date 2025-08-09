@@ -53,7 +53,7 @@ if (typeof window !== 'undefined') {
             //await loadContent(side);
 
             // 获取触发器位置
-            const triggerRect = triggers[side].getBoundingClientRect();
+            const triggerRect = triggerBtn[side].getBoundingClientRect();
 
             // 计算拟态窗口位置（与触发器同一高度）
             const top = triggerRect.top;
