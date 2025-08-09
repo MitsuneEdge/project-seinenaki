@@ -4,16 +4,16 @@
 if (typeof window !== 'undefined') {
     document.addEventListener('DOMContentLoaded', async () => {
         const triggerBtn = {
-            L : document.querySelector('window-trigger-L'),
-            R : document.querySelector('window-trigger-R')
+            L : document.getElementById('window-trigger-L'),
+            R : document.getElementById('window-trigger-R')
         };
-        const overlayCore = document.querySelector('overlay-core');
+        const overlayCore = document.getElementById('overlay-core');
         const overlayWindow = {
-            L : document.querySelector('overlay-window-L'),
-            R : document.querySelector('overlay-window-R')
+            L : document.getElementById('overlay-window-L'),
+            R : document.getElementById('overlay-window-R')
         };
-        const contentSectionL = document.querySelector('content-section-L');
-        const contentSectionR = document.querySelector('content-section-R');
+        const contentSectionL = document.getElementById('content-section-L');
+        const contentSectionR = document.getElementById('content-section-R');
 
         const defaultContent = {
             L: '拟态窗口-左',
