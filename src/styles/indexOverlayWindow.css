@@ -52,7 +52,7 @@
 }
 
 #overlay-content-L1, #overlay-content-R1,
-#overlay-content-L2, #overlay-content-R2,{
+#overlay-content-L2, #overlay-content-R2 {
     border: 5px solid #FF99CC;
     margin: 10px;
     padding: 10px;
