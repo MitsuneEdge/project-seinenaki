@@ -74,9 +74,9 @@ if (typeof window !== 'undefined') {
         // 隐藏所有窗口
         function hideAllWindows() {
             overlayCore.style.display = 'none';
-            Object.values(overlayWindow).forEach(window => {
-                window.style.display = 'none';
-                window.innerHTML = defaultContent[window.id.split('-').pop()]; // 恢复默认内容
+            Object.values(overlayWindow).forEach(overlayWindow => {
+                overlayWindow.style.display = 'none';
+                overlayWindow.innerHTML = defaultContent[overlayWindow.id.split('-').pop()]; // 恢复默认内容
             });
             activeWindow = null;
             document.removeEventListener('click', handleOutsideClick, true);
