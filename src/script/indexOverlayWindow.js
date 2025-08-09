@@ -9,8 +9,8 @@ if (typeof window !== 'undefined') {
             R : document.getElementById('window-trigger-R')
         };
         const content = {
-            L : document.getElementById('overlay-window-L'),
-            R : document.getElementById('overlay-window-R')
+            L : document.getElementById('content-section-L'),
+            R : document.getElementById('content-section-R')
         };
 
     // 异步加载外部html文件
