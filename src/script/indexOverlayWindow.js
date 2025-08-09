@@ -73,11 +73,11 @@ if (typeof window !== 'undefined') {
                 const contentR2 = await loadContent('/content/OverlayWindow/indexContent-R1.html');
                 // 将内容填充到对应的div中
                 if (side === 'L') {
-                    //document.getElementById('overlay-content-L1').innerHTML = contentL1;
+                    document.getElementById('indexImage-L').innerHTML = contentL1;
                     document.getElementById('overlay-content-R1').innerHTML = contentL2;
                 } else {
                     document.getElementById('overlay-content-L2').innerHTML = contentR1;
-                    //document.getElementById('overlay-content-R2').innerHTML = contentR2;
+                    document.getElementById('indexImage-R').innerHTML = contentR2;
                 }
             } catch (error) {
                 console.error(`加载外部内容失败:`, error);

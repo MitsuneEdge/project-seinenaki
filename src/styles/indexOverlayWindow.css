@@ -51,8 +51,8 @@
     animation: R-SlideIn 0.5s ease-out;
 }
 
-#overlay-content-L1, #overlay-content-R1,
-#overlay-content-L2, #overlay-content-R2,
+#indexImage-L, #overlay-content-R1,
+#overlay-content-L2, #indexImage-R,
 #overlay-content-ContainL, #overlay-content-ContainR {
     border: 5px solid #FF99CC;
     border-radius: 10px;
