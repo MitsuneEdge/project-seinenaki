@@ -17,30 +17,59 @@ import '../styles/musicPlayer.css';
 </header>
 <style>
     header {
-        position: fixed;      /* 固定定位 */
-        left: 0;              /* 贴紧左侧 */
-        top: 50%;             /* 垂直居中起点 */
-        transform: translateY(-50%); /* 上移自身高度的50%实现精确居中 */
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
 
-        width: 10vw;          /* 宽度为视窗宽度的3% */
+        width: 10vw;
         max-width: 90px;
-        height: 30vh;         /* 高度为视窗高度的30% */
+        min-height: 30vh;
         max-height: 300px;
 
-        background: #f0f0f0;  /* 背景色（可选） */
-        border: 5px solid #666699; /* 右侧边框（可选） */
+        background: #f8f9fa;
+        border-right: 5px solid #666699;
+        border-radius: 0 10px 10px 0;
         display: flex;
-        border-radius: 10px;
-        z-index: 1000;         /* 确保悬浮在其他元素上方 */
+        flex-direction: column;
+        z-index: 1000;
 
-        white-space: nowrap;
-        gap: 10px;
+        padding: 15px 0;
+        box-sizing: border-box;
+        overflow-y: auto; /* 内容过多时滚动 */
     }
+
     nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		flex-direction: column;
-	}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        height: 100%;
+    }
+
+    .internal-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    SidebarLink {
+        display: block;
+        padding: 8px 15px;
+        color: #333;
+        text-decoration: none;
+        transition: all 0.3s;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    SidebarLink:hover {
+        background-color: #e9ecef;
+        color: #000;
+    }
 </style>
 <script src="../script/musicPlayerControl.js"></script>
