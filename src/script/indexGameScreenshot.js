@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 当前显示索引和轮播控制
     let currentIndex = 0;
     let autoRotateInterval;
-    const rotationInterval = 5000; // 5秒轮换间隔
+    const rotationInterval = 10000; // 轮换间隔，单位ms， 5s = 5000
 
     // 初始化显示第一组内容
     updateContent();

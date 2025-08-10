@@ -45,8 +45,8 @@
     align-items: center;
     justify-content: center;
 
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
 
     border: 5px solid #ddd;      /* 新增边框保持统一 */
     border-radius: 10px;         /* 新增圆角 */

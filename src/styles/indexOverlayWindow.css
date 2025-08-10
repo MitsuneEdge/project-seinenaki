@@ -7,7 +7,7 @@
 #overlay-core {
     grid-area: character-container;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     z-index: 1000;
     justify-content: center;
     align-items: center;

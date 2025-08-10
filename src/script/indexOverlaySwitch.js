@@ -118,7 +118,7 @@ if (!window.__SCRIPT_EXECUTED__) {
                 indexText[side].innerHTML = `加载错误: ${error.message}`;
             }
 
-            console.log(`${side}侧当前显示文字: ${text[side][currentTextIndex[side]]}`);
+            //console.log(`${side}侧当前显示文字: ${text[side][currentTextIndex[side]]}`);
         }
     });
 }
