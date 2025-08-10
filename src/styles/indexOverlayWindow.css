@@ -18,7 +18,7 @@
     flex-direction: row;
     align-items: stretch;
     width: 80%;
-    height: 85%;
+    height: 90%;
     left: 10%;
     background: white;
     border-radius: 8px;
@@ -33,7 +33,7 @@
     flex-direction: row;
     align-items: stretch;
     width: 80%;
-    height: 85%;
+    height: 90%;
     right: 10%; /* 距离右边10vw */
     background: white;
     border-radius: 8px;
@@ -57,6 +57,9 @@
     align-items: center;        /* 垂直居中 */
     width: 100%;               /* 确保宽度填满父容器 */
     height: 90%;              /* 确保高度填满父容器 */
+
+    overflow: auto;
+    line-height: 0.8;
 }
 
 #indexImage-L, #indexImage-R {
