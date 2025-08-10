@@ -1,9 +1,11 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
-<html lang="zh">
+<html lang="zh-CN">
 
     <head>
         <BaseHead title={"关于团队"} description={"《时载录-永律之羽》开发团队"} />
@@ -66,6 +68,8 @@ import Layout from '../layouts/BlogPost.astro';
             </p>
 
         </main>
+
+        <Footer />
     </body>
 </html>
 
