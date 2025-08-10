@@ -4,12 +4,17 @@
 .character-container {
     display: flex;           /* Flex 布局 */
     width: 80%;           /* 固定宽度 */
-    min-height: 80vh;
+    height: 95vh;
     margin: 0 auto;
+
     text-align: center;
     font-size: 16px;
     font-weight: normal;
-    background-color: transparent;
+
+    background-image: '/image/Reserver_Example_1.jpg';
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     grid-area: character-container;
 }
@@ -19,13 +24,7 @@
     display: flex;
     height: 100%;           /* 统一高度 */
     width: 100%;
-    border: 2px solid #000;  /* 边框（可选） */
-    box-sizing: border-box;  /* 确保边框不影响宽度计算 */
     margin: 20px;
-    background-image: '/image/Reserver_Example_1.jpg';
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 /* 按比例分配宽度 */
