@@ -29,14 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // 获取DOM元素
     const leftContainer = document.querySelector('.GameScreenshot-L');
     const rightContainer = document.querySelector('.GameScreenshot-R');
+    const container = document.querySelector('.GameScreenshot-container');
     const prevButton = document.getElementById('prev-btn');
     const nextButton = document.getElementById('next-btn');
 
-    // 当前显示索引
+    // 当前显示索引和轮播控制
     let currentIndex = 0;
+    let autoRotateInterval;
+    const rotationInterval = 5000; // 5秒轮换间隔
 
     // 初始化显示第一组内容
     updateContent();
+    startAutoRotation();
 
     // 更新显示内容
     function updateContent() {
@@ -78,10 +82,26 @@ document.addEventListener('DOMContentLoaded', function() {
         updateContent();
     }
 
-    // 添加按钮事件监听
-    if (prevButton) prevButton.addEventListener('click', showPrevious);
-    if (nextButton) nextButton.addEventListener('click', showNext);
+    // 开始自动轮播
+    function startAutoRotation() {
+        if (!autoRotateInterval) {
+            autoRotateInterval = setInterval(showNext, rotationInterval);
+        }
+    }
 
-    // 可选：自动轮播
-    const autoRotateInterval = setInterval(showNext, 5000);
+    // 暂停自动轮播
+    function pauseAutoRotation() {
+        if (autoRotateInterval) {
+            clearInterval(autoRotateInterval);
+            autoRotateInterval = null;
+        }
+    }
+
+    // 鼠标悬停暂停轮播
+    container.addEventListener('mouseenter', pauseAutoRotation);
+    container.addEventListener('mouseleave', startAutoRotation);
+    // 添加按钮事件监听
+    //if (prevButton) prevButton.addEventListener('click', showPrevious);
+    //if (nextButton) nextButton.addEventListener('click', showNext);
+
 });
