@@ -1,12 +1,7 @@
 /* src/styles/indexOverlayWindow.css */
 
-.window-trigger-L, .window-trigger-R {
+#window-trigger-L, #window-trigger-R {
     cursor: pointer;
-    padding: 10px;
-    background-color: transparent;
-    color: white;
-    display: inline-block;
-    position: relative;
 }
 
 #overlay-core {
