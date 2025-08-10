@@ -17,7 +17,7 @@ function attemptAutoPlay() {
 }
 
 // 切换播放/停止状态
-function toggleMusic() {
+async function toggleMusic() {
     if (music.paused) {
         music.play();
         musicButton.textContent = '停止音乐';
