@@ -25,9 +25,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	    {/* 导航栏 */}
 		<Header />
 
-        {/* 神秘播放器 */}
+        {/* 神秘播放器 波罗的海劲爆电音 */}
         <audio id="bgMusic" loop>
-            <source src="https://data-reserve.rinkawa-0v0.top/29. Broken Arrow - OST - Command Master.mp3" type="audio/mpeg">
+            <source src="https://music.163.com/song/media/outer/url?id=2691120935.mp3" type="audio/mpeg">
         </audio>
 
 		{/* 网页头部的巨大海报和字体 */}
@@ -105,7 +105,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                        onmouseover="this.style.transform='scale(1.15)'"
                        onmouseout="this.style.transform='scale(1)'"
                     >
-                        背景音乐
+                        播放音乐
                     </a>
                 </div>
             </div>
@@ -136,13 +136,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                     <div id="indexImage-L" style="flex: 5;"></div>
                         <div id="overlay-content-ContainL" style="flex: 2; align-items: center; flex-direction: column;">
                             <div id="overlay-content-L" style="flex: 7; align-items: center;"></div>
-                            <div id="overlay-content-BtnL" style="flex: 1; align-items: center;">左测试按钮</div>
+                            <div id="overlay-content-BtnL" style="flex: 1; align-items: center;">切换动画</div>
                         </div>
                     </div>
                     <div id="overlay-window-R">
                         <div id="overlay-content-ContainR" style="flex: 2; align-items: center; flex-direction: column;">
                             <div id="overlay-content-R" style="flex: 7; align-items: center;"></div>
-                            <div id="overlay-content-BtnR" style="flex: 1; align-items: center;">右测试按钮</div>
+                            <div id="overlay-content-BtnR" style="flex: 1; align-items: center;">切换动画</div>
                         </div>
                         <div id="indexImage-R" style="flex: 5;"></div>
                     </div>
@@ -153,8 +153,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             {/* indexGameScreenshot.css */}
             {/*插画鉴赏部分——多图片幻灯片轮换，鼠标移至区块上暂停轮换*/}
             <div class="GameScreenshot-container">
-                <div style="background-color: transparent; text-align: center; width: 100%;">
-                    <p><b>插画鉴赏</b></p>
+                <div style="background-color: transparent; text-align: center; width: 100%; margin-bottom: 20px;">
+                    <p style="font-size: 24px"><b>插画鉴赏</b></p>
                 </div>
                 <div style="display: flex; width: 100%; gap: 10px;">
                     <div class="GameScreenshot-L" style="flex:5; min-width:0; overflow: hidden;">
@@ -246,5 +246,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<script src="../script/indexGameMechanicsImage.js"></script>
         <script src="../script/indexOverlaySwitch.js"></script>
         <script src="../script/musicPlayerControl.js"></script>
+        <script src="/path/to/indexGameScreenshot.js"></script>
 	</body>
 </html>

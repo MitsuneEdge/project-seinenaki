@@ -36,12 +36,12 @@ if (!window.__SCRIPT_EXECUTED__) {
         //文字数组
         const text = {
             L: [
-                '/content/OverlayWindow/indexContent-L1.html',
-                '/content/OverlayWindow/indexContent-L2.html'
+                '/content/indexOverlayWindow/indexContent-L1.html',
+                '/content/indexOverlayWindow/indexContent-L2.html'
             ],
             R: [
-                '/content/OverlayWindow/indexContent-R1.html',
-                '/content/OverlayWindow/indexContent-R2.html'
+                '/content/indexOverlayWindow/indexContent-R1.html',
+                '/content/indexOverlayWindow/indexContent-R2.html'
             ]
         };
 
