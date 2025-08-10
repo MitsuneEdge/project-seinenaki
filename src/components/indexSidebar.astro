@@ -1,16 +1,14 @@
 ---
-import SidebarLink from './SidebarLink.astro';
 import '../styles/musicPlayer.css';
 ---
 
 <header>
     <nav>
-        <div class="internal-links">
-            <SidebarLink href="/">主页</SidebarLink>
-            <SidebarLink href="/story">剧情</SidebarLink>
-            <SidebarLink href="/blog">动态</SidebarLink>
-            <SidebarLink href="/about">关于</SidebarLink>
-        </div>
+        <button class="jump2page" data-target="hero-banner">顶部海报</button>
+        <button class="jump2page" data-target="character-container">角色介绍</button>
+        <button class="jump2page" data-target="GameScreenshot-container">设定集</button>
+        <button class="jump2page" data-target="GameMechanics-container">玩法展示</button>
+        <button class="jump2page" data-target="storyIntroduce">关于游戏</button>
         <button id="musicPlayerButton">播放音乐</button>
         <audio id="backgroundMusic"></audio>
     </nav>
@@ -47,29 +45,20 @@ import '../styles/musicPlayer.css';
         gap: 15px;
         height: 100%;
     }
-
-    .internal-links {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        width: 100%;
-    }
-
-    SidebarLink {
-        display: block;
-        padding: 8px 15px;
-        color: #333;
-        text-decoration: none;
-        transition: all 0.3s;
+    .jump2page {
+        padding: 12px 20px;
+        margin: 5px 0;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
         text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
 
-    SidebarLink:hover {
-        background-color: #e9ecef;
-        color: #000;
+    /* 鼠标悬停效果 */
+    .jump2page:hover {
+        background-color: #e0e0e0;
     }
 </style>
 <script src="../script/musicPlayerControl.js"></script>
+<script src="../script/Jump2Target.js"></script>
