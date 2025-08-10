@@ -1,36 +1,76 @@
 /* src/script/musicPlayerControl.js */
 
-const music = document.getElementById('bgMusic');
-const musicButton = document.getElementById('musicPlayerButton');
+document.addEventListener('DOMContentLoaded', function() {
+    musicPlayerButton = document.getElementById('musicPlayerButton');
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    //const currentSongDisplay = document.getElementById('currentSong');
 
-// 初始音量设为10%
-music.volume = 0.1;
+    // 歌曲列表
+    const songs = [
+        '1.mp3',
+        '2.mp3',
+        '3.mp3'
+    ];
 
-// 自动播放尝试（需用户交互的浏览器会失败）
-function attemptAutoPlay() {
-    const playPromise = music.play();
-    if (playPromise !== undefined) {
-        playPromise.catch(() => {
-            // 自动播放失败时不处理，等待用户点击
-        });
+    let currentSongIndex = -1;
+
+    // 设置音量为10%
+    backgroundMusic.volume = 0.1;
+
+    // 随机选择下一首歌
+    function getRandomSong() {
+        let nextIndex;
+        do {
+            nextIndex = Math.floor(Math.random() * songs.length);
+        } while (songs.length > 1 && nextIndex === currentSongIndex);
+
+        currentSongIndex = nextIndex;
+        return songs[currentSongIndex];
     }
-}
 
-// 切换播放/停止状态
-async function toggleMusic() {
-    if (music.paused) {
-        music.play();
-        musicButton.textContent = '停止音乐';
-        musicButton.classList.add('playing');
-    } else {
-        music.pause();
-        musicButton.textContent = '播放音乐';
-        musicButton.classList.remove('playing');
+    // 加载并播放歌曲
+    function playRandomSong() {
+        const song = getRandomSong();
+        backgroundMusic.src = song;
+        backgroundMusic.play()
+            .then(() => {
+                //currentSongDisplay.textContent = `正在播放: ${song}`;
+                musicPlayerButton.textContent = '暂停音乐';
+            })
+            .catch(error => {
+                console.error('播放失败:', error);
+            });
     }
-}
 
-// 按钮点击事件
-musicButton.addEventListener('click', toggleMusic);
+    // 按钮点击事件
+    musicPlayerButton.addEventListener('click', function() {
+        if (backgroundMusic.paused) {
+            if (!backgroundMusic.src) {
+                // 如果还没有选择歌曲，随机选择一首
+                playRandomSong();
+            } else {
+                backgroundMusic.play()
+                .then(() => {
+                    musicPlayerButton.textContent = '暂停音乐';
+                });
+            }
+        } else {
+            backgroundMusic.pause();
+            musicPlayerButton.textContent = '播放音乐';
+        }
+    });
 
-// 页面加载后尝试自动播放（可选）
-window.addEventListener('load', attemptAutoPlay);
+    // 歌曲结束时自动播放下一首
+    backgroundMusic.addEventListener('ended', function() {
+        playRandomSong();
+    });
+
+     // 处理网络错误
+    backgroundMusic.addEventListener('error', function() {
+        console.error('加载音乐失败');
+        setTimeout(playRandomSong, 2000);
+    });
+
+    // 初始状态显示
+    //currentSongDisplay.textContent = '音乐已停止';
+});

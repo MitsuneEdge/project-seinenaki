@@ -1,11 +1,15 @@
 /* src/styles/musicPlayer.css */
 
 #musicPlayerButton {
-    background: #4CAF50;
+    font-size: 16px;
     cursor: pointer;
-    white-space: nowrap;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
-#musicPlayerButton.playing {
+#musicPlayerButton:hover {
     background: #f44336; /* 播放时按钮变红色 */
 }
