@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 歌曲列表
     const songs = [
-        '1.mp3',
-        '2.mp3',
+        'https://music.163.com/song/media/outer/url?id=2691120935.mp3',
+        'https://music.163.com/song/media/outer/url?id=28481734.mp3',
         '3.mp3'
     ];
 
