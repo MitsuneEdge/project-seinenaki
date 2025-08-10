@@ -2,12 +2,18 @@
 // src/components/DivLine.astro
 // 可选的 Props（如果需要动态调整样式）
 export interface Props {
-  color?: string;
-  height?: string;
-  background?: string;
+    color?: string;
+    height?: string;
+    background?: string;
+    spacing?: string;
 }
 
-const { color = "var(--div-line-color, #e2e8f0)", height = "5vh", background = "" } = Astro.props;
+const {
+    color = "var(--div-line-color, #e2e8f0)",
+    height = "5vh",
+    background = "",
+    spacing = "8vh",
+} = Astro.props;
 const finalBackground = background || color;
 
 ---
@@ -19,7 +25,7 @@ const finalBackground = background || color;
     height: ${height};
     background: ${finalBackground};
     border: none;
-    margin: 0;
+    margin: ${spacing} 0;
   `}
 />
 

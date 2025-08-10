@@ -3,7 +3,7 @@
 /* 容器样式 */
 .character-container {
     display: flex;           /* Flex 布局 */
-    width: 90%;           /* 固定宽度 */
+    width: 100%;           /* 固定宽度 */
     height: 95vh;
     margin: 0 auto;
 
@@ -33,6 +33,7 @@
     flex: 2;                 /* 比例 1 */
     border: 5px solid #FF00CC;
     height: 95%;
+    padding: 10px;
     justify-content: center;
     align-items: center;
 }
