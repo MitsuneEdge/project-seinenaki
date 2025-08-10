@@ -149,45 +149,42 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                 </div>
         </div>
         {/*网页主体*/}
-        <main>
-            {/* indexGameScreenshot.css */}
-            {/*插画鉴赏部分——多图片幻灯片轮换，鼠标移至区块上暂停轮换*/}
-            <div class="GameScreenshot-container">
-                <div style="background-color: transparent; text-align: center; width: 100%; margin-bottom: 20px;">
-                    <p style="font-size: 24px"><b>插画鉴赏</b></p>
-                </div>
-                <div style="display: flex; width: 100%; gap: 10px;">
-                    <div class="GameScreenshot-L" style="flex:5; min-width:0; overflow: hidden;">
-                        <img style="height: auto; width: 100%; object-fit: contain;" src="/image/humph_rabbit.jpg">
-                    </div>
-                    <div class="GameScreenshot-R" style="flex:3; min-width:0;">
-                        这里是右侧内容
-                    </div>
-                </div>
+
+        {/* indexGameScreenshot.css */}
+        {/*插画鉴赏部分——多图片幻灯片轮换，鼠标移至区块上暂停轮换*/}
+        <div class="GameScreenshot-container">
+            <div style="background-color: transparent; text-align: center; width: 100%; margin-bottom: 20px;">
+                <p style="font-size: 24px"><b>插画鉴赏</b></p>
             </div>
+            <div style="display: flex; width: 100%; gap: 10px;">
+                <div class="GameScreenshot-L" style="flex:5; min-width:0; overflow: hidden;"></div>
+                <div class="GameScreenshot-R" style="flex:3; min-width:0;"></div>
+            </div>
+        </div>
 
-            <DivLine color="#00ff00" height="10px" class="DivLine-GameMechanics" />
+        <DivLine color="#00ff00" height="10px" class="DivLine-GameMechanics" />
 
-            {/* indexGameMechanics.css */}
-            {/*玩法展示部分——左模块为竖排多选项，右模块为对应概念图*/}
-            <div class="GameMechanics-container">
-                <div class="GameMechanics-title">
-                    <p style="text-align: center;"><b>玩法展示</b><p>
-                </div>
-                <div class="GameMechanics-image">
-                    <div class="GameMechanics-L">
+        {/* indexGameMechanics.css */}
+        {/*玩法展示部分——左模块为竖排多选项，右模块为对应概念图*/}
+        <div class="GameMechanics-container">
+            <div class="GameMechanics-title">
+                <p style="text-align: center;"><b>玩法展示</b><p>
+            </div>
+            <div class="GameMechanics-image">
+                <div class="GameMechanics-L">
                         <div class="GameMechanics-L-module">模块 1</div>
                         <div class="GameMechanics-L-module">模块 2</div>
                         <div class="GameMechanics-L-module">模块 3</div>
                         <div class="GameMechanics-L-module">模块 4</div>
                         <div class="GameMechanics-L-module">模块 5</div>
                     </div>
-                    <div class="GameMechanics-R" id="rightContent"></div>
-                </div>
+                <div class="GameMechanics-R" id="rightContent"></div>
             </div>
+        </div>
 
-            <DivLine color="#00ff00" height="10px" class="DivLine-storyIntroduce" />
+        <DivLine color="#00ff00" height="10px" class="DivLine-storyIntroduce" />
 
+        <main>
             {/*模块2*/}
             <div class="storyIntroduce" style="background-color: transparent;">
                 <p style="text-align: center;"><b>这是剧情介绍</b><p>
@@ -214,9 +211,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                 </p>
             </div>
 
-			{/*游戏点击就送*/}
-			<DivLine color="#ffffff" height="10px" class="DivLine-indexPreOrder"  />
-			<div class="preorder-btn"
+            <DivLine color="#00ff00" height="10px" class="DivLine-preOrder" />
+        </main>
+
+        {/*游戏点击就送*/}
+
+        <DivLine color="#ffffff" height="10px" class="DivLine-indexPreOrder"  />
+        <div class="preorder-btn"
 			    style="
 			    display: flex;
 			    background-color: transparent;
@@ -240,7 +241,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                     预约游戏
                 </a>
             </div>
-		</main>
+
 		<Footer />
 		<script src="../script/indexOverlayWindow.js"></script>
 		<script src="../script/indexGameMechanicsImage.js"></script>
