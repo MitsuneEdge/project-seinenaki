@@ -26,7 +26,7 @@
     border: 10px solid #e0e0e0;
 
     overflow: hidden;
-    animation: L-SlideIn 0.5s ease-out;
+    animation: L-SlideIn 2.5s ease-out;
 }
 
 #overlay-window-R {
@@ -41,7 +41,7 @@
     border: 10px solid #e0e0e0;
 
     overflow: hidden;
-    animation: R-SlideIn 0.5s ease-out;
+    animation: R-SlideIn 2.5s ease-out;
 }
 
 #indexImage-L, #overlay-content-R1,
