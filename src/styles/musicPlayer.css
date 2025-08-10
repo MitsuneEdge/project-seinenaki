@@ -3,6 +3,7 @@
 #musicPlayerButton {
     background: #4CAF50;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 #musicPlayerButton.playing {
