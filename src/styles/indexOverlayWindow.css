@@ -59,7 +59,7 @@
     height: 90%;              /* 确保高度填满父容器 */
 
     overflow: auto;
-    line-height: 0.8;
+    line-height: 1.5;
 }
 
 #indexImage-L, #indexImage-R {
