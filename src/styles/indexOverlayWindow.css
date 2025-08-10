@@ -58,7 +58,7 @@
     width: 100%;               /* 确保宽度填满父容器 */
     height: 90%;              /* 确保高度填满父容器 */
 
-    overflow: auto;
+    overflow: hidden;
     line-height: 1.5;
 }
 
