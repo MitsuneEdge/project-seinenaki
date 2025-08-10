@@ -7,7 +7,6 @@ import '../styles/indexCharacterIntroduction.css';
 import '../styles/indexHeroBanner.css';
 import '../styles/indexGameMechanics.css';
 import '../styles/indexOverlayWindow.css';
-import '../styles/musicPlayer.css';
 import '../styles/indexGameScreenshot.css';
 ---
 
@@ -24,11 +23,6 @@ import '../styles/indexGameScreenshot.css';
 	<body>
 	    {/* 导航栏 */}
 		<Header />
-
-        {/* 神秘播放器 波罗的海劲爆电音 */}
-        <audio id="bgMusic" loop>
-            <source src="https://music.163.com/song/media/outer/url?id=2691120935.mp3" type="audio/mpeg">
-        </audio>
 
 		{/* 网页头部的巨大海报和字体 */}
 
@@ -91,21 +85,6 @@ import '../styles/indexGameScreenshot.css';
                         onmouseout="this.style.transform='scale(1)'"
                     >
                         预约游戏
-                    </a>
-                    <a id="musicPlayerButton"
-                       style="
-                        font-size: 16px;
-                        margin-left: 15px;
-                        white-space: nowrap;
-                        background-color: rgba(0,0,0,0.3);
-                        text-decoration: none;
-                        border-radius: 4px;
-                        box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-                        width: max-content;"
-                       onmouseover="this.style.transform='scale(1.15)'"
-                       onmouseout="this.style.transform='scale(1)'"
-                    >
-                        播放音乐
                     </a>
                 </div>
             </div>
@@ -186,9 +165,9 @@ import '../styles/indexGameScreenshot.css';
             <DivLine color="#00ff00" height="10px" class="DivLine-storyIntroduce" />
 
 
-            {/*模块2*/}
+            {/* 游戏介绍 */}
             <div class="storyIntroduce" style="background-color: transparent;">
-                <p style="text-align: center; font-size: 30px;"><b>关于 《永律之雨》</b></p>
+                <p style="text-align: center; font-size: 35px;"><b>关于 《永律之羽》</b></p>
                 <p style="text-align: center; font-size: 22px;">这是一款以世界故事与角色表现为核心的叙事RPG游戏。</p>
                 <p style="text-align: center; font-size: 22px;">
                     你将踏入濒临崩溃的永律界，一个由旋律构成、却因负面情感而濒临毁灭的独特世界。
@@ -221,7 +200,7 @@ import '../styles/indexGameScreenshot.css';
 
         <DivLine color="#00ff00" height="10px" class="DivLine-indexPreOrder"  />
 
-        {/*游戏点击就送*/}
+        {/*点击就送*/}
         <div class="preorder-btn"
 			    style="
 			    display: flex;
@@ -250,7 +229,6 @@ import '../styles/indexGameScreenshot.css';
 		<script src="../script/indexOverlayWindow.js"></script>
 		<script src="../script/indexGameMechanicsImage.js"></script>
         <script src="../script/indexOverlaySwitch.js"></script>
-        <script src="../script/musicPlayerControl.js"></script>
         <script src="../script/indexGameScreenshot.js"></script>
 	</body>
 </html>

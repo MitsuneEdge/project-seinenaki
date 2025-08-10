@@ -1,0 +1,34 @@
+---
+import SidebarLink from './SidebarLink.astro';
+import '../styles/musicPlayer.css';
+---
+
+<header>
+    <nav>
+        <div class="internal-links">
+            <SidebarLink href="/">主页</SidebarLink>
+            <SidebarLink href="/story">剧情</SidebarLink>
+            <SidebarLink href="/blog">动态</SidebarLink>
+            <SidebarLink href="/about">关于</SidebarLink>
+        </div>
+    </nav>
+</header>
+<style>
+    .sidebar {
+        position: fixed;      /* 固定定位 */
+        left: 0;              /* 贴紧左侧 */
+        top: 50%;             /* 垂直居中起点 */
+        transform: translateY(-50%); /* 上移自身高度的50%实现精确居中 */
+
+        width: 3vw;          /* 宽度为视窗宽度的3% */
+        max-width: 90px;
+        height: 30vh;         /* 高度为视窗高度的30% */
+        max-height: 150px;
+
+        background: #f0f0f0;  /* 背景色（可选） */
+        border: 5px solid #666699; /* 右侧边框（可选） */
+        display: flex;
+        z-index: 1000;         /* 确保悬浮在其他元素上方 */
+    }
+</style>
+<script src="../script/musicPlayerControl.js"></script>
