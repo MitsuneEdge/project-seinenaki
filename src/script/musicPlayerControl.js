@@ -1,7 +1,7 @@
 /* src/script/musicPlayerControl.js */
 
 document.addEventListener('DOMContentLoaded', function() {
-    musicPlayerButton = document.getElementById('musicPlayerButton');
+    const musicPlayerButton = document.getElementById('musicPlayerButton');
     const backgroundMusic = document.getElementById('backgroundMusic');
     //const currentSongDisplay = document.getElementById('currentSong');
 
