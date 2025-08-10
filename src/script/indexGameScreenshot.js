@@ -56,9 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch(currentPair.html)
             .then(response => response.text())
             .then(html => {
-                rightContainer.innerHTML = `
-                    <div class="screenshot-content">${html}</div>
-                `;
+                rightContainer.innerHTML = html;
             })
             .catch(error => {
                 console.error('加载内容失败:', error);
