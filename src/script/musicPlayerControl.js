@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const songs = [
         'https://music.163.com/song/media/outer/url?id=2691120935.mp3',
         'https://music.163.com/song/media/outer/url?id=28481734.mp3',
-        '3.mp3'
+        'https://music.163.com/song/media/outer/url?id=686361.mp3'
     ];
 
     let currentSongIndex = -1;

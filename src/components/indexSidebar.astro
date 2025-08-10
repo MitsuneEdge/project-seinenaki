@@ -15,6 +15,7 @@ import '../styles/musicPlayer.css';
 </header>
 <style>
     header {
+        white-space: nowrap;
         position: fixed;
         left: 0;
         top: 50%;
@@ -45,14 +46,15 @@ import '../styles/musicPlayer.css';
         gap: 15px;
         height: 100%;
     }
+
     .jump2page {
-        padding: 12px 20px;
-        margin: 5px 0;
-        background-color: #f0f0f0;
-        border-radius: 5px;
+        font-size: 16px;
         cursor: pointer;
-        transition: all 0.2s ease;
-        text-align: center;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     }
 
     /* 鼠标悬停效果 */
