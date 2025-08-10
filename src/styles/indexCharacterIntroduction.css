@@ -3,7 +3,7 @@
 /* 容器样式 */
 .character-container {
     display: flex;           /* Flex 布局 */
-    width: 80%;           /* 固定宽度 */
+    width: 90%;           /* 固定宽度 */
     height: 95vh;
     margin: 0 auto;
 
@@ -11,7 +11,7 @@
     font-size: 16px;
     font-weight: normal;
 
-    background-image: '/image/Reserver_Example_1.jpg';
+    background-image: url('/image/Reserve_Example_1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,7 +22,7 @@
 /* 通用子元素样式 */
 .character-item {
     display: flex;
-    height: 100%;           /* 统一高度 */
+    height: 90%;           /* 统一高度 */
     width: 100%;
     margin: 20px;
 }
@@ -30,17 +30,17 @@
 /* 按比例分配宽度 */
 .character-trigger-L,
 .character-trigger-R {
-    flex: 1;                 /* 比例 1 */
+    flex: 2;                 /* 比例 1 */
     border: 5px solid #FF00CC;
-    height: 100%;
+    height: 95%;
     justify-content: center;
     align-items: center;
 }
 
 .character-EmptyBlock {
-    flex: 6;                 /* 比例 6 */
+    flex: 5;                 /* 比例 6 */
     border: 5px solid #FF99CC;
-    height: 100%;
+    height: 95%;
     padding: 10px;
     min-width: 0;
 }
