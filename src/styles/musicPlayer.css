@@ -1,0 +1,13 @@
+/* src/styles/musicPlayer.css */
+
+#musicPlayerButton {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#musicPlayerButton.playing {
+    background: #f44336; /* 播放时按钮变红色 */
+}
