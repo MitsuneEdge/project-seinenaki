@@ -2,59 +2,70 @@
 import Layout from '../layouts/BlogPost.astro';
 ---
 
-<Layout
-	title="时载录 - 永律之羽 开发团队"
-	description="哎要不要试试联系管理员"
-	pubDate={new Date('May 09 2077')}
-	heroImage="/image/war&kal.png"
->
-    <div style="display: flex; padding: 15px; margin: 10px;">
-        <div
-            style="
-            flex: 3;
-            display: flex;
-            max-height: 300px;
-            align-items: center;
-            justify-content: center;
-        ">
-            <img src="/image/Rinkawa.jpg"
-                 style="
-                 width: auto;
-                 height: 100%;
-                 object-fit: contain;
-                 border: 5px solid #CC3399;
-                 border-radius: 10px;
-            ">
-        </div>
-        <div
-            style="
-            flex: 5;
-            display: flex;
-            border: 5px solid #CCCCFF;
-            border-radius: 10px;
-            padding: 15px;
-            align-items: center;
-            justify-content: center;
-        ">
-            <p style="margin: 0;">
-                网站管理 & Dev<br>
-                Matsushita Rinkawa 哈气了<br>
-                哈气直通车：krs_noelrose@foxmail.com
+<!doctype html>
+<html lang="zh">
+
+    <head>
+        <BaseHead title={"关于团队"} description={"《时载录-永律之羽》开发团队"} />
+    </head>
+
+    <body>
+        <Header />
+
+        <main>
+
+            <img src="/image/war&kal.png" style="width: 80%; objectFit: contain;">
+
+            <h1 style="text-align:center;">时载录 - 永律之羽 开发团队</h1>
+            <h3 style="text-align:center;"> May 09 2077 </h3>
+
+            <p>
+                你说得对但是这里是千秋子的联系方式
             </p>
-        </div>
-    </div>
 
-	<p>
-		你说得对但是这里是千秋子的联系方式
-	</p>
+            <div style="display: flex; padding: 15px; margin: 10px;">
+                <div
+                    style="
+                    flex: 3;
+                    display: flex;
+                    max-height: 300px;
+                    align-items: center;
+                    justify-content: center;
+                ">
+                    <img src="/image/Rinkawa.jpg"
+                         style="
+                         width: auto;
+                         height: 100%;
+                         object-fit: contain;
+                         border: 5px solid #CC3399;
+                         border-radius: 10px;
+                    ">
+                </div>
+                <div
+                    style="
+                    flex: 5;
+                    display: flex;
+                    border: 5px solid #CCCCFF;
+                    border-radius: 10px;
+                    padding: 15px;
+                    align-items: center;
+                    justify-content: center;
+                ">
+                    <p style="margin: 0; text-align: center;">
+                        网站管理 & Dev<br>
+                        Matsushita Rinkawa 哈气了<br>
+                        哈气直通车：krs_noelrose@foxmail.com<br>
+                        或者点击<a href="https://github.com/MitsuneEdge/project-seinenaki">哈气直通车</a>提交网页问题issue<br>
+                        记得附上可以帮助排查问题的信息x
+                    </p>
+                </div>
+            </div>
 
-	<p>
-		你说得对但是这里是Morind的联系方式
-	</p>
+            <p>
+                你说得对但是这里是Morind的联系方式
+            </p>
 
-	<p>
-		你说得对但是这里是这个静态的动态网页的gayhub仓库的地址<br>
-		<a href="https://github.com/MitsuneEdge/project-seinenaki">Project-Seinenaki by Lolita High-Tech</a><br>
-		发现网页问题请提交issue
-	</p>
-</Layout>
+        </main>
+    </body>
+</html>
+
