@@ -99,16 +99,19 @@ import '../styles/indexGameScreenshot.css';
         {/*Project-Seinenaki 首页介绍正文部分*/}
 
         {/* indexCharacterIntroduction.css */}
-        <div style="display: grid; grid-template-areas: 'character-container';">
+        <div style="display: grid; grid-template-areas: 'character-container'; margin: 0;">
             <div class="character-container">
+                <video class="video-background" autoplay muted loop>
+                    <source src="/video/your-video.mp4" type="video/mp4">
+                    <!-- 后备内容（如果浏览器不支持视频） -->
+                    <p>您的浏览器不支持 HTML5 视频</p>
+                </video>
                 <div class="character-item">
                     <div class="character-trigger-L" id="window-trigger-L"></div>
                     <div class="character-EmptyBlock"></div>
                     <div class="character-trigger-R" id="window-trigger-R"></div>
                 </div>
             </div>
-
-            <DivLine color="#00ff00" height="10px" class="DivLine-ScreenShot" spacing="2vh" />
 
             {/*要套一层拟态窗口的div，让窗口锁定这一层*/}
             <div id="overlay-core">
@@ -129,6 +132,8 @@ import '../styles/indexGameScreenshot.css';
                     </div>
                 </div>
         </div>
+
+        <DivLine color="#00ff00" height="10px" class="DivLine-ScreenShot" spacing="0vh" />
         {/*网页主体*/}
 
         <main>

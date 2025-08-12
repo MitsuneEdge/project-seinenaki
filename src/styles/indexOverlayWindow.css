@@ -7,11 +7,16 @@
 #overlay-core {
     grid-area: character-container;
     width: 100%;
-    height: 90vh;
+    height: 100%;
     z-index: 1000;
+
+    display: flex;
     justify-content: center;
     align-items: center;
     display: none; /* 默认隐藏 */
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 #overlay-window-L {
@@ -24,6 +29,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border: 10px solid #e0e0e0;
+    margin: auto;
 
     overflow: hidden;
     animation: L-SlideIn 2.0s ease-out;
@@ -39,6 +45,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border: 10px solid #e0e0e0;
+    margin: auto;
 
     overflow: hidden;
     animation: R-SlideIn 2.0s ease-out;
