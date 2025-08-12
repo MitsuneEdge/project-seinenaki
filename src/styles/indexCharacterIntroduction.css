@@ -4,8 +4,8 @@
 .character-container {
     display: flex;           /* Flex 布局 */
     width: 100%;           /* 固定宽度 */
-    height: 95vh;
     margin: 0 auto;
+    position: relative;
 
     text-align: center;
     font-size: 16px;
@@ -17,6 +17,13 @@
     background-repeat: no-repeat;
 
     grid-area: character-container;
+}
+
+.character-container::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* 16:9 比例 */
+    /* 或者用 JS 动态计算 */
 }
 
 /* 通用子元素样式 */
