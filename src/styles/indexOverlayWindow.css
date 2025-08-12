@@ -15,8 +15,6 @@
     align-items: center;
     display: none; /* 默认隐藏 */
     position: absolute;
-    top: 0;
-    left: 0;
 }
 
 #overlay-window-L {
