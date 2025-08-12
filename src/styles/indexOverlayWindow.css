@@ -29,7 +29,7 @@
     margin: auto;
 
     overflow: hidden;
-    animation: L-SlideIn 2.0s ease-out;
+    animation: L-SlideIn 1.5s ease-out;
 }
 
 #overlay-window-R {
@@ -45,7 +45,7 @@
     margin: auto;
 
     overflow: hidden;
-    animation: R-SlideIn 2.0s ease-out;
+    animation: R-SlideIn 1.5s ease-out;
 }
 
 #indexImage-L, #overlay-content-R1,
