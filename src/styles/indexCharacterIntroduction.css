@@ -29,7 +29,7 @@
 /* 通用子元素样式 */
 .character-item {
     display: flex;
-    height: 90%;           /* 统一高度 */
+    height: 95%;           /* 统一高度 */
     width: 100%;
     margin: 20px;
 }
