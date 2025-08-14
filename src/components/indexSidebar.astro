@@ -3,7 +3,7 @@ import '../styles/musicPlayer.css';
 ---
 
 <header>
-    <nav>
+    <nav class="collapsed">
         <button class="jump2page" data-target="hero-banner">顶部海报</button>
         <button class="jump2page" data-target="character-container">角色介绍</button>
         <button class="jump2page" data-target="GameScreenshot-container">设定展示</button>
@@ -73,7 +73,6 @@ import '../styles/musicPlayer.css';
         border-radius: 5px;
         box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 
-        padding: 8px 5px; /* 按钮内边距 */
         white-space: nowrap; /* 防止文字换行 */
         opacity: 0; /* 初始不可见 */
         transition: opacity 0.3s ease 0.1s; /* 延迟显示 */
@@ -95,20 +94,6 @@ import '../styles/musicPlayer.css';
     }
 </style>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const header = document.querySelector('header');
-        const key = document.querySelector('.key');
-
-        // 初始状态为收起
-        header.classList.add('collapsed');
-
-        // 点击key按钮切换展开/收起状态
-        key.addEventListener('click', function() {
-            header.classList.toggle('collapsed');
-        });
-    });
-</script>
-
+<script src="../script/indexSidebar.js"></script>
 <script src="../script/musicPlayerControl.js"></script>
 <script src="../script/Jump2Target.js"></script>
