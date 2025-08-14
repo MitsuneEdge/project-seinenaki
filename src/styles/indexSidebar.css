@@ -1,6 +1,6 @@
 /* src/styles/indexSidebar.css */
 
-header {
+.indexSidebar-header {
     white-space: nowrap;
     position: fixed;
     left: 0;
