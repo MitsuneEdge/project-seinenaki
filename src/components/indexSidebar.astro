@@ -24,7 +24,7 @@ import '../styles/musicPlayer.css';
         top: 50%;
         transform: translateY(-50%);
 
-        width: 10vw;
+        width: auto;
         max-width: 120px;
         min-height: 30vh;
         max-height: 350px;
@@ -35,13 +35,18 @@ import '../styles/musicPlayer.css';
 
         padding: 15px 0;
         box-sizing: border-box;
+        transition: width 0.3s ease;
     }
     
     .key {
         display: flex;
-        width: 20%;
         justify-content: center;
         align-items: center;
+
+        width: 50px; /* 固定宽度 */
+        cursor: pointer; /* 鼠标指针变为手型 */
+        position: relative; /* 为伪元素定位 */
+        z-index: 2; /* 确保key在最上层 */
     }
 
     nav {
@@ -73,6 +78,33 @@ import '../styles/musicPlayer.css';
     .jump2page:hover {
         background-color: #336699;
     }
+
+     header:not(.collapsed) nav {
+        width: 200px; /* 展开时的宽度 */
+        opacity: 1; /* 完全显示 */
+        padding: 0 10px; /* 添加内边距 */
+    }
+
+    header:not(.collapsed) .jump2page {
+        opacity: 1; /* 完全显示 */
+    }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const header = document.querySelector('header');
+        const key = document.querySelector('.key');
+
+        // 初始状态为收起
+        header.classList.add('collapsed');
+
+        // 点击key按钮切换展开/收起状态
+        key.addEventListener('click', function() {
+            header.classList.toggle('collapsed');
+            }
+        });
+    });
+</script>
+
 <script src="../script/musicPlayerControl.js"></script>
 <script src="../script/Jump2Target.js"></script>
