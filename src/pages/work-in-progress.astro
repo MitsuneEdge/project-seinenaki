@@ -1,0 +1,36 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="zh-CN">
+
+    <style>
+    </style>
+
+    <head>
+    		<BaseHead title={"页面构建中"} description={"页面构建中"} />
+    </head>
+
+    <body>
+        <Header />
+
+        <main>
+            <h1 style="text-align:center;">构建中</h1>
+            <p style="text-align: center; text-indent: 2em; font-size: 14px;">
+                在做了在做了在做了
+            </p>
+        </main>
+
+        <div id="test-video2" style="text-align:center;">
+            <video width="240" height="240" controls>
+                <source src="/video/hihihiha.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <Footer />
+    </body>
+
+</html>
