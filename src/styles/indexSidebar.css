@@ -31,7 +31,7 @@ header {
     min-width: 50px; /* 确保最小宽度 */
 }
 
-nav {
+.indexSidebar {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +63,7 @@ nav {
     background-color: #336699;
 }
 
-nav.collapsed {
+.indexSidebar.collapsed {
     width: 0 !important; /* 收起状态宽度为0 */
     opacity: 0; /* 完全透明 */
     padding: 0 !important; /* 无内边距 */
@@ -71,7 +71,7 @@ nav.collapsed {
     transition: width 0.3s ease, opacity 0.3s ease, padding 0.3s ease; /* 过渡效果 */
 }
 
-nav:not(.collapsed) {
+.indexSidebar:not(.collapsed) {
     width: 200px; /* 展开状态宽度 */
     opacity: 1; /* 完全显示 */
 }
