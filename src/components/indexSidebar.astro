@@ -12,6 +12,9 @@ import '../styles/musicPlayer.css';
         <button id="musicPlayerButton">播放音乐</button>
         <audio id="backgroundMusic"></audio>
     </nav>
+    <div class="key">
+        <img src="/image/key1.png" style="width: 10px; align-items: center;">
+    </div>
 </header>
 <style>
     header {
@@ -35,7 +38,10 @@ import '../styles/musicPlayer.css';
 
         padding: 15px 0;
         box-sizing: border-box;
-        overflow-y: auto; /* 内容过多时滚动 */
+    }
+    
+    .key{
+        ;
     }
 
     nav {
@@ -46,6 +52,8 @@ import '../styles/musicPlayer.css';
         gap: 15px;
         height: 100%;
     }
+
+    
 
     .jump2page {
         font-size: 16px;
