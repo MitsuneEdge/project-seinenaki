@@ -1,0 +1,77 @@
+/* src/styles/indexSidebar.css */
+
+header {
+    white-space: nowrap;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: auto;
+    max-width: 120px;
+    min-height: 30vh;
+    max-height: 350px;
+
+    display: flex;
+    flex-direction: row;
+    z-index: 1000;
+
+    padding: 15px 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px; /* 固定宽度 */
+    cursor: pointer; /* 鼠标手型 */
+    min-width: 50px; /* 确保最小宽度 */
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 5px;
+    height: 100%;
+    width: 80%;
+
+    background: #f8f9fa;
+    border-right: 5px solid #666699;
+    border-radius: 0 10px 10px 0;
+}
+
+.jump2page {
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #993399;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+
+    white-space: nowrap; /* 防止文字换行 */
+}
+
+/* 鼠标悬停效果 */
+.jump2page:hover {
+    background-color: #336699;
+}
+
+nav.collapsed {
+    width: 0 !important; /* 收起状态宽度为0 */
+    opacity: 0; /* 完全透明 */
+    padding: 0 !important; /* 无内边距 */
+    border-right: none; /* 移除边框 */
+    transition: width 0.3s ease, opacity 0.3s ease, padding 0.3s ease; /* 过渡效果 */
+}
+
+nav:not(.collapsed) {
+    width: 200px; /* 展开状态宽度 */
+    opacity: 1; /* 完全显示 */
+}

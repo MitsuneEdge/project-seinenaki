@@ -1,5 +1,6 @@
 ---
 import '../styles/musicPlayer.css';
+import '../styles/indexSidebar.css';
 ---
 
 <header>
@@ -16,82 +17,8 @@ import '../styles/musicPlayer.css';
         <img src="/image/key/key1.png">
     </div>
 </header>
+
 <style>
-    header {
-        white-space: nowrap;
-        position: fixed;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-
-        width: auto;
-        max-width: 120px;
-        min-height: 30vh;
-        max-height: 350px;
-
-        display: flex;
-        flex-direction: row;
-        z-index: 1000;
-
-        padding: 15px 0;
-        box-sizing: border-box;
-        transition: width 0.3s ease;
-    }
-    
-    .key {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 50px; /* 固定宽度 */
-        cursor: pointer; /* 鼠标指针变为手型 */
-        position: relative; /* 为伪元素定位 */
-        z-index: 2; /* 确保key在最上层 */
-    }
-
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 15px;
-        padding: 5px;
-        height: 100%;
-        width: 80%;
-
-        background: #f8f9fa;
-        border-right: 5px solid #666699;
-        border-radius: 0 10px 10px 0;
-    }
-
-    .jump2page {
-        font-size: 16px;
-        cursor: pointer;
-        background-color: #993399;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-
-        white-space: nowrap; /* 防止文字换行 */
-        opacity: 0; /* 初始不可见 */
-        transition: opacity 0.3s ease 0.1s; /* 延迟显示 */
-    }
-
-    /* 鼠标悬停效果 */
-    .jump2page:hover {
-        background-color: #336699;
-    }
-
-     header:not(.collapsed) nav {
-        width: 200px; /* 展开时的宽度 */
-        opacity: 1; /* 完全显示 */
-        padding: 0 10px; /* 添加内边距 */
-    }
-
-    header:not(.collapsed) .jump2page {
-        opacity: 1; /* 完全显示 */
-    }
 </style>
 
 <script src="../script/indexSidebar.js"></script>
