@@ -1,4 +1,4 @@
-/* src/script/indexGameMechanicsImage.js */
+/* src/script/index/indexGameMechanicsImage.js */
 
 // 预加载所有图片
 const imagePaths = [

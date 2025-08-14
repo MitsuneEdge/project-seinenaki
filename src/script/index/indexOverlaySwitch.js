@@ -1,4 +1,4 @@
-/* src/script/indexOverlaySwitch.js */
+/* src/script/index/indexOverlaySwitch.js */
 
 if (!window.__SCRIPT_EXECUTED__) {
     window.__SCRIPT_EXECUTED__ = true;

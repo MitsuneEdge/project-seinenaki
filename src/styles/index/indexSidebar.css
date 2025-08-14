@@ -1,4 +1,4 @@
-/* src/styles/indexSidebar.css */
+/* src/styles/index/indexSidebar.css */
 
 .indexSidebar-header {
     white-space: nowrap;
@@ -72,7 +72,6 @@
     opacity: 0; /* 完全透明 */
     padding: 0 !important; /* 无内边距 */
     border-right: none; /* 移除边框 */
-    transition: width 0.3s ease, opacity 0.3s ease, padding 0.3s ease; /* 过渡效果 */
 
     pointer-events: none; /* 禁止鼠标交互 */
     position: absolute; /* 从文档流中移除 */

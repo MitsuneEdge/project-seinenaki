@@ -1,4 +1,4 @@
-/* src/script/indexSidebar.js */
+/* src/script/index/indexSidebar.js */
 
 document.addEventListener('DOMContentLoaded', function() {
     const nav = document.querySelector('.indexSidebar-nav');

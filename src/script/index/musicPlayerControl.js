@@ -1,4 +1,4 @@
-/* src/script/musicPlayerControl.js */
+/* src/script/index/musicPlayerControl.js */
 
 document.addEventListener('DOMContentLoaded', function() {
     const musicPlayerButton = document.getElementById('musicPlayerButton');

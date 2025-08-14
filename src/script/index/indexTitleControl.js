@@ -1,4 +1,4 @@
-/* src/script/indexTitleControl.js */
+/* src/script/index/indexTitleControl.js */
 
 export function adjustFontSize() {
     const title = document.querySelector('.index_title');

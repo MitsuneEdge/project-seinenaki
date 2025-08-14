@@ -1,4 +1,4 @@
-/* src/script/indexOverlayWindow.js */
+/* src/script/index/indexOverlayWindow.js */
 
 // 获取元素引用
 if (typeof window !== 'undefined') {

@@ -1,4 +1,4 @@
-/* src/script/Jump2Target.js */
+/* src/script/index/Jump2Target.js */
 
 document.querySelectorAll('.jump2page').forEach(div => {
     div.addEventListener('click', function() {

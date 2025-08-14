@@ -1,4 +1,4 @@
-/* src/script/indexGameScreenshot.js */
+/* src/script/index/indexGameScreenshot.js */
 
 document.addEventListener('DOMContentLoaded', function() {
     // 配置内容配对数组
