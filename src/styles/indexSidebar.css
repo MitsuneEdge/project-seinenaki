@@ -26,9 +26,13 @@
     justify-content: center;
     align-items: center;
 
-    width: 50px; /* 固定宽度 */
+    width: 30px; /* 固定宽度 */
     cursor: pointer; /* 鼠标手型 */
-    min-width: 50px; /* 确保最小宽度 */
+    min-width: 30px; /* 确保最小宽度 */
+    z-index: 100;
+
+    pointer-events: auto;
+    position: relative;
 }
 
 .indexSidebar-nav {
@@ -36,7 +40,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 15px;
+    gap: 10px;
     padding: 5px;
     height: 100%;
     width: 80%;
@@ -69,9 +73,15 @@
     padding: 0 !important; /* 无内边距 */
     border-right: none; /* 移除边框 */
     transition: width 0.3s ease, opacity 0.3s ease, padding 0.3s ease; /* 过渡效果 */
+
+    pointer-events: none; /* 禁止鼠标交互 */
+    position: absolute; /* 从文档流中移除 */
+    overflow: hidden; /* 隐藏溢出内容 */
 }
 
 .indexSidebar-nav:not(.collapsed) {
     width: 200px; /* 展开状态宽度 */
     opacity: 1; /* 完全显示 */
+    pointer-events: auto; /* 恢复鼠标交互 */
+    position: relative; /* 恢复文档流位置 */
 }
