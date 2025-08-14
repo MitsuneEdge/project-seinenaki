@@ -1,7 +1,7 @@
 /* src/script/indexSidebar.js */
 
 document.addEventListener('DOMContentLoaded', function() {
-    const nav = document.querySelector('indexSidebar');
+    const nav = document.querySelector('indexSidebar-nav');
     const key = document.querySelector('.key');
 
     // 初始为收起状态
