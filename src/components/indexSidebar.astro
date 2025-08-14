@@ -72,6 +72,11 @@ import '../styles/musicPlayer.css';
         border: none;
         border-radius: 5px;
         box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+
+        padding: 8px 5px; /* 按钮内边距 */
+        white-space: nowrap; /* 防止文字换行 */
+        opacity: 0; /* 初始不可见 */
+        transition: opacity 0.3s ease 0.1s; /* 延迟显示 */
     }
 
     /* 鼠标悬停效果 */
@@ -101,7 +106,7 @@ import '../styles/musicPlayer.css';
         // 点击key按钮切换展开/收起状态
         key.addEventListener('click', function() {
             header.classList.toggle('collapsed');
-        };
+        });
     });
 </script>
 
