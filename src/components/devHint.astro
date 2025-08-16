@@ -1,0 +1,45 @@
+---
+import '../styles/index/musicPlayer.css';
+import '../styles/index/indexSidebar.css';
+---
+
+<header>
+    <div class="hint-window">
+        <div class="hint-content">
+            <p style="text-align:center; font-size: 30px;">该页面正在构建</p>
+            <p style="text-align:center; font-size: 16px;">工作室IT部门正在加紧处理，给您带来的不便敬请谅解</p>
+        </div>
+        <button class="close-hint-window">关闭开发者提示</button>
+    </div>
+
+    <script>
+        document.querySelector('.close-hint-window').addEventListener('click', function() {
+            document.querySelector('.hint-window').style.display = 'none';
+        });
+    </script>
+</header>
+
+<style>
+    .close-hint-window {
+        align-items: center;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .hint-window {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        max-width: 1200px;
+        min-width: 60vw;
+
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border: 10px solid #e0e0e0;
+    }
+</style>
