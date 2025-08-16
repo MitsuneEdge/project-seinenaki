@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // 设置音量为10%
     backgroundMusic.volume = 0.1;
 
+    // 尝试自动播放（不考虑浏览器限制）
+    backgroundMusic.play().catch(error => {
+        console.log('自动播放被阻止:', error);
+    });
+
     // 随机选择下一首歌
     function getRandomSong() {
         let nextIndex;
