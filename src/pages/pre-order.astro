@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Hint from '../components/devHint.astro';
+import DivLine from '../components/DivLine.astro';
 import '../styles/pre-order/Overview.css';
 ---
 
@@ -13,7 +14,7 @@ import '../styles/pre-order/Overview.css';
     </style>
 
     <head>
-        <BaseHead title={"系列游戏预约下载"} description={"预约游戏"} />
+        <BaseHead title={"预约下载"} description={"预约游戏"} />
     </head>
 
     <body>
@@ -21,10 +22,29 @@ import '../styles/pre-order/Overview.css';
         <Hint />
 
         <div class="overview-container">
-            <div class="overview-game">单元1</div>
+            <div class="overview-game">
+                <div class="overview-icon">
+                    <img src="/image/Rinkawa.jpg" style="
+                         width: auto;
+                         height: 100%;
+                         object-fit: contain;
+                         border: 5px solid #CC3399;
+                         border-radius: 10px;
+                    ">
+                </div>
+                <div class="overview-text">
+                    <p style="margin: 0; text-align: center;">这是用来填充的测试文本</p>
+                </div>
+            </div>
             <div class="overview-game">单元2</div>
             <div class="overview-game">单元3</div>
         </div>
+
+        <DivLine color="#00ff00" height="10px" class="DivLine-Overview" spacing="0vh" />
+
+        <div class="project01-container"></div>
+        <div class="project02-container"></div>
+        <div class="project03-container"></div>
 
         <main>
 
