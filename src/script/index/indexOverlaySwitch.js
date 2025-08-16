@@ -4,7 +4,7 @@ if (!window.__SCRIPT_EXECUTED__) {
     window.__SCRIPT_EXECUTED__ = true;
 
     // 主逻辑（只会执行一次）
-    console.log('脚本已执行');
+    //console.log('脚本已执行');
 
     document.addEventListener('DOMContentLoaded', function() {
         // 获取DOM元素
