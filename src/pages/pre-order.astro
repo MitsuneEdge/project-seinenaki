@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import Hint from '../components/divHint.astro';
+import Hint from '../components/devHint.astro';
 ---
 
 <!doctype html>
@@ -12,24 +12,20 @@ import Hint from '../components/divHint.astro';
     </style>
 
     <head>
-    		<BaseHead title={"剧情Online"} description={"剧情"} />
+        <BaseHead title={"系列游戏预约下载"} description={"预约游戏"} />
     </head>
 
     <body>
         <Header />
         <Hint />
 
+
+
         <main>
             <h1 style="text-align:center;">构建中</h1>
         </main>
 
-        <div id="test-video2" style="text-align:center;">
-            <video width="240" height="240" controls>
-                <source src="/video/hihihiha.mp4" type="video/mp4">
-            </video>
-        </div>
-
         <Footer />
+        <script src="../script/Jump2Target.js"></script>
     </body>
-
 </html>
