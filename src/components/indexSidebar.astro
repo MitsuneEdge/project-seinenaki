@@ -5,11 +5,12 @@ import '../styles/index/indexSidebar.css';
 
 <header class="indexSidebar-header">
     <nav class="indexSidebar-nav">
-        <button class="jump2page" data-target="hero-banner">顶部海报</button>
-        <button class="jump2page" data-target="character-container">角色介绍</button>
-        <button class="jump2page" data-target="GameScreenshot-container">设定展示</button>
-        <button class="jump2page" data-target="GameMechanics-container">玩法展示</button>
-        <button class="jump2page" data-target="storyIntroduce">关于游戏</button>
+        {/* 什么叫做可读性.png */}
+        <button class="sidebar-button" data-trigger="jump2page" data-target="hero-banner">顶部海报</button>
+        <button class="sidebar-button" data-trigger="jump2page" data-target="character-container">角色介绍</button>
+        <button class="sidebar-button" data-trigger="jump2page" data-target="GameScreenshot-container">设定展示</button>
+        <button class="sidebar-button" data-trigger="jump2page" data-target="GameMechanics-container">玩法展示</button>
+        <button class="sidebar-button" data-trigger="jump2page" data-target="storyIntroduce">关于游戏</button>
         <button id="musicPlayerButton">播放音乐</button>
         <audio id="backgroundMusic"></audio>
     </nav>

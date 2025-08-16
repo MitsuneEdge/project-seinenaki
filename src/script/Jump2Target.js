@@ -1,6 +1,6 @@
 /* src/script/index/Jump2Target.js */
 
-document.querySelectorAll('.jump2page').forEach(div => {
+document.querySelectorAll('[data-trigger="jump2page"]').forEach(div => {
     div.addEventListener('click', function() {
         const targetClass = this.getAttribute('data-target');
         const targetElement = document.querySelector(`.${targetClass}`);
