@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Hint from '../components/devHint.astro';
+import '../styles/pre-order/Overview.css';
 ---
 
 <!doctype html>
@@ -19,8 +20,14 @@ import Hint from '../components/devHint.astro';
         <Header />
         <Hint />
 
+        <div class="overview-container">
+            <div class="overview-game">单元1</div>
+            <div class="overview-game">单元2</div>
+            <div class="overview-game">单元3</div>
+        </div>
+
         <main>
-            <h1 style="text-align:center;">构建中</h1>
+
         </main>
 
         <Footer />
