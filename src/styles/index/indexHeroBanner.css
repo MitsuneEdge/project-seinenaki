@@ -59,12 +59,13 @@
 
 /* 关键帧动画：水平滑动 */
 @keyframes slideShow {
-    0% { transform: translateX(0); }     /* 第1张 */
-    20% { transform: translateX(-20%); } /* 第2张 */
-    40% { transform: translateX(-40%); } /* 第3张 */
-    60% { transform: translateX(-60%); } /* 第4张 */
-    80% { transform: translateX(-80%); } /* 第5张 */
-    100% { transform: translateX(-80%); } /* 最后一帧保持 */
+  0% { transform: translateX(0); }      /* 第1张 */
+  16% { transform: translateX(-20%); }  /* 第2张 */
+  32% { transform: translateX(-40%); }  /* 第3张 */
+  48% { transform: translateX(-60%); }  /* 第4张 */
+  64% { transform: translateX(-80%); }  /* 第5张 */
+  80% { transform: translateX(-80%); }  /* 短暂停留 */
+  100% { transform: translateX(0); }    /* 无缝回到第1张 */
 }
 
 {/*巨大海报里包含的文字*/}
