@@ -31,10 +31,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 500%; /* 5张图片的总宽度（100% * 5） */
+    min-width: 600%; /* 图片的总宽度（100% * n） */
     height: 100%;
     display: flex;
-    animation: slideShow 45s infinite; /* 45秒完成一轮 */
+    animation: slideShow 60s infinite; /* 45秒完成一轮 */
     z-index: 5;
 }
 
@@ -50,22 +50,23 @@
     overflow: hidden;
 }
 
-/* 定义5张图片 */
+/* 定义6张图片 */
 .hero-banner-slide:nth-child(1) { background-image: url('https://data-reserve.rinkawa-0v0.top/indexHeroBanner_1.png'); }
 .hero-banner-slide:nth-child(2) { background-image: url('https://data-reserve.rinkawa-0v0.top/indexHeroBanner_2.png'); }
 .hero-banner-slide:nth-child(3) { background-image: url('https://data-reserve.rinkawa-0v0.top/indexHeroBanner_3.png'); }
 .hero-banner-slide:nth-child(4) { background-image: url('/image/Reserve_Example_4.jpg'); }
 .hero-banner-slide:nth-child(5) { background-image: url('/image/Reserve_Example_5.jpg'); }
+.hero-banner-slide:nth-child(6) { background-image: url('https://data-reserve.rinkawa-0v0.top/indexHeroBanner_1.png'); }
 
 /* 关键帧动画：水平滑动 */
 @keyframes slideShow {
-  0% { transform: translateX(0); }      /* 第1张 */
-  16% { transform: translateX(-20%); }  /* 第2张 */
-  32% { transform: translateX(-40%); }  /* 第3张 */
-  48% { transform: translateX(-60%); }  /* 第4张 */
-  64% { transform: translateX(-80%); }  /* 第5张 */
-  80% { transform: translateX(-80%); }  /* 短暂停留 */
-  100% { transform: translateX(0); }    /* 无缝回到第1张 */
+    0% { transform: translateX(0); }     /* 第1张 */
+    16.67% { transform: translateX(-16.667%); } /* 第2张 */
+    33.33% { transform: translateX(-33.333%); } /* 第3张 */
+    50% { transform: translateX(-50%); } /* 第4张 */
+    66.67% { transform: translateX(-66.667%); } /* 第5张 */
+    83.33% { transform: translateX(-83.333%); } /* 第6张 */
+    100% { transform: translateX(-83.333%); } /* 第6张 */
 }
 
 {/*巨大海报里包含的文字*/}
