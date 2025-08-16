@@ -14,3 +14,6 @@ document.querySelectorAll('.jump2page').forEach(div => {
         }
     });
 });
+
+/* <button class="jump2page" data-target="storyIntroduce">关于游戏</button> */
+/* class=jump2page，data-target选择需要跳转到的元素 */
