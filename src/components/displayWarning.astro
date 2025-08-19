@@ -1,0 +1,52 @@
+---
+<!--import '../styles/index/musicPlayer.css';-->
+---
+
+<header>
+    <div class="warning-window">
+        <div class="hint-content">
+            <p style="text-align:center; font-size: 30px;">显示设备不兼容</p>
+            <p style="text-align:center; font-size: 16px;">当前浏览器宽度不足以正常显示网页内容，工作室IT正在处理兼容性问题</p>
+        </div>
+        <button class="close-warning-window">关闭</button>
+    </div>
+
+    <script>
+        document.querySelector('.close-warning-window').addEventListener('click', function() {
+            document.querySelector('.warning-window').style.display = 'none';
+        });
+    </script>
+</header>
+
+<style>
+    .close-warning-window {
+        align-items: center;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .warning-window {
+        display: none;
+        margin: 0;
+        padding: 10px;
+
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border: 10px solid #003399;
+        border-radius: 15px;
+    }
+
+     @media (max-width: 1023px) {
+            .warning-window {
+                display: flex;
+
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+</style>
